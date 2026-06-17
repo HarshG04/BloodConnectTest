@@ -81,14 +81,10 @@ public class RegisterPage extends BasePage{
         js.executeScript("arguments[0].scrollIntoView();arguments[0].click();",btnRegister);
     }
     public String getEmailErrorMessage(){
-        String msg = "";
-        if(emailErrorMsg.isDisplayed()) msg = emailErrorMsg.getText();
-        return msg;
+        return wait.until(ExpectedConditions.visibilityOf(emailErrorMsg)).getText();
     }
     public String getAlertMessage(){
-        String msg = "";
-        if(alertMsg.isDisplayed()) msg = alertMsg.getText();
-        return msg;
+        return wait.until(ExpectedConditions.visibilityOf(alertMsg)).getText();
     }
 
 

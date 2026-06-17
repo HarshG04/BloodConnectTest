@@ -12,22 +12,30 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Parameters;
+
 public class BaseClass {
     public WebDriver driver;
     public Properties properties;
+    public Logger logger;
 
     @BeforeMethod
     @Parameters({"browser"})
     public void setup(String browser) throws IOException {
+
         FileReader file = new FileReader("./src/test/resources/config.properties");
         properties = new Properties();
         properties.load(file);
+
+        logger = LogManager.getLogger(this.getClass());
 
         switch(browser.toLowerCase()){
             case "chrome" : driver = new ChromeDriver(); break;
             case "edge" : driver = new EdgeDriver(); break;
             case "firefox" : driver = new FirefoxDriver();  break;
-            default: System.out.println("Invalid Browser Name"); return;
+            default: throw new IllegalArgumentException("Invalid Browser Name: " + browser);
         }
 
         driver.manage().deleteAllCookies();

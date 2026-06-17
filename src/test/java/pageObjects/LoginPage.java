@@ -16,4 +16,5 @@ public class LoginPage extends BasePage{
     public void clickRegister(){
         lnkRegister.click();
     }
+
 }

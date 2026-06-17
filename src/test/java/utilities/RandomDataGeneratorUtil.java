@@ -48,6 +48,6 @@ public class RandomDataGeneratorUtil {
         );
 
         registerPage.setMedicalInfo(userData[12]);
-        registerPage.clickAgreeTerms();
+
     }
 }
