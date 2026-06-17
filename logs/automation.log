@@ -360,3 +360,30 @@ Session ID: 73632d06b112ea6d0d6a95d30526b64c
 2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:69 - Clicking on 'I Need Blood' button as a logged-in user...
 2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:72 - Checking if the user goes directly back to their dashboard without logging in again...
 2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:76 - SUCCESS: Logged-in user bypassed login page and accessed dashboard.
+2026-06-17 14:48:45 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:51:49 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:54:29 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:57:32 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:57:39 INFO  TS005_HomePageInfo:12 - =========================================================
+2026-06-17 14:57:39 INFO  TS005_HomePageInfo:13 - STARTING TEST: TC014_WhyDonateBloodSectionVisibility
+2026-06-17 14:57:39 INFO  TS005_HomePageInfo:14 - =========================================================
+2026-06-17 14:57:39 INFO  TS005_HomePageInfo:18 - Checking if the 'Why Donate Blood' section is visible on the Home page...
+2026-06-17 14:57:39 INFO  TS005_HomePageInfo:22 - SUCCESS: 'Why Donate Blood' section is visible.
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:36 - =========================================================
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:37 - STARTING TEST: TC015_BenefitsOfDonatingBloodSectionVisibility
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:38 - =========================================================
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:42 - Checking if the 'Benefits of Donating Blood' section is visible on the Home page...
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:46 - SUCCESS: 'Benefits of Donating Blood' section is visible.
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:60 - =========================================================
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:61 - STARTING TEST: TC016_sectionEligibilityCriteriaSectionVisibility
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:62 - =========================================================
+2026-06-17 14:57:40 INFO  TS005_HomePageInfo:66 - Checking if the 'Eligibility Criteria' section is visible on the Home page...
+2026-06-17 14:57:41 INFO  TS005_HomePageInfo:70 - SUCCESS: 'Eligibility Criteria' section is visible.
