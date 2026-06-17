@@ -315,3 +315,48 @@ Session ID: 73632d06b112ea6d0d6a95d30526b64c
 2026-06-17 12:21:21 INFO  Utils:112 - [TestNG] Running:
   C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
 
+2026-06-17 14:04:34 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:14:41 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:16:41 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:18:26 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-06-17 14:18:37 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:19:25 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:19:58 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:20:50 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:29:16 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 14:29:22 INFO  TS004_INeedBloodButton:15 - =========================================================
+2026-06-17 14:29:22 INFO  TS004_INeedBloodButton:16 - STARTING TEST: TC012_verifyINeedButtonUnauthenticatedUsers
+2026-06-17 14:29:22 INFO  TS004_INeedBloodButton:17 - =========================================================
+2026-06-17 14:29:22 INFO  TS004_INeedBloodButton:21 - Clicking on 'I Need Blood' button as a guest user...
+2026-06-17 14:29:22 INFO  TS004_INeedBloodButton:24 - Checking if the guest user is redirected to the Login page...
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:28 - SUCCESS: Guest user was successfully redirected to the Login page.
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:43 - =========================================================
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:44 - STARTING TEST: TC013_verifyINeedButtonAuthenticatedUsers
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:45 - Testing with account: johncena2@gmail.com : password123
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:46 - =========================================================
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:50 - Navigating to the Login page...
+2026-06-17 14:29:23 INFO  TS004_INeedBloodButton:54 - Entering email and password...
+2026-06-17 14:29:24 INFO  TS004_INeedBloodButton:58 - Clicking the Login button...
+2026-06-17 14:29:24 INFO  TS004_INeedBloodButton:61 - Waiting for the Recipient Dashboard to load...
+2026-06-17 14:29:27 INFO  TS004_INeedBloodButton:65 - Going back to the Home page from the dashboard...
+2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:69 - Clicking on 'I Need Blood' button as a logged-in user...
+2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:72 - Checking if the user goes directly back to their dashboard without logging in again...
+2026-06-17 14:29:28 INFO  TS004_INeedBloodButton:76 - SUCCESS: Logged-in user bypassed login page and accessed dashboard.

@@ -24,10 +24,17 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS003_BloodAvailability">
+<!--    <test name="TS003_BloodAvailability">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS003_BloodAvailability" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="TS004_INeedBloodButton">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testCases.TS003_BloodAvailability" />
+            <class name="testCases.TS004_INeedBloodButton" />
         </classes>
     </test>
 </suite>
