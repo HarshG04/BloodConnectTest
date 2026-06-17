@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +17,11 @@ public class BasePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void waitForUrlToContain(String partialUrl) {
-        wait.until(ExpectedConditions.urlContains(partialUrl));
+    public boolean waitForUrlToContain(String partialUrl) {
+        try{
+            return wait.until(ExpectedConditions.urlContains(partialUrl));
+        }catch(TimeoutException e){
+            return false;
+        }
     }
 }

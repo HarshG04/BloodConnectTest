@@ -12,11 +12,16 @@ public class HomePage extends BasePage{
 
     //locators
     @FindBy(xpath = "//div[@id='navbarNav']//a[contains(text(),'Register')]") WebElement lnkRegister;
+    @FindBy(xpath = "//div[@id='navbarNav']//a[contains(text(),'Login')]") WebElement lnkLogin;
+
 
 
 
     //actions
     public void clickRegister(){
         lnkRegister.click();
+    }
+    public void clickLogin(){
+        lnkLogin.click();
     }
 }
