@@ -306,3 +306,12 @@ Session ID: 73632d06b112ea6d0d6a95d30526b64c
 2026-06-17 11:22:25 INFO  TS002_Login:54 - Getting Alert Message...
 2026-06-17 11:22:25 INFO  TS002_Login:56 - Alert Message: 'Bad credentials'
 2026-06-17 11:22:25 INFO  TS002_Login:70 - SUCCESS: Data iteration row processed successfully.
+2026-06-17 12:18:20 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 12:19:51 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
+2026-06-17 12:21:21 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494393\OneDrive - Cognizant\Desktop\Java-SDET\Projects\BloodConnect\BloodConnectTest\testng.xml
+
