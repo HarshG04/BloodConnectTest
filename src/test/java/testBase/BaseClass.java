@@ -21,7 +21,7 @@ public class BaseClass {
     public Properties properties;
     public Logger logger;
 
-    @BeforeMethod
+    @BeforeClass
     @Parameters({"browser"})
     public void setup(String browser) throws IOException {
 
@@ -38,13 +38,22 @@ public class BaseClass {
             default: throw new IllegalArgumentException("Invalid Browser Name: " + browser);
         }
 
+    }
+
+    @BeforeMethod
+    public void driverSetup(){
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(properties.getProperty("uri"));
     }
 
-    @AfterMethod
+//    @AfterMethod
+//    public void driverTearDown(){
+//        driver = null;
+//    }
+
+    @AfterClass
     public void teardown(){
         driver.quit();
     }
