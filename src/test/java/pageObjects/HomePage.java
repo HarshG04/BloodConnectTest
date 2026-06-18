@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class HomePage extends BasePage{
     //constructor
     public HomePage(WebDriver driver){
@@ -19,7 +21,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//h2[contains(text(),'Why Donate Blood?')]/ancestor::div[@class='container']") WebElement sectionWhyDonateBlood;
     @FindBy(xpath = "//h2[contains(text(),'Benefits of Donating Blood')]/ancestor::section") WebElement sectionBenefitsOfDonatingBlood;
     @FindBy(xpath = "//h2[contains(text(),'Eligibility Criteria')]/ancestor::section") WebElement sectionEligibilityCriteria;
-
+    @FindBy(xpath = "//div[@class='col-lg-4 col-md-6']") List<WebElement> bloodCampList;
 
 
     //actions
@@ -50,5 +52,9 @@ public class HomePage extends BasePage{
         wait.until(ExpectedConditions.visibilityOf(sectionEligibilityCriteria));
         js.executeScript("arguments[0].scrollIntoView()",sectionEligibilityCriteria);
         return sectionEligibilityCriteria.isDisplayed();
+    }
+
+    public void getBloodCampsCount(){
+
     }
 }

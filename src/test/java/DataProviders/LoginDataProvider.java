@@ -19,6 +19,11 @@ public class LoginDataProvider {
         return new Object[][] {{"johncena2@gmail.com", "password123"}};
     }
 
+    @DataProvider(name = "adminLoginData")
+    public Object[][] adminLoginData() {
+        return new Object[][] {{"admin@bms.com", "password123"}};
+    }
+
 //    @DataProvider(name = "recipientRegistrationData")
 //    public Object[][] recipientData() {
 //        return new Object[][] {{"John Cena", "johncena2@gmail.com", "password123", "123456789", 25, 65.0, "male", "O+", "Chil Sez IT Park", "Coimbatore", "Tamilnadu", 123098, "no medical info"}};
