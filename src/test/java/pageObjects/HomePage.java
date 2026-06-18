@@ -1,5 +1,7 @@
 package pageObjects;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +24,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//h2[contains(text(),'Benefits of Donating Blood')]/ancestor::section") WebElement sectionBenefitsOfDonatingBlood;
     @FindBy(xpath = "//h2[contains(text(),'Eligibility Criteria')]/ancestor::section") WebElement sectionEligibilityCriteria;
     @FindBy(xpath = "//div[@class='col-lg-4 col-md-6']") List<WebElement> bloodCampList;
-
+    @FindBy(xpath= "//div[contains(@class,'camp-card')]") WebElement sectionBloodDonationCamps;
 
     //actions
     public void clickRegister(){
@@ -54,7 +56,15 @@ public class HomePage extends BasePage{
         return sectionEligibilityCriteria.isDisplayed();
     }
 
-    public void getBloodCampsCount(){
+    public int getBloodCampsCount(){
+        try{
+            js.executeScript("arguments[0].scrollIntoView();",sectionBloodDonationCamps);
+            return bloodCampList==null ? 0 : bloodCampList.size();
+        } catch (NoSuchElementException e) {
+            return 0;
+        }
 
     }
+
+
 }

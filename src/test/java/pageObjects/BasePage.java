@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +17,7 @@ public class BasePage {
     public BasePage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         js = (JavascriptExecutor) driver;
     }
 
@@ -26,5 +27,9 @@ public class BasePage {
         }catch(TimeoutException e){
             return false;
         }
+    }
+
+    public void waitForElementToVisible(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

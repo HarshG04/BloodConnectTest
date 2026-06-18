@@ -5,7 +5,6 @@ import org.testng.annotations.DataProvider;
 public class LoginDataProvider {
 
     @DataProvider(name = "LoginData")
-
     public Object[][] LoginData() {
         return new Object[][] {
                 {"testcase@gmail.com", "password123","Valid"},
@@ -14,23 +13,24 @@ public class LoginDataProvider {
         };
     }
 
-
-    @DataProvider(name = "DonorNameUpdate")
-    public Object[][] DonorNameUpdate() {
-        return new Object[][]{
-                {"john@bms.com", "password123", "john cena"}
-        };
-    }
-
     @DataProvider(name = "recipientLoginData")
     public Object[][] recipientLoginData() {
         return new Object[][] {{"johncena2@gmail.com", "password123"}};
+    }
 
+    @DataProvider(name="donorLogin")
+    public Object[][] donorLogin(){
+        return new Object[][] {{"johncena@gmail.com", "password123"}};
     }
 
     @DataProvider(name = "adminLoginData")
     public Object[][] adminLoginData() {
         return new Object[][] {{"admin@bms.com", "password123"}};
+    }
+
+    @DataProvider(name="bothLoginData")
+    public Object[][] bothLoginData() {
+        return new Object[][] {{"john@bms.com", "password123"}};
     }
 
 //    @DataProvider(name = "recipientRegistrationData")
