@@ -68,8 +68,6 @@ public class TS007_DonorProfile extends BaseClass {
             Assert.assertEquals(actualName, name,
                     "Donor name update validation failed");
             logger.info("TEST CASE PASSED ");
-            donorDash.clickUserDropDown();
-            donorDash.clickLogout();
 
         } catch (AssertionError ae) {
             logger.error("ASSERTION FAILED : " + ae.getMessage());
@@ -156,8 +154,6 @@ public class TS007_DonorProfile extends BaseClass {
             Assert.assertEquals(actualBldGrp, bd,
                     "Donor blood group update validation failed");
             logger.info("TEST CASE PASSED ");
-            donorDash.clickUserDropDown();
-            donorDash.clickLogout();
 
         } catch (AssertionError ae) {
             logger.error("ASSERTION FAILED : " + ae.getMessage());
@@ -252,8 +248,6 @@ public class TS007_DonorProfile extends BaseClass {
                     "Donor email update validation failed");
             Assert.assertEquals(actualPhone,newPhno,"Donor phone no. update validation failed");
             logger.info("TEST CASE PASSED ");
-            donorDash.clickUserDropDown();
-            donorDash.clickLogout();
 
         } catch (AssertionError ae) {
             logger.error("ASSERTION FAILED : " + ae.getMessage());
@@ -550,8 +544,6 @@ public class TS007_DonorProfile extends BaseClass {
             Assert.assertEquals(actualLocation, newLocation,
                     "Donor Location update validation failed");
             logger.info("TEST CASE PASSED ");
-            donorDash.clickUserDropDown();
-            donorDash.clickLogout();
         } catch (AssertionError ae) {
             logger.error("ASSERTION FAILED : " + ae.getMessage());
             throw ae; // rethrow to mark test as FAILED
