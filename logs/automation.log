@@ -1363,3 +1363,86 @@ Session ID: baab10aa828a288ed3b86af2db14324c
 2026-06-18 14:48:56 INFO  TS007_DonorProfile:221 - Checking if Email field is editable
 2026-06-18 14:48:57 ERROR TS007_DonorProfile:261 - ASSERTION FAILED : Email field is NOT editable expected [true] but found [false]
 2026-06-18 14:48:58 INFO  TS007_DonorProfile:273 - Logged out in finally block
+2026-06-18 15:59:21 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 15:59:29 INFO  TS007_DonorProfile:15 - =========================================================
+2026-06-18 15:59:29 INFO  TS007_DonorProfile:16 - STARTING TEST CASE: TC019_updateDonorName
+2026-06-18 15:59:29 INFO  TS007_DonorProfile:17 - =========================================================
+2026-06-18 15:59:29 INFO  TS007_DonorProfile:21 - Navigating to Login Page
+2026-06-18 15:59:30 INFO  TS007_DonorProfile:25 - Entering login credentials
+2026-06-18 15:59:30 INFO  TS007_DonorProfile:30 - Clicking Login button
+2026-06-18 15:59:31 INFO  TS007_DonorProfile:33 - Verifying login success (Dashboard page)
+2026-06-18 15:59:34 INFO  TS007_DonorProfile:37 - Navigating to Edit Profile page
+2026-06-18 15:59:36 INFO  TS007_DonorProfile:41 - Verifying Edit Profile page load
+2026-06-18 15:59:37 INFO  TS007_DonorProfile:45 - Checking if Full Name field is editable
+2026-06-18 15:59:38 ERROR TS007_DonorProfile:75 - ASSERTION FAILED : Full Name field is NOT editable expected [true] but found [false]
+2026-06-18 15:59:38 INFO  TS007_DonorProfile:88 - Logged out in finally block
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:102 - =========================================================
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:103 - STARTING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:104 - =========================================================
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:108 - Navigating to Login Page
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:112 - Entering login credentials
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:117 - Clicking Login button
+2026-06-18 15:59:39 INFO  TS007_DonorProfile:120 - Verifying login success (Dashboard page)
+2026-06-18 15:59:43 INFO  TS007_DonorProfile:124 - Navigating to Edit Profile page
+2026-06-18 15:59:45 INFO  TS007_DonorProfile:128 - Verifying Edit Profile page load
+2026-06-18 15:59:46 INFO  TS007_DonorProfile:132 - Checking if Blood Group field is editable
+2026-06-18 15:59:47 INFO  TS007_DonorProfile:138 - Updating Blood Group to: A+
+2026-06-18 15:59:47 INFO  TS007_DonorProfile:142 - Clicking Save Changes
+2026-06-18 15:59:47 INFO  TS007_DonorProfile:145 - Verifying navigation to Dashboard after save
+2026-06-18 15:59:49 INFO  TS007_DonorProfile:149 - Validating donor blood group update
+2026-06-18 15:59:50 INFO  TS007_DonorProfile:153 - Expected: A+
+2026-06-18 15:59:50 INFO  TS007_DonorProfile:154 - Actual: A+
+2026-06-18 15:59:50 INFO  TS007_DonorProfile:158 - TEST CASE PASSED 
+2026-06-18 16:00:01 WARN  TS007_DonorProfile:177 - Logout skipped: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='userDropdown']"}
+  (Session info: chrome=148.0.7778.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e0f0fd298efebe6541abc28192f818a0, findElement {value=//a[@id='userDropdown'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65438}, goog:processID: 35072, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65438/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0f0fd298efebe6541abc28192f818a0
+2026-06-18 16:00:01 INFO  TS007_DonorProfile:181 - =========================================================
+2026-06-18 16:00:01 INFO  TS007_DonorProfile:182 - ENDING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 16:00:01 INFO  TS007_DonorProfile:183 - =========================================================
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:189 - =========================================================
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:190 - STARTING TEST CASE: TC021_updateDonorContactDetails
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:191 - =========================================================
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:195 - Navigating to Login Page
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:199 - Entering login credentials
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:204 - Clicking Login button
+2026-06-18 16:00:02 INFO  TS007_DonorProfile:207 - Verifying login success (Dashboard page)
+2026-06-18 16:00:06 INFO  TS007_DonorProfile:211 - Navigating to Edit Profile page
+2026-06-18 16:00:07 INFO  TS007_DonorProfile:215 - Verifying Edit Profile page load
+2026-06-18 16:00:08 INFO  TS007_DonorProfile:219 - Checking if Email field is editable
+2026-06-18 16:00:09 ERROR TS007_DonorProfile:259 - ASSERTION FAILED : Email field is NOT editable expected [true] but found [false]
+2026-06-18 16:00:09 INFO  TS007_DonorProfile:271 - Logged out in finally block
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:284 - =========================================================
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:285 - STARTING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:286 - =========================================================
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:290 - Navigating to Registration page from Home page...
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:294 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:296 - Target phone number to seed: '9402801172'
+2026-06-18 16:00:10 INFO  TS007_DonorProfile:298 - Populating form fields for the initial baseline user...
+2026-06-18 16:00:11 INFO  TS007_DonorProfile:301 - Clicking on the Agree Terms checkbox...
+2026-06-18 16:00:12 INFO  TS007_DonorProfile:304 - Submitting the initial registration...
+2026-06-18 16:00:16 INFO  TS007_DonorProfile:308 - Initial registration system response: 'User Registered Successfully'
+2026-06-18 16:00:16 INFO  TS007_DonorProfile:310 - Verifying baseline user registered successfully...
+2026-06-18 16:00:16 INFO  TS007_DonorProfile:313 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-18 16:00:16 INFO  TS007_DonorProfile:314 - Entering login credentials
+2026-06-18 16:00:18 INFO  TS007_DonorProfile:320 - Clicking Login button
+2026-06-18 16:00:18 INFO  TS007_DonorProfile:323 - Verifying login success (Dashboard page)
+2026-06-18 16:00:24 INFO  TS007_DonorProfile:327 - Navigating to Edit Profile page
+2026-06-18 16:00:26 INFO  TS007_DonorProfile:331 - Verifying Edit Profile page load
+2026-06-18 16:00:26 INFO  TS007_DonorProfile:337 - Checking if Phone No. field is editable
+2026-06-18 16:00:27 INFO  TS007_DonorProfile:342 - Updating Phone No. to: 9402801172
+2026-06-18 16:00:27 INFO  TS007_DonorProfile:345 - Clicking Save Changes
+2026-06-18 16:00:27 INFO  TS007_DonorProfile:348 - Validating duplicate phone number behavior...
+2026-06-18 16:00:30 ERROR TS007_DonorProfile:354 - BUG: Duplicate phone number was accepted and profile updated!
+2026-06-18 16:00:30 ERROR TS007_DonorProfile:366 - ASSERTION FAILED : Test FAILED: System allowed duplicate phone number update
+2026-06-18 16:00:30 INFO  TS007_DonorProfile:378 - Logged out in finally block
+2026-06-18 16:00:30 INFO  TS007_DonorProfile:382 - =========================================================
+2026-06-18 16:00:30 INFO  TS007_DonorProfile:383 - ENDING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber
+2026-06-18 16:00:30 INFO  TS007_DonorProfile:384 - =========================================================
