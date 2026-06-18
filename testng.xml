@@ -17,11 +17,39 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS002_Login">
+<!--    <test name="TS002_Login">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS002_Login" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TS003_BloodAvailability">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS003_BloodAvailability" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TS004_INeedBloodButton">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS004_INeedBloodButton" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="TS005_HomePageInfo">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-<!--            <class name="testCases.TS002_Login" />-->
-<!--            <class name="testCases.TS007_DonorProfile"></class>-->
+            <class name="testCases.TS005_HomePageInfo" />
         </classes>
     </test>
+    
+    <test name="TS007_DonorProfile">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS007_DonorProfile"></class>
+        </classes>
+    </test>
+    
 </suite>

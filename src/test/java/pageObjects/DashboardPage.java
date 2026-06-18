@@ -13,6 +13,8 @@ public class DashboardPage extends BasePage{
     //locators
     @FindBy(xpath = "//a[@id='userDropdown']") WebElement lnkUserDropDown;
     @FindBy(xpath = "//a[@class='dropdown-item']") WebElement lnkLogout;
+    @FindBy(xpath = "//a[contains(text(),'Home')]") WebElement lnKHome;
+
 
     //actions
     public void clickUserDropDown(){
@@ -20,6 +22,9 @@ public class DashboardPage extends BasePage{
     }
     public void clickLogout(){
         lnkLogout.click();
+    }
+    public void clickHome(){
+        lnKHome.click();
     }
 
 }
