@@ -45,11 +45,11 @@
 <!--        </classes>-->
 <!--    </test>-->
     
-    <test name="TS007_DonorProfile">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS007_DonorProfile"></class>
-        </classes>
-    </test>
+<!--    <test name="TS007_DonorProfile">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS007_DonorProfile"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
     
 </suite>

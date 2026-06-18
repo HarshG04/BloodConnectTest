@@ -55,6 +55,11 @@ public class DonorProfilePage extends BasePage{
         sel.selectByValue(bd);
     }
 
+    public void enterLocation(String location){
+        txtAddress.clear();
+        txtAddress.sendKeys(location);
+    }
+
     public boolean isFullNameEditable() {
         return txtFullName.isEnabled();
     }
@@ -69,6 +74,10 @@ public class DonorProfilePage extends BasePage{
 
     public boolean isBloodGroupEditable(){
         return drpBloodGroup.isEnabled();
+    }
+
+    public boolean isLocationEditable(){
+        return txtAddress.isEnabled();
     }
 
     public void clickSaveChanges() throws InterruptedException {
