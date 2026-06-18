@@ -29,6 +29,13 @@ public class LoginDataProvider {
         };
     }
 
+    @DataProvider(name="DonorContactUpdate")
+    public Object[][] DonorContactUpdate(){
+        return new Object[][]{
+                {"john@bms.com","password123","johncena@bms.com","9876543210"}
+        };
+    }
+
     @DataProvider(name = "recipientLoginData")
     public Object[][] recipientLoginData() {
         return new Object[][] {{"johncena2@gmail.com", "password123"}};

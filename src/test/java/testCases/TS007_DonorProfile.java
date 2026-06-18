@@ -12,10 +12,10 @@ import testBase.BaseClass;
 public class TS007_DonorProfile extends BaseClass {
 
     @Test(priority = 1, dataProvider = "DonorNameUpdate", dataProviderClass = LoginDataProvider.class)
-    public void TC0019_updateDonorName(String email, String pwd, String name) {
+    public void TC019_updateDonorName(String email, String pwd, String name) {
 
         logger.info("=========================================================");
-        logger.info("STARTING TEST CASE: TC0019_updateDonorName");
+        logger.info("STARTING TEST CASE: TC019_updateDonorName");
         logger.info("=========================================================");
 
 
@@ -56,7 +56,7 @@ public class TS007_DonorProfile extends BaseClass {
             logger.info("Clicking Save Changes");
             donorProfile.clickSaveChanges();
 
-            logger.info("Step 10: Verifying navigation to Dashboard after save");
+            logger.info("Verifying navigation to Dashboard after save");
             Assert.assertTrue(donorProfile.waitForUrlToContain("/donor/dashboard"),
                     "Profile not saved or navigation failed");
 
@@ -95,14 +95,14 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         logger.info("=========================================================");
-        logger.info("ENDING TEST CASE: TC0019_updateDonorName");
+        logger.info("ENDING TEST CASE: TC019_updateDonorName");
         logger.info("=========================================================");
     }
 
     @Test(priority = 2, dataProvider = "DonorBloodGrpUpdate",dataProviderClass = LoginDataProvider.class)
-    public void TC0020_updateDonorBloodGroup(String email,String pwd,String bd) {
+    public void TC020_updateDonorBloodGroup(String email,String pwd,String bd) {
         logger.info("=========================================================");
-        logger.info("STARTING TEST CASE: TC0020_updateDonorBloodGroup");
+        logger.info("STARTING TEST CASE: TC020_updateDonorBloodGroup");
         logger.info("=========================================================");
 
 
@@ -181,8 +181,104 @@ public class TS007_DonorProfile extends BaseClass {
         }
 
         logger.info("=========================================================");
-        logger.info("ENDING TEST CASE: TC0020_updateDonorBloodGroup");
+        logger.info("ENDING TEST CASE: TC020_updateDonorBloodGroup");
         logger.info("=========================================================");
 
     }
+
+    @Test(priority = 3, dataProvider = "DonorContactUpdate", dataProviderClass = LoginDataProvider.class)
+    public void TC021_updateDonorContactDetails(String email,String pwd,String newEmail,String newPhno){
+        logger.info("=========================================================");
+        logger.info("STARTING TEST CASE: TC021_updateDonorContactDetails");
+        logger.info("=========================================================");
+
+
+        try {
+            logger.info("Navigating to Login Page");
+            HomePage homePage = new HomePage(driver);
+            homePage.clickLogin();
+
+            logger.info("Entering login credentials");
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.setEmail(email);
+            loginPage.setPassword(pwd);
+
+            logger.info("Clicking Login button");
+            loginPage.clickLogin();
+
+            logger.info("Verifying login success (Dashboard page)");
+            Assert.assertTrue(homePage.waitForUrlToContain("/donor/dashboard"),
+                    "Login failed: Dashboard URL not loaded");
+
+            logger.info("Navigating to Edit Profile page");
+            DonorDashboardPage donorDash = new DonorDashboardPage(driver);
+            donorDash.clickEditProfile();
+
+            logger.info("Verifying Edit Profile page load");
+            Assert.assertTrue(donorDash.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
+
+            logger.info("Checking if Email field is editable");
+            DonorProfilePage donorProfile = new DonorProfilePage(driver);
+
+            Assert.assertTrue(donorProfile.isEmailEditable(),
+                    "Email field is NOT editable");
+
+            logger.info("Updating Email to: " + newEmail);
+            donorProfile.enterEmail(newEmail);
+
+            logger.info("Checking if Phone No. field is editable");
+
+            Assert.assertTrue(donorProfile.isPhoneNoEditable(),
+                    "Phone No. field is NOT editable");
+
+            logger.info("Updating Phone No. to: " + newPhno);
+            donorProfile.enterPhoneno(newPhno);
+
+            logger.info("Clicking Save Changes");
+            donorProfile.clickSaveChanges();
+
+            logger.info("Verifying navigation to Dashboard after save");
+            Assert.assertTrue(donorProfile.waitForUrlToContain("/donor/dashboard"),
+                    "Profile not saved or navigation failed");
+
+            logger.info("Validating donor contact update");
+
+            String actualEmail = donorDash.getDonorEmail();
+            String actualPhone = donorDash.getDonorPhone();
+
+            logger.info("Expected: {}{}", newEmail,newPhno);
+            logger.info("Actual: {}{}", actualEmail,actualPhone);
+
+            Assert.assertEquals(actualEmail, newEmail,
+                    "Donor email update validation failed");
+            Assert.assertEquals(actualPhone,newPhno,"Donor phone no. update validation failed");
+            logger.info("TEST CASE PASSED ");
+            donorDash.clickUserDropDown();
+            donorDash.clickLogout();
+
+        } catch (AssertionError ae) {
+            logger.error("ASSERTION FAILED : " + ae.getMessage());
+            throw ae; // rethrow to mark test as FAILED
+
+        } catch (Exception e) {
+            logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
+            Assert.fail("Test failed due to unexpected exception");
+        }
+        finally {
+            try {
+                DonorDashboardPage donorDash = new DonorDashboardPage(driver);
+                donorDash.clickUserDropDown();
+                donorDash.clickLogout();
+                logger.info("Logged out in finally block");
+            } catch (Exception e) {
+                logger.warn("Logout skipped: " + e.getMessage());
+            }
+        }
+
+        logger.info("=========================================================");
+        logger.info("ENDING TEST CASE: TC021_updateDonorContactDetails");
+        logger.info("=========================================================");
+    }
+
 }

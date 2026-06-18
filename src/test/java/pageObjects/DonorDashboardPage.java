@@ -17,8 +17,14 @@ public class DonorDashboardPage extends DashboardPage {
     @FindBy(xpath="//div[@class='profile-card']//div[@class='profile-header']//h4']")
     WebElement lblName;
 
+    @FindBy(xpath = "//div[@class='profile-card']//div[@class='profile-header']//p")
+    WebElement lblEmail;
+
     @FindBy(xpath = "//div[@class='profile-card']//div[@class='profile-info']//span[@class='label' and text()='Blood Type']/following-sibling::span")
     WebElement lblBloodGrp;
+
+    @FindBy(xpath = "//div[@class='profile-card']//div[@class='profile-info']//span[@class='label' and text()='Phone']/following-sibling::span")
+    WebElement lblPhoneNo;
 
     //actions
     public void clickEditProfile(){
@@ -26,4 +32,6 @@ public class DonorDashboardPage extends DashboardPage {
     }
     public String getDonorName(){return lblName.getText();}
     public String getDonorBloodGrp(){return lblBloodGrp.getText();}
+    public String getDonorEmail(){return lblEmail.getText();}
+    public String getDonorPhone(){return lblPhoneNo.getText();}
 }

@@ -1219,3 +1219,147 @@ Session ID: a872a50a67b64bc255a952079f945c90
 2026-06-18 10:35:38 INFO  TS007_DonorProfile:173 - =========================================================
 2026-06-18 10:35:38 INFO  TS007_DonorProfile:174 - ENDING TEST CASE: TC0020_updateDonorBloodGroup
 2026-06-18 10:35:38 INFO  TS007_DonorProfile:175 - =========================================================
+2026-06-18 10:55:32 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 10:55:39 INFO  TS007_DonorProfile:18 - =========================================================
+2026-06-18 10:55:39 INFO  TS007_DonorProfile:19 - STARTING TEST CASE: TC0019_updateDonorName
+2026-06-18 10:55:39 INFO  TS007_DonorProfile:20 - =========================================================
+2026-06-18 10:55:39 ERROR TS007_DonorProfile:70 - EXCEPTION OCCURRED : Cannot invoke "org.apache.logging.log4j.Logger.info(String)" because "this.logger" is null
+java.lang.NullPointerException: Cannot invoke "org.apache.logging.log4j.Logger.info(String)" because "this.logger" is null
+	at utilities.UserLoginUtility.Login(UserLoginUtility.java:11)
+	at testCases.TS007_DonorProfile.TC0019_updateDonorName(TS007_DonorProfile.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-06-18 10:55:49 WARN  TS007_DonorProfile:81 - Logout skipped: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='userDropdown']"}
+  (Session info: chrome=148.0.7778.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3254fe98f63714182b6ad2efd874c634, findElement {using=xpath, value=//a[@id='userDropdown']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50579}, goog:processID: 13604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50579/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3254fe98f63714182b6ad2efd874c634
+2026-06-18 10:57:53 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:17 - =========================================================
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:18 - STARTING TEST CASE: TC0019_updateDonorName
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:19 - =========================================================
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:23 - Navigating to Login Page
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:27 - Entering login credentials
+2026-06-18 10:57:58 INFO  TS007_DonorProfile:32 - Clicking Login button
+2026-06-18 10:57:59 INFO  TS007_DonorProfile:35 - Verifying login success (Dashboard page)
+2026-06-18 10:58:02 INFO  TS007_DonorProfile:39 - Navigating to Edit Profile page
+2026-06-18 10:58:04 INFO  TS007_DonorProfile:43 - Verifying Edit Profile page load
+2026-06-18 10:58:05 INFO  TS007_DonorProfile:47 - Checking if Full Name field is editable
+2026-06-18 10:58:05 ERROR TS007_DonorProfile:77 - ASSERTION FAILED : Full Name field is NOT editable expected [true] but found [false]
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:90 - Logged out in finally block
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:104 - =========================================================
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:105 - STARTING TEST CASE: TC0020_updateDonorBloodGroup
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:106 - =========================================================
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:110 - Navigating to Login Page
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:114 - Entering login credentials
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:119 - Clicking Login button
+2026-06-18 10:58:06 INFO  TS007_DonorProfile:122 - Verifying login success (Dashboard page)
+2026-06-18 10:58:10 INFO  TS007_DonorProfile:126 - Navigating to Edit Profile page
+2026-06-18 10:58:11 INFO  TS007_DonorProfile:130 - Verifying Edit Profile page load
+2026-06-18 10:58:12 INFO  TS007_DonorProfile:134 - Checking if Blood Group field is editable
+2026-06-18 10:58:13 INFO  TS007_DonorProfile:140 - Updating Blood Group to: A+
+2026-06-18 10:58:13 INFO  TS007_DonorProfile:144 - Clicking Save Changes
+2026-06-18 10:58:13 INFO  TS007_DonorProfile:147 - Verifying navigation to Dashboard after save
+2026-06-18 10:58:15 INFO  TS007_DonorProfile:151 - Validating donor blood group update
+2026-06-18 10:58:16 INFO  TS007_DonorProfile:155 - Expected: A+
+2026-06-18 10:58:16 INFO  TS007_DonorProfile:156 - Actual: A+
+2026-06-18 10:58:16 INFO  TS007_DonorProfile:160 - TEST CASE PASSED 
+2026-06-18 10:58:27 WARN  TS007_DonorProfile:179 - Logout skipped: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='userDropdown']"}
+  (Session info: chrome=148.0.7778.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0aa6f34561e3220c66606ac4a18979b4, findElement {using=xpath, value=//a[@id='userDropdown']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49363}, goog:processID: 20304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49363/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0aa6f34561e3220c66606ac4a18979b4
+2026-06-18 10:58:27 INFO  TS007_DonorProfile:183 - =========================================================
+2026-06-18 10:58:27 INFO  TS007_DonorProfile:184 - ENDING TEST CASE: TC0020_updateDonorBloodGroup
+2026-06-18 10:58:27 INFO  TS007_DonorProfile:185 - =========================================================
+2026-06-18 14:48:11 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:17 - =========================================================
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:18 - STARTING TEST CASE: TC019_updateDonorName
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:19 - =========================================================
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:23 - Navigating to Login Page
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:27 - Entering login credentials
+2026-06-18 14:48:19 INFO  TS007_DonorProfile:32 - Clicking Login button
+2026-06-18 14:48:20 INFO  TS007_DonorProfile:35 - Verifying login success (Dashboard page)
+2026-06-18 14:48:23 INFO  TS007_DonorProfile:39 - Navigating to Edit Profile page
+2026-06-18 14:48:25 INFO  TS007_DonorProfile:43 - Verifying Edit Profile page load
+2026-06-18 14:48:25 INFO  TS007_DonorProfile:47 - Checking if Full Name field is editable
+2026-06-18 14:48:26 ERROR TS007_DonorProfile:77 - ASSERTION FAILED : Full Name field is NOT editable expected [true] but found [false]
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:90 - Logged out in finally block
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:104 - =========================================================
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:105 - STARTING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:106 - =========================================================
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:110 - Navigating to Login Page
+2026-06-18 14:48:27 INFO  TS007_DonorProfile:114 - Entering login credentials
+2026-06-18 14:48:28 INFO  TS007_DonorProfile:119 - Clicking Login button
+2026-06-18 14:48:28 INFO  TS007_DonorProfile:122 - Verifying login success (Dashboard page)
+2026-06-18 14:48:31 INFO  TS007_DonorProfile:126 - Navigating to Edit Profile page
+2026-06-18 14:48:33 INFO  TS007_DonorProfile:130 - Verifying Edit Profile page load
+2026-06-18 14:48:34 INFO  TS007_DonorProfile:134 - Checking if Blood Group field is editable
+2026-06-18 14:48:35 INFO  TS007_DonorProfile:140 - Updating Blood Group to: A+
+2026-06-18 14:48:35 INFO  TS007_DonorProfile:144 - Clicking Save Changes
+2026-06-18 14:48:35 INFO  TS007_DonorProfile:147 - Verifying navigation to Dashboard after save
+2026-06-18 14:48:37 INFO  TS007_DonorProfile:151 - Validating donor blood group update
+2026-06-18 14:48:39 INFO  TS007_DonorProfile:155 - Expected: A+
+2026-06-18 14:48:39 INFO  TS007_DonorProfile:156 - Actual: A+
+2026-06-18 14:48:39 INFO  TS007_DonorProfile:160 - TEST CASE PASSED 
+2026-06-18 14:48:49 WARN  TS007_DonorProfile:179 - Logout skipped: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='userDropdown']"}
+  (Session info: chrome=148.0.7778.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [baab10aa828a288ed3b86af2db14324c, findElement {value=//a[@id='userDropdown'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55394}, goog:processID: 33660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55394/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: baab10aa828a288ed3b86af2db14324c
+2026-06-18 14:48:49 INFO  TS007_DonorProfile:183 - =========================================================
+2026-06-18 14:48:49 INFO  TS007_DonorProfile:184 - ENDING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 14:48:49 INFO  TS007_DonorProfile:185 - =========================================================
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:191 - =========================================================
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:192 - STARTING TEST CASE: TC021_updateDonorContactDetails
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:193 - =========================================================
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:197 - Navigating to Login Page
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:201 - Entering login credentials
+2026-06-18 14:48:50 INFO  TS007_DonorProfile:206 - Clicking Login button
+2026-06-18 14:48:51 INFO  TS007_DonorProfile:209 - Verifying login success (Dashboard page)
+2026-06-18 14:48:54 INFO  TS007_DonorProfile:213 - Navigating to Edit Profile page
+2026-06-18 14:48:56 INFO  TS007_DonorProfile:217 - Verifying Edit Profile page load
+2026-06-18 14:48:56 INFO  TS007_DonorProfile:221 - Checking if Email field is editable
+2026-06-18 14:48:57 ERROR TS007_DonorProfile:261 - ASSERTION FAILED : Email field is NOT editable expected [true] but found [false]
+2026-06-18 14:48:58 INFO  TS007_DonorProfile:273 - Logged out in finally block

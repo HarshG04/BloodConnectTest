@@ -16,6 +16,9 @@ public class DonorProfilePage extends BasePage{
     @FindBy(xpath = "//input[@name='name']")
     WebElement txtFullName;
 
+    @FindBy(xpath = "//input[@name='email']")
+    WebElement txtEmail;
+
     @FindBy(xpath="//select[@name='bloodGroup']")
     WebElement drpBloodGroup;
 
@@ -23,7 +26,7 @@ public class DonorProfilePage extends BasePage{
     WebElement txtAge;
 
     @FindBy(xpath="//input[@name='phone']")
-    WebElement phoneno;
+    WebElement phoneNo;
 
     @FindBy(xpath="//textarea[@name='address']")
     WebElement txtAddress;
@@ -37,6 +40,16 @@ public class DonorProfilePage extends BasePage{
         txtFullName.sendKeys(name);
     }
 
+    public void enterEmail(String email){
+        txtEmail.clear();
+        txtEmail.sendKeys(email);
+    }
+
+    public void enterPhoneno(String phoneno){
+        phoneNo.clear();
+        phoneNo.sendKeys(phoneno);
+    }
+
     public void selectBloodGrp(String bd){
         Select sel = new Select(drpBloodGroup);
         sel.selectByValue(bd);
@@ -44,6 +57,14 @@ public class DonorProfilePage extends BasePage{
 
     public boolean isFullNameEditable() {
         return txtFullName.isEnabled();
+    }
+
+    public boolean isEmailEditable(){
+        return txtEmail.isEnabled();
+    }
+
+    public boolean isPhoneNoEditable(){
+        return phoneNo.isEnabled();
     }
 
     public boolean isBloodGroupEditable(){
