@@ -1,8 +1,11 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DonorProfilePage extends BasePage{
     public DonorProfilePage(WebDriver driver){
@@ -34,12 +37,23 @@ public class DonorProfilePage extends BasePage{
         txtFullName.sendKeys(name);
     }
 
+    public void selectBloodGrp(String bd){
+        Select sel = new Select(drpBloodGroup);
+        sel.selectByValue(bd);
+    }
+
     public boolean isFullNameEditable() {
         return txtFullName.isEnabled();
     }
 
-    public void clickSaveChanges(){
-        btnSaveChanges.click();
+    public boolean isBloodGroupEditable(){
+        return drpBloodGroup.isEnabled();
+    }
+
+    public void clickSaveChanges() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();arguments[0].click();",btnSaveChanges);
+//        waitForElementToBeClickable(btnSaveChanges).click();
     }
 
 }

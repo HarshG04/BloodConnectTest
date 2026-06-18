@@ -38,12 +38,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS005_HomePageInfo">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS005_HomePageInfo" />
-        </classes>
-    </test>
+<!--    <test name="TS005_HomePageInfo">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS005_HomePageInfo" />-->
+<!--        </classes>-->
+<!--    </test>-->
     
     <test name="TS007_DonorProfile">
         <parameter name="browser" value="chrome"></parameter>

@@ -10,11 +10,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseClass {
     public WebDriver driver;
@@ -32,7 +34,21 @@ public class BaseClass {
         logger = LogManager.getLogger(this.getClass());
 
         switch(browser.toLowerCase()){
-            case "chrome" : driver = new ChromeDriver(); break;
+            case "chrome" :
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--disable-notifications");
+                options.addArguments("--disable-infobars");
+
+
+                HashMap<String, Object> prefs = new HashMap<>();
+                prefs.put("credentials_enable_service", false);
+                prefs.put("profile.password_manager_enabled", false);
+                prefs.put("profile.password_manager_leak_detection", false);
+
+
+                options.setExperimentalOption("prefs", prefs);
+
+                driver = new ChromeDriver(options); break;
             case "edge" : driver = new EdgeDriver(); break;
             case "firefox" : driver = new FirefoxDriver();  break;
             default: throw new IllegalArgumentException("Invalid Browser Name: " + browser);

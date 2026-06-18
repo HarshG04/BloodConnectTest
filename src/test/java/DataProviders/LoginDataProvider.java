@@ -22,11 +22,20 @@ public class LoginDataProvider {
         };
     }
 
+    @DataProvider(name = "DonorBloodGrpUpdate")
+    public Object[][] DonorBloodGrpUdate(){
+        return new Object[][]{
+                {"john@bms.com","password123","A+"}
+        };
+    }
+
     @DataProvider(name = "recipientLoginData")
     public Object[][] recipientLoginData() {
         return new Object[][] {{"johncena2@gmail.com", "password123"}};
 
     }
+
+
 
 //    @DataProvider(name = "recipientRegistrationData")
 //    public Object[][] recipientData() {
