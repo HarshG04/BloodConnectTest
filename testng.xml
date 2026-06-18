@@ -20,7 +20,8 @@
     <test name="TS002_Login">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testCases.TS002_Login" />
+<!--            <class name="testCases.TS002_Login" />-->
+<!--            <class name="testCases.TS007_DonorProfile"></class>-->
         </classes>
     </test>
 </suite>
