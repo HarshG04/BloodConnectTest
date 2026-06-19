@@ -1,551 +1,507 @@
-2026-06-18 14:59:29 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 14:59:38 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 14:59:38 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 14:59:38 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 14:59:38 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 14:59:39 INFO  TS013_RecipientProfileManagement:45 - Capturing current recipient name...
-2026-06-18 14:59:45 INFO  TS013_RecipientProfileManagement:47 - Current Name: John Cena
-2026-06-18 14:59:45 INFO  TS013_RecipientProfileManagement:49 - Clicking Edit Profile button...
-2026-06-18 14:59:45 INFO  TS013_RecipientProfileManagement:56 - Updating recipient name to: GILHC
-2026-06-18 14:59:47 ERROR TS013_RecipientProfileManagement:75 - FAILURE: Exception encountered during test execution!
-2026-06-18 14:59:47 ERROR TS013_RecipientProfileManagement:76 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1a231639a72dc0debb4386d8ba112bd8, sendKeysToElement {id=f.9DB7153CB78A8327C206444951FA66AF.d.3D1EC16C1154B50E09E494CFD83427C0.e.77, value=[Ljava.lang.CharSequence;@5cf87cfd}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51975}, goog:processID: 15156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51975/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1a231639a72dc0debb4386d8ba112bd8)] -> xpath: //input[@name='name']]
-Session ID: 1a231639a72dc0debb4386d8ba112bd8
-2026-06-18 14:59:57 WARN  TS013_RecipientProfileManagement:85 - Unable to Logout
-2026-06-18 15:32:34 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 15:32:41 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:32:41 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:32:41 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:32:41 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:32:41 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 15:32:46 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 15:32:46 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 15:32:47 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: JfNUf
-2026-06-18 15:32:48 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:32:48 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3b4a3194e0ad7977f4ec7d5e3351d625, sendKeysToElement {value=[Ljava.lang.CharSequence;@267517e4, id=f.D8FC3244B02F006125C89457A805C6DB.d.2F8878A3AEE9FA22E08585F8F55ADAEC.e.60}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50392}, goog:processID: 13492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50392/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3b4a3194e0ad7977f4ec7d5e3351d625)] -> xpath: //input[@name='name']]
-Session ID: 3b4a3194e0ad7977f4ec7d5e3351d625
-2026-06-18 15:32:58 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 15:32:59 INFO  TS013_RecipientProfileManagement:95 - =========================================================
-2026-06-18 15:32:59 INFO  TS013_RecipientProfileManagement:96 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:32:59 INFO  TS013_RecipientProfileManagement:97 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:32:59 INFO  TS013_RecipientProfileManagement:98 - =========================================================
-2026-06-18 15:33:09 ERROR TS013_RecipientProfileManagement:137 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:33:09 ERROR TS013_RecipientProfileManagement:138 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3b4a3194e0ad7977f4ec7d5e3351d625, findElement {using=xpath, value=//div[@id='navbarNav']//a[contains(text(),'Login')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50392}, goog:processID: 13492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50392/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b4a3194e0ad7977f4ec7d5e3351d625
-2026-06-18 15:37:19 INFO  Utils:112 - [TestNG] Running:
+2026-06-19 09:05:23 INFO  Utils:112 - [TestNG] Running:
   C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
 
-2026-06-18 15:37:33 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 15:37:39 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:37:39 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:37:39 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:37:39 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:37:39 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 15:37:44 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 15:37:44 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 15:37:44 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: zhAwE
-2026-06-18 15:37:47 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:37:47 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e7378697554c603516352b4b8300af9d, sendKeysToElement {value=[Ljava.lang.CharSequence;@5cf87cfd, id=f.228B4F96B7328A8FE1B66BAD2402F45B.d.4A4D8E49AE690B19C9F1A4482C1121B6.e.57}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55406}, goog:processID: 13712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55406/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e7378697554c603516352b4b8300af9d)] -> xpath: //input[@name='name']]
-Session ID: e7378697554c603516352b4b8300af9d
-2026-06-18 15:37:57 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 15:37:57 INFO  TS013_RecipientProfileManagement:95 - =========================================================
-2026-06-18 15:37:57 INFO  TS013_RecipientProfileManagement:96 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:37:57 INFO  TS013_RecipientProfileManagement:97 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:37:57 INFO  TS013_RecipientProfileManagement:98 - =========================================================
-2026-06-18 15:38:07 ERROR TS013_RecipientProfileManagement:137 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:38:07 ERROR TS013_RecipientProfileManagement:138 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e7378697554c603516352b4b8300af9d, findElement {value=//div[@id='navbarNav']//a[contains(text(),'Login')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55406}, goog:processID: 13712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55406/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e7378697554c603516352b4b8300af9d
-2026-06-18 15:42:59 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 15:43:04 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:43:04 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:43:04 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:43:04 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:43:04 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:43:04 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable: element has zero size
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [aad5a412376de37da7d891e9ed5d9c36, clickElement {id=f.AC08D5C0663134F40CEB4B5DBFF58611.d.8C290F984D32769C77564EABA6D3407F.e.21}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51696}, goog:processID: 14516, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51696/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (aad5a412376de37da7d891e9ed5d9c36)] -> xpath: //div[@id='navbarNav']//a[contains(text(),'Login')]]
-Session ID: aad5a412376de37da7d891e9ed5d9c36
-2026-06-18 15:43:07 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 15:43:07 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:43:07 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:43:07 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 15:43:08 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 15:43:14 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: O+
-2026-06-18 15:43:14 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 15:43:14 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: A+
-2026-06-18 15:43:14 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:43:14 ERROR TS013_RecipientProfileManagement:139 - Exception Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [aad5a412376de37da7d891e9ed5d9c36, getElementValueOfCssProperty {propertyName=visibility, id=f.AC08D5C0663134F40CEB4B5DBFF58611.d.587F59722B2A2B0E85845C2F33956CBF.e.77}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51696}, goog:processID: 14516, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51696/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (aad5a412376de37da7d891e9ed5d9c36)] -> xpath: //select]
-Session ID: aad5a412376de37da7d891e9ed5d9c36
-2026-06-18 15:43:24 WARN  TS013_RecipientProfileManagement:148 - Unable to Logout
-2026-06-18 15:49:33 INFO  Utils:112 - [TestNG] Running:
+2026-06-19 09:05:42 INFO  Utils:112 - [TestNG] Running:
   C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
 
-2026-06-18 15:49:43 INFO  Utils:112 - [TestNG] Running:
+2026-06-19 09:05:56 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-06-19 09:07:05 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-06-19 09:08:25 INFO  Utils:112 - [TestNG] Running:
   C:\Practice\BCT\BloodConnectTest\testng.xml
 
-2026-06-18 15:49:49 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:49:49 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:49:49 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:49:49 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:49:50 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 15:49:55 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 15:49:55 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 15:49:55 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: hQhSk
-2026-06-18 15:49:56 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:49:56 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+2026-06-19 09:08:34 INFO  TS013_RecipientProfileManagement:32 - =========================================================
+2026-06-19 09:08:34 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
+2026-06-19 09:08:34 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 09:08:34 INFO  TS013_RecipientProfileManagement:35 - =========================================================
+2026-06-19 09:08:36 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
+2026-06-19 09:08:46 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
+2026-06-19 09:08:46 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
+2026-06-19 09:08:46 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: clKkc
+2026-06-19 09:08:48 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
+2026-06-19 09:08:48 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
   (Session info: chrome=148.0.7778.97)
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [947c5b66dbbf565051518b61f4e3a88b, sendKeysToElement {value=[Ljava.lang.CharSequence;@6f8e0cee, id=f.9977B8ED832809A75265038F50D51B52.d.67A4AF6C3DF8399993F566DCCA88192F.e.51}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56820}, goog:processID: 22560, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56820/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (947c5b66dbbf565051518b61f4e3a88b)] -> xpath: //input[@name='name']]
-Session ID: 947c5b66dbbf565051518b61f4e3a88b
-2026-06-18 15:50:06 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 15:50:07 INFO  TS013_RecipientProfileManagement:95 - =========================================================
-2026-06-18 15:50:07 INFO  TS013_RecipientProfileManagement:96 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:50:07 INFO  TS013_RecipientProfileManagement:97 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:50:07 INFO  TS013_RecipientProfileManagement:98 - =========================================================
-2026-06-18 15:50:17 ERROR TS013_RecipientProfileManagement:137 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:50:17 ERROR TS013_RecipientProfileManagement:138 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
+Command: [e47cc6221371374ca848858a13fe1d0f, sendKeysToElement {value=[Ljava.lang.CharSequence;@614aeccc, id=f.C731186D92072E519512B54BC2E0793A.d.B6A27DAEDFE52A781B066B449EF9C12F.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54898}, goog:processID: 5888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54898/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e47cc6221371374ca848858a13fe1d0f)] -> xpath: //input[@name='name']]
+Session ID: e47cc6221371374ca848858a13fe1d0f
+2026-06-19 09:08:49 INFO  TS013_RecipientProfileManagement:96 - =========================================================
+2026-06-19 09:08:49 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
+2026-06-19 09:08:49 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 09:08:49 INFO  TS013_RecipientProfileManagement:99 - =========================================================
+2026-06-19 09:08:49 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
+2026-06-19 09:08:54 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: B+
+2026-06-19 09:08:54 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
+2026-06-19 09:08:55 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: A-
+2026-06-19 09:08:59 INFO  TS013_RecipientProfileManagement:122 - Clicking Save Changes button...
+2026-06-19 09:09:00 INFO  TS013_RecipientProfileManagement:125 - Capturing updated Blood Type from profile...
+2026-06-19 09:09:03 INFO  TS013_RecipientProfileManagement:128 - Verifying recipient Bloot Type was updated successfully...
+2026-06-19 09:09:03 INFO  TS013_RecipientProfileManagement:131 - SUCCESS: Recipient Blood Type updated successfully.
+2026-06-19 09:09:04 INFO  TS013_RecipientProfileManagement:147 - Logout Success
+2026-06-19 09:09:04 INFO  TS013_RecipientProfileManagement:160 - =========================================================
+2026-06-19 09:09:04 INFO  TS013_RecipientProfileManagement:161 - STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails
+2026-06-19 09:09:04 INFO  TS013_RecipientProfileManagement:162 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 09:09:04 INFO  TS013_RecipientProfileManagement:163 - =========================================================
+2026-06-19 09:09:05 INFO  TS013_RecipientProfileManagement:172 - Capturing recipient's current MailId...
+2026-06-19 09:09:09 INFO  TS013_RecipientProfileManagement:174 - Current Email: johncena2@gmail.com
+2026-06-19 09:09:09 INFO  TS013_RecipientProfileManagement:176 - Capturing recipient's current Phone Number...
+2026-06-19 09:09:10 INFO  TS013_RecipientProfileManagement:178 - Current Phone Number: 123456789
+2026-06-19 09:09:10 INFO  TS013_RecipientProfileManagement:180 - Clicking Edit Profile button...
+2026-06-19 09:09:10 INFO  TS013_RecipientProfileManagement:187 - Updating recipient's Email to: xwxub@gmail.com
+2026-06-19 09:09:11 ERROR TS013_RecipientProfileManagement:220 - FAILURE: Exception encountered during test execution!
+2026-06-19 09:09:11 ERROR TS013_RecipientProfileManagement:221 - Exception Message: element not interactable
+  (Session info: chrome=148.0.7778.97)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e47cc6221371374ca848858a13fe1d0f, sendKeysToElement {value=[Ljava.lang.CharSequence;@1cb7936c, id=f.C731186D92072E519512B54BC2E0793A.d.E559352B22A8E1F9B57CB2519E611369.e.278}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54898}, goog:processID: 5888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54898/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e47cc6221371374ca848858a13fe1d0f)] -> xpath: //input[@name='email']]
+Session ID: e47cc6221371374ca848858a13fe1d0f
+2026-06-19 09:09:12 INFO  TS013_RecipientProfileManagement:229 - Logout Success
+2026-06-19 09:10:19 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-06-19 09:10:49 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 09:10:53 INFO  TS013_RecipientProfileManagement:160 - =========================================================
+2026-06-19 09:10:53 INFO  TS013_RecipientProfileManagement:161 - STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails
+2026-06-19 09:10:53 INFO  TS013_RecipientProfileManagement:162 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 09:10:53 INFO  TS013_RecipientProfileManagement:163 - =========================================================
+2026-06-19 09:10:54 INFO  TS013_RecipientProfileManagement:172 - Capturing recipient's current MailId...
+2026-06-19 09:10:59 INFO  TS013_RecipientProfileManagement:174 - Current Email: johncena2@gmail.com
+2026-06-19 09:10:59 INFO  TS013_RecipientProfileManagement:176 - Capturing recipient's current Phone Number...
+2026-06-19 09:10:59 INFO  TS013_RecipientProfileManagement:178 - Current Phone Number: 123456789
+2026-06-19 09:10:59 INFO  TS013_RecipientProfileManagement:180 - Clicking Edit Profile button...
+2026-06-19 09:10:59 INFO  TS013_RecipientProfileManagement:187 - Updating recipient's Phone Number to: 9360902786
+2026-06-19 09:11:01 ERROR TS013_RecipientProfileManagement:221 - FAILURE: Exception encountered during test execution!
+2026-06-19 09:11:01 ERROR TS013_RecipientProfileManagement:222 - Exception Message: element not interactable
+  (Session info: chrome=148.0.7778.97)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7303ee34aa8e374ae180ff3ca98615e, sendKeysToElement {value=[Ljava.lang.CharSequence;@d176a31, id=f.D74E7E28874B8C501023835411B0325F.d.1980F8D5484C8A4D84CC40201F4D3973.e.58}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52444}, goog:processID: 25008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52444/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d7303ee34aa8e374ae180ff3ca98615e)] -> xpath: //input[@name='email']]
+Session ID: d7303ee34aa8e374ae180ff3ca98615e
+2026-06-19 09:11:01 INFO  TS013_RecipientProfileManagement:230 - Logout Success
+2026-06-19 11:19:48 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:257 - Target email to seed: 'lvckx@gmail.com'
+2026-06-19 11:19:56 INFO  TS013_RecipientProfileManagement:259 - Populating form fields for the initial baseline user...
+2026-06-19 11:19:59 INFO  TS013_RecipientProfileManagement:262 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:19:59 INFO  TS013_RecipientProfileManagement:265 - Submitting the initial registration...
+2026-06-19 11:20:02 INFO  TS013_RecipientProfileManagement:269 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:20:02 INFO  TS013_RecipientProfileManagement:271 - Verifying baseline user registered successfully...
+2026-06-19 11:20:02 INFO  TS013_RecipientProfileManagement:275 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:20:02 INFO  TS013_RecipientProfileManagement:276 - Entering login credentials
+2026-06-19 11:20:13 ERROR TS013_RecipientProfileManagement:314 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:20:13 ERROR TS013_RecipientProfileManagement:315 - Exception Message: Expected condition failed: waiting for element to be clickable, but the element was not enabled.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57184}, goog:processID: 29552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57184/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cfb250e3baf621748c89c15c8c4f43bb
+2026-06-19 11:27:48 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:27:53 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:27:54 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:27:54 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'fzrer@gmail.com'
+2026-06-19 11:27:54 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:27:55 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:27:55 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:27:59 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:27:59 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:27:59 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:27:59 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:28:09 ERROR TS013_RecipientProfileManagement:319 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:28:09 ERROR TS013_RecipientProfileManagement:320 - Exception Message: Expected condition failed: waiting for element to be clickable, but the element was not enabled.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52826}, goog:processID: 9924, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52826/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56928503a8871ed6d7e5696a8331dfac
+2026-06-19 11:31:28 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:31:33 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:31:34 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:31:34 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'inwdu@gmail.com'
+2026-06-19 11:31:34 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:31:35 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:31:35 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:31:39 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:31:39 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:31:39 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:31:39 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:31:39 ERROR TS013_RecipientProfileManagement:319 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:31:39 ERROR TS013_RecipientProfileManagement:320 - Exception Message: element not interactable
+  (Session info: chrome=148.0.7778.97)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f030840f07a39a7bf8e75e1e0da81b9, sendKeysToElement {value=[Ljava.lang.CharSequence;@4f82663e, id=f.451220C2249D2623EC42FF392FC8D38C.d.EB02BDCE71D52D56D769196740EFCE41.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57828}, goog:processID: 31228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57828/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1f030840f07a39a7bf8e75e1e0da81b9)] -> xpath: //input[@type='email']]
+Session ID: 1f030840f07a39a7bf8e75e1e0da81b9
+2026-06-19 11:32:03 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494594\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-06-19 11:32:11 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:32:16 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:32:17 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:32:17 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'fuhnj@gmail.com'
+2026-06-19 11:32:17 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:32:18 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:32:18 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:32:22 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:32:22 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:32:22 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:32:22 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:32:32 ERROR TS013_RecipientProfileManagement:319 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:32:32 ERROR TS013_RecipientProfileManagement:320 - Exception Message: Expected condition failed: waiting for element to be clickable, but the element was not enabled.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50843}, goog:processID: 31720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50843/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 899ea7cc6a5e2de60c0c2fd0a1d7c700
+2026-06-19 11:34:22 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'pslsk@gmail.com'
+2026-06-19 11:34:27 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:34:29 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:34:29 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:34:32 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:34:32 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:34:32 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:34:32 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:34:32 INFO  TS013_RecipientProfileManagement:289 - Capturing recipient's current MailId...
+2026-06-19 11:34:42 ERROR TS013_RecipientProfileManagement:322 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:34:42 ERROR TS013_RecipientProfileManagement:323 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='profile-avatar']/following-sibling::p[1]"}
   (Session info: chrome=148.0.7778.97)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [947c5b66dbbf565051518b61f4e3a88b, findElement {value=//div[@id='navbarNav']//a[contains(text(),'Login')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56820}, goog:processID: 22560, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56820/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 947c5b66dbbf565051518b61f4e3a88b
-2026-06-18 15:52:10 INFO  Utils:112 - [TestNG] Running:
+Command: [5c891c0a7ab51a28d53a17ed7babe9c5, findElement {using=xpath, value=//div[@class='profile-avatar']/following-sibling::p[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55181}, goog:processID: 12900, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55181/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c891c0a7ab51a28d53a17ed7babe9c5
+2026-06-19 11:34:52 WARN  TS013_RecipientProfileManagement:334 - Unable to Logout
+2026-06-19 11:35:51 INFO  Utils:112 - [TestNG] Running:
   C:\Practice\BCT\BloodConnectTest\testng.xml
 
-2026-06-18 15:52:15 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:52:15 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:52:15 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:52:15 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:52:15 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 15:52:20 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 15:52:20 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 15:52:20 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: QjTmo
-2026-06-18 15:52:22 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:52:22 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f44b10e602030ba2b1db004453f862ab, sendKeysToElement {id=f.3F48201732DA73E32CE7134F1C9149EC.d.2D2B5FBCFA525B37204836AF0D0C7317.e.56, value=[Ljava.lang.CharSequence;@460b6d54}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64091}, goog:processID: 18740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64091/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f44b10e602030ba2b1db004453f862ab)] -> xpath: //input[@name='name']]
-Session ID: f44b10e602030ba2b1db004453f862ab
-2026-06-18 15:52:32 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 15:52:37 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 15:52:37 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:52:37 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:52:37 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 15:52:47 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:52:47 ERROR TS013_RecipientProfileManagement:139 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:35:56 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:35:57 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:35:57 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'lsnue@gmail.com'
+2026-06-19 11:35:57 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:35:58 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:35:58 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:36:02 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:36:02 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:36:02 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:36:02 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:36:05 INFO  TS013_RecipientProfileManagement:289 - Capturing recipient's current MailId...
+2026-06-19 11:36:15 ERROR TS013_RecipientProfileManagement:322 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:36:15 ERROR TS013_RecipientProfileManagement:323 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='profile-avatar']/following-sibling::p[1]"}
   (Session info: chrome=148.0.7778.97)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f44b10e602030ba2b1db004453f862ab, findElement {using=xpath, value=//div[@id='navbarNav']//a[contains(text(),'Login')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64091}, goog:processID: 18740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64091/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f44b10e602030ba2b1db004453f862ab
-2026-06-18 15:58:01 INFO  Utils:112 - [TestNG] Running:
+Command: [d080d1a598108d740bf65f9bc2e4f7c3, findElement {value=//div[@class='profile-avatar']/following-sibling::p[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51899}, goog:processID: 21240, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51899/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d080d1a598108d740bf65f9bc2e4f7c3
+2026-06-19 11:36:25 WARN  TS013_RecipientProfileManagement:334 - Unable to Logout
+2026-06-19 11:38:49 INFO  Utils:112 - [TestNG] Running:
   C:\Practice\BCT\BloodConnectTest\testng.xml
 
-2026-06-18 15:58:05 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 15:58:05 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 15:58:05 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:58:05 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 15:58:06 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 15:58:11 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 15:58:11 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 15:58:11 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: eXrOy
-2026-06-18 15:58:13 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:58:13 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'wzzcd@gmail.com'
+2026-06-19 11:38:54 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:38:56 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:38:56 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:38:59 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:38:59 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:38:59 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:38:59 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:39:09 ERROR TS013_RecipientProfileManagement:322 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:39:09 ERROR TS013_RecipientProfileManagement:323 - Exception Message: Expected condition failed: waiting for element to be clickable, but the element was not enabled.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49384}, goog:processID: 9740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49384/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 35326e5910b0d43551469f49cf3e6336
+2026-06-19 11:41:08 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:41:13 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:41:14 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:41:14 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'nqdbm@gmail.com'
+2026-06-19 11:41:14 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 11:41:15 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:41:15 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 11:41:20 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:41:20 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 11:41:20 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:41:20 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 11:41:22 INFO  TS013_RecipientProfileManagement:290 - Capturing recipient's current MailId...
+2026-06-19 11:41:27 INFO  TS013_RecipientProfileManagement:292 - Current Email: johncena2@gmail.com
+2026-06-19 11:41:27 INFO  TS013_RecipientProfileManagement:294 - Clicking Edit Profile button...
+2026-06-19 11:41:27 INFO  TS013_RecipientProfileManagement:301 - Updating recipient's Email to existing User's Email: nqdbm@gmail.com
+2026-06-19 11:41:29 ERROR TS013_RecipientProfileManagement:323 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:41:29 ERROR TS013_RecipientProfileManagement:324 - Exception Message: element not interactable
   (Session info: chrome=148.0.7778.97)
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5ccfe781b5bf2ae1adadecd672be449, sendKeysToElement {id=f.EA6D19311F70FFDFC2AE2714CD045329.d.FD2A6DF5CF15DECA1CEF10EE6B7C0DB2.e.56, value=[Ljava.lang.CharSequence;@61a91912}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, goog:processID: 17152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a5ccfe781b5bf2ae1adadecd672be449)] -> xpath: //input[@name='name']]
-Session ID: a5ccfe781b5bf2ae1adadecd672be449
-2026-06-18 15:58:23 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 15:58:28 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 15:58:28 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 15:58:28 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 15:58:28 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 15:58:28 INFO  TS013_RecipientProfileManagement:103 - Current URL: https://bloodconnectc.netlify.app/
-2026-06-18 15:58:38 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 15:58:38 ERROR TS013_RecipientProfileManagement:139 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
+Command: [e671f98de605fc5d90c25c17773eea77, sendKeysToElement {value=[Ljava.lang.CharSequence;@6c03fb16, id=f.410337C7F9C790A6854D7F555C06D4E3.d.21A8C1D8F2295590629911316F273D0F.e.191}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61297}, goog:processID: 23804, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61297/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e671f98de605fc5d90c25c17773eea77)] -> xpath: //input[@name='email']]
+Session ID: e671f98de605fc5d90c25c17773eea77
+2026-06-19 11:41:29 INFO  TS013_RecipientProfileManagement:332 - Logout Success
+2026-06-19 11:54:29 INFO  Utils:112 - [TestNG] Running:
+  C:\Practice\BCT\BloodConnectTest\testng.xml
+
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:346 - =========================================================
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:347 - STARTING TEST CASE: TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:348 - =========================================================
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:353 - Navigating to Registration page from Home page...
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:357 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 11:54:34 INFO  TS013_RecipientProfileManagement:358 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 11:54:35 INFO  TS013_RecipientProfileManagement:361 - Selecting the 'Recipient' checkbox option...
+2026-06-19 11:54:35 INFO  TS013_RecipientProfileManagement:364 - Target email to seed: 'qudrb@gmail.com'
+2026-06-19 11:54:35 INFO  TS013_RecipientProfileManagement:366 - Populating form fields for the initial baseline user...
+2026-06-19 11:54:37 INFO  TS013_RecipientProfileManagement:369 - Clicking on the Agree Terms checkbox...
+2026-06-19 11:54:37 INFO  TS013_RecipientProfileManagement:372 - Submitting the initial registration...
+2026-06-19 11:54:41 INFO  TS013_RecipientProfileManagement:376 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 11:54:41 INFO  TS013_RecipientProfileManagement:378 - Verifying baseline user registered successfully...
+2026-06-19 11:54:41 INFO  TS013_RecipientProfileManagement:382 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 11:54:41 INFO  TS013_RecipientProfileManagement:383 - Entering login credentials
+2026-06-19 11:54:43 INFO  TS013_RecipientProfileManagement:392 - Capturing recipient's current Phone Number...
+2026-06-19 11:54:48 INFO  TS013_RecipientProfileManagement:394 - Current Phone Number: 123456789
+2026-06-19 11:54:48 INFO  TS013_RecipientProfileManagement:396 - Clicking Edit Profile button...
+2026-06-19 11:54:48 INFO  TS013_RecipientProfileManagement:403 - Updating recipient's Phone Number to existing User's Phone Number: 9867068503
+2026-06-19 11:54:58 ERROR TS013_RecipientProfileManagement:425 - FAILURE: Exception encountered during test execution!
+2026-06-19 11:54:58 ERROR TS013_RecipientProfileManagement:426 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='phone']"}
   (Session info: chrome=148.0.7778.97)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5ccfe781b5bf2ae1adadecd672be449, findElement {using=xpath, value=//div[@id='navbarNav']//a[contains(text(),'Login')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, goog:processID: 17152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a5ccfe781b5bf2ae1adadecd672be449
-2026-06-18 16:04:06 INFO  Utils:112 - [TestNG] Running:
+Command: [1fc50d92a81e09401a6e1f666a314288, findElement {using=xpath, value=//input[@name='phone']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58238}, goog:processID: 21124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58238/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fc50d92a81e09401a6e1f666a314288
+2026-06-19 11:54:58 INFO  TS013_RecipientProfileManagement:434 - Logout Success
+2026-06-19 12:20:36 INFO  Utils:112 - [TestNG] Running:
   C:\Practice\BCT\BloodConnectTest\testng.xml
 
-2026-06-18 16:04:13 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:04:13 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:04:13 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:04:13 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:04:14 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:04:19 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:04:19 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:04:19 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: BDSav
-2026-06-18 16:04:20 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:04:20 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f4879fbb2091447596f3f067d23b8e3a, sendKeysToElement {value=[Ljava.lang.CharSequence;@4b2a30d, id=f.CC1225537700CC32D3992EF5E7019640.d.31F72BE204A31F45A5B106AB1D289ACE.e.57}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49385}, goog:processID: 18636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49385/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f4879fbb2091447596f3f067d23b8e3a)] -> xpath: //input[@name='name']]
-Session ID: f4879fbb2091447596f3f067d23b8e3a
-2026-06-18 16:04:30 WARN  TS013_RecipientProfileManagement:84 - Unable to Logout
-2026-06-18 16:04:36 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:04:36 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:04:36 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:04:36 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:04:46 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:04:46 ERROR TS013_RecipientProfileManagement:139 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='navbarNav']//a[contains(text(),'Login')]"}
+2026-06-19 12:20:43 INFO  TS013_RecipientProfileManagement:447 - =========================================================
+2026-06-19 12:20:43 INFO  TS013_RecipientProfileManagement:448 - STARTING TEST CASE: TC043_VerifyRecipientCanUpdateLocation
+2026-06-19 12:20:43 INFO  TS013_RecipientProfileManagement:449 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 12:20:43 INFO  TS013_RecipientProfileManagement:450 - =========================================================
+2026-06-19 12:20:44 INFO  TS013_RecipientProfileManagement:459 - Capturing current recipient Location...
+2026-06-19 12:20:48 INFO  TS013_RecipientProfileManagement:461 - Current Location: Coimbatore
+2026-06-19 12:20:48 INFO  TS013_RecipientProfileManagement:463 - Clicking Edit Profile button...
+2026-06-19 12:20:48 INFO  TS013_RecipientProfileManagement:470 - Updating recipient Location to: fFrDp
+2026-06-19 12:20:59 ERROR TS013_RecipientProfileManagement:489 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:20:59 ERROR TS013_RecipientProfileManagement:490 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='address']"}
   (Session info: chrome=148.0.7778.97)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f4879fbb2091447596f3f067d23b8e3a, findElement {value=//div[@id='navbarNav']//a[contains(text(),'Login')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49385}, goog:processID: 18636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49385/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f4879fbb2091447596f3f067d23b8e3a
-2026-06-18 16:21:23 INFO  Utils:112 - [TestNG] Running:
+Command: [b8d17732d6d7e6f6bdab94eb07212f17, findElement {value=//textarea[@name='address'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64001}, goog:processID: 23432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64001/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8d17732d6d7e6f6bdab94eb07212f17
+2026-06-19 12:23:02 INFO  Utils:112 - [TestNG] Running:
   C:\Practice\BCT\BloodConnectTest\testng.xml
 
-2026-06-18 16:21:28 INFO  TS002_Login:16 - =========================================================
-2026-06-18 16:21:28 INFO  TS002_Login:17 - STARTING DATA ROW EXECUTION: Login Verification
-2026-06-18 16:21:28 INFO  TS002_Login:18 - Target Account: [ testcase@gmail.com: password123 ] | Expected Profile: Valid
-2026-06-18 16:21:28 INFO  TS002_Login:19 - =========================================================
-2026-06-18 16:21:28 INFO  TS002_Login:23 - Navigating to Login page from Home Page...
-2026-06-18 16:21:28 INFO  TS002_Login:27 - Entering email and password ...
-2026-06-18 16:21:29 INFO  TS002_Login:31 - Submitting login form...
-2026-06-18 16:21:29 INFO  TS002_Login:34 - Waiting to verify if target dashboard URL loads...
-2026-06-18 16:21:33 INFO  TS002_Login:40 - SUCCESS: Logged in successfully with Valid credentials as expected.
-2026-06-18 16:21:33 INFO  TS002_Login:43 - Logging out...
-2026-06-18 16:21:33 INFO  TS002_Login:71 - SUCCESS: Data iteration row processed successfully.
-2026-06-18 16:21:33 INFO  TS002_Login:16 - =========================================================
-2026-06-18 16:21:33 INFO  TS002_Login:17 - STARTING DATA ROW EXECUTION: Login Verification
-2026-06-18 16:21:33 INFO  TS002_Login:18 - Target Account: [ invalid@gmail.com: password123 ] | Expected Profile: Invalid
-2026-06-18 16:21:33 INFO  TS002_Login:19 - =========================================================
-2026-06-18 16:21:33 INFO  TS002_Login:23 - Navigating to Login page from Home Page...
-2026-06-18 16:21:33 INFO  TS002_Login:27 - Entering email and password ...
-2026-06-18 16:21:34 INFO  TS002_Login:31 - Submitting login form...
-2026-06-18 16:21:34 INFO  TS002_Login:34 - Waiting to verify if target dashboard URL loads...
-2026-06-18 16:21:44 INFO  TS002_Login:53 - Not able to logIn with Invalid Credentials.
-2026-06-18 16:21:44 INFO  TS002_Login:55 - Getting Alert Message...
-2026-06-18 16:21:44 INFO  TS002_Login:57 - Alert Message: 'Bad credentials'
-2026-06-18 16:21:44 INFO  TS002_Login:71 - SUCCESS: Data iteration row processed successfully.
-2026-06-18 16:21:45 INFO  TS002_Login:16 - =========================================================
-2026-06-18 16:21:45 INFO  TS002_Login:17 - STARTING DATA ROW EXECUTION: Login Verification
-2026-06-18 16:21:45 INFO  TS002_Login:18 - Target Account: [ testcase@gmail.com: invalidpass ] | Expected Profile: Invalid
-2026-06-18 16:21:45 INFO  TS002_Login:19 - =========================================================
-2026-06-18 16:21:45 INFO  TS002_Login:23 - Navigating to Login page from Home Page...
-2026-06-18 16:21:45 INFO  TS002_Login:27 - Entering email and password ...
-2026-06-18 16:21:45 INFO  TS002_Login:31 - Submitting login form...
-2026-06-18 16:21:45 INFO  TS002_Login:34 - Waiting to verify if target dashboard URL loads...
-2026-06-18 16:21:56 INFO  TS002_Login:53 - Not able to logIn with Invalid Credentials.
-2026-06-18 16:21:56 INFO  TS002_Login:55 - Getting Alert Message...
-2026-06-18 16:21:56 INFO  TS002_Login:57 - Alert Message: 'Bad credentials'
-2026-06-18 16:21:56 INFO  TS002_Login:71 - SUCCESS: Data iteration row processed successfully.
-2026-06-18 16:24:52 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:24:56 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:24:56 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:24:56 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:24:56 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:24:57 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:25:02 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:25:02 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:25:02 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: SkAOi
-2026-06-18 16:25:03 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:25:03 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+2026-06-19 12:23:08 INFO  TS013_RecipientProfileManagement:32 - =========================================================
+2026-06-19 12:23:08 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
+2026-06-19 12:23:08 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 12:23:08 INFO  TS013_RecipientProfileManagement:35 - =========================================================
+2026-06-19 12:23:09 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
+2026-06-19 12:23:15 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
+2026-06-19 12:23:15 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
+2026-06-19 12:23:15 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: YPYsv
+2026-06-19 12:23:16 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:23:16 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
   (Session info: chrome=148.0.7778.97)
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [605054a6f4b7b2f1574d27d9ef95a94b, sendKeysToElement {id=f.BFD63D68DC266B414F5BCC07053A007A.d.9DD0408555725A8D54A22AD7F42F1E81.e.57, value=[Ljava.lang.CharSequence;@267517e4}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50162}, goog:processID: 13068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50162/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (605054a6f4b7b2f1574d27d9ef95a94b)] -> xpath: //input[@name='name']]
-Session ID: 605054a6f4b7b2f1574d27d9ef95a94b
-2026-06-18 16:25:09 INFO  TS013_RecipientProfileManagement:97 - =========================================================
-2026-06-18 16:25:09 INFO  TS013_RecipientProfileManagement:98 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:25:09 INFO  TS013_RecipientProfileManagement:99 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:25:09 INFO  TS013_RecipientProfileManagement:100 - =========================================================
-2026-06-18 16:25:10 INFO  TS013_RecipientProfileManagement:109 - Capturing recipient's current BloodType...
-2026-06-18 16:25:15 INFO  TS013_RecipientProfileManagement:111 - Current Blood Type: O+
-2026-06-18 16:25:15 INFO  TS013_RecipientProfileManagement:113 - Clicking Edit Profile button...
-2026-06-18 16:25:15 INFO  TS013_RecipientProfileManagement:120 - Updating recipient's Blood Type to: A+
-2026-06-18 16:25:15 ERROR TS013_RecipientProfileManagement:139 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:25:15 ERROR TS013_RecipientProfileManagement:140 - Exception Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [605054a6f4b7b2f1574d27d9ef95a94b, isElementEnabled {id=f.BFD63D68DC266B414F5BCC07053A007A.d.FF2C96DE676426941F7C43BD50AB72AE.e.228}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50162}, goog:processID: 13068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50162/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (605054a6f4b7b2f1574d27d9ef95a94b)] -> xpath: //select]
-Session ID: 605054a6f4b7b2f1574d27d9ef95a94b
-2026-06-18 16:25:25 WARN  TS013_RecipientProfileManagement:150 - Unable to Logout
-2026-06-18 16:27:15 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:27:20 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:27:20 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:27:20 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:27:20 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:27:20 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:27:25 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:27:25 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:27:25 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: JkmJt
-2026-06-18 16:27:27 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:27:27 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+Command: [91d4c2a1e5f6853816d3168be59979ee, sendKeysToElement {value=[Ljava.lang.CharSequence;@5c92166b, id=f.3D8FF901781F0C67781688E1E867D207.d.4AAD5CE6575DB5E4BFF2059DDEFD2BD9.e.76}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53953}, goog:processID: 19532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53953/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91d4c2a1e5f6853816d3168be59979ee)] -> xpath: //input[@name='name']]
+Session ID: 91d4c2a1e5f6853816d3168be59979ee
+2026-06-19 12:23:17 INFO  TS013_RecipientProfileManagement:96 - =========================================================
+2026-06-19 12:23:17 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
+2026-06-19 12:23:17 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 12:23:17 INFO  TS013_RecipientProfileManagement:99 - =========================================================
+2026-06-19 12:23:18 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
+2026-06-19 12:23:24 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: A-
+2026-06-19 12:23:24 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
+2026-06-19 12:23:24 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: O-
+2026-06-19 12:23:28 INFO  TS013_RecipientProfileManagement:122 - Clicking Save Changes button...
+2026-06-19 12:23:28 INFO  TS013_RecipientProfileManagement:125 - Capturing updated Blood Type from profile...
+2026-06-19 12:23:32 INFO  TS013_RecipientProfileManagement:128 - Verifying recipient Bloot Type was updated successfully...
+2026-06-19 12:23:32 INFO  TS013_RecipientProfileManagement:131 - SUCCESS: Recipient Blood Type updated successfully.
+2026-06-19 12:23:32 INFO  TS013_RecipientProfileManagement:147 - Logout Success
+2026-06-19 12:23:32 INFO  TS013_RecipientProfileManagement:160 - =========================================================
+2026-06-19 12:23:33 INFO  TS013_RecipientProfileManagement:161 - STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails
+2026-06-19 12:23:33 INFO  TS013_RecipientProfileManagement:162 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 12:23:33 INFO  TS013_RecipientProfileManagement:163 - =========================================================
+2026-06-19 12:23:33 INFO  TS013_RecipientProfileManagement:172 - Capturing recipient's current MailId...
+2026-06-19 12:23:38 INFO  TS013_RecipientProfileManagement:174 - Current Email: johncena2@gmail.com
+2026-06-19 12:23:38 INFO  TS013_RecipientProfileManagement:176 - Capturing recipient's current Phone Number...
+2026-06-19 12:23:38 INFO  TS013_RecipientProfileManagement:178 - Current Phone Number: 123456789
+2026-06-19 12:23:38 INFO  TS013_RecipientProfileManagement:180 - Clicking Edit Profile button...
+2026-06-19 12:23:38 INFO  TS013_RecipientProfileManagement:187 - Updating recipient's Email to: ngfiu@gmail.com
+2026-06-19 12:23:40 ERROR TS013_RecipientProfileManagement:220 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:23:40 ERROR TS013_RecipientProfileManagement:221 - Exception Message: element not interactable
   (Session info: chrome=148.0.7778.97)
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ae34eaa4204da72557225ed5ab250f8d, sendKeysToElement {value=[Ljava.lang.CharSequence;@659a2455, id=f.B09B6DC50121D005D1EB43B17381381D.d.846E0DE31B424A43AC86223D018A6997.e.52}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53236}, goog:processID: 13984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53236/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ae34eaa4204da72557225ed5ab250f8d)] -> xpath: //input[@name='name']]
-Session ID: ae34eaa4204da72557225ed5ab250f8d
-2026-06-18 16:27:27 INFO  TS013_RecipientProfileManagement:83 - Success
-2026-06-18 16:27:32 INFO  TS013_RecipientProfileManagement:98 - =========================================================
-2026-06-18 16:27:32 INFO  TS013_RecipientProfileManagement:99 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:27:32 INFO  TS013_RecipientProfileManagement:100 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:27:32 INFO  TS013_RecipientProfileManagement:101 - =========================================================
-2026-06-18 16:27:33 INFO  TS013_RecipientProfileManagement:110 - Capturing recipient's current BloodType...
-2026-06-18 16:27:38 INFO  TS013_RecipientProfileManagement:112 - Current Blood Type: O+
-2026-06-18 16:27:38 INFO  TS013_RecipientProfileManagement:114 - Clicking Edit Profile button...
-2026-06-18 16:27:38 INFO  TS013_RecipientProfileManagement:121 - Updating recipient's Blood Type to: O-
-2026-06-18 16:27:38 ERROR TS013_RecipientProfileManagement:140 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:27:38 ERROR TS013_RecipientProfileManagement:141 - Exception Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ae34eaa4204da72557225ed5ab250f8d, getElementValueOfCssProperty {propertyName=visibility, id=f.B09B6DC50121D005D1EB43B17381381D.d.570DE5CA344475F5374F4CC584151EEA.e.223}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53236}, goog:processID: 13984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53236/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ae34eaa4204da72557225ed5ab250f8d)] -> xpath: //select]
-Session ID: ae34eaa4204da72557225ed5ab250f8d
-2026-06-18 16:27:48 WARN  TS013_RecipientProfileManagement:151 - Unable to Logout
-2026-06-18 16:28:58 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:29:03 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:29:03 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:29:03 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:29:03 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:29:04 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:29:09 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:29:09 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:29:09 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: clWsE
-2026-06-18 16:29:11 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:29:11 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+Command: [91d4c2a1e5f6853816d3168be59979ee, sendKeysToElement {value=[Ljava.lang.CharSequence;@4bafe935, id=f.3D8FF901781F0C67781688E1E867D207.d.D3AA8EE4A08EC9280FF043E8020153AE.e.281}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53953}, goog:processID: 19532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53953/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91d4c2a1e5f6853816d3168be59979ee)] -> xpath: //input[@name='email']]
+Session ID: 91d4c2a1e5f6853816d3168be59979ee
+2026-06-19 12:23:40 INFO  TS013_RecipientProfileManagement:229 - Logout Success
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:244 - =========================================================
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:245 - STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:246 - =========================================================
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:251 - Navigating to Registration page from Home page...
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:255 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:256 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:259 - Selecting the 'Recipient' checkbox option...
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:262 - Target email to seed: 'epckh@gmail.com'
+2026-06-19 12:23:41 INFO  TS013_RecipientProfileManagement:264 - Populating form fields for the initial baseline user...
+2026-06-19 12:23:43 INFO  TS013_RecipientProfileManagement:267 - Clicking on the Agree Terms checkbox...
+2026-06-19 12:23:43 INFO  TS013_RecipientProfileManagement:270 - Submitting the initial registration...
+2026-06-19 12:23:46 INFO  TS013_RecipientProfileManagement:274 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 12:23:46 INFO  TS013_RecipientProfileManagement:276 - Verifying baseline user registered successfully...
+2026-06-19 12:23:46 INFO  TS013_RecipientProfileManagement:280 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 12:23:46 INFO  TS013_RecipientProfileManagement:281 - Entering login credentials
+2026-06-19 12:23:48 INFO  TS013_RecipientProfileManagement:290 - Capturing recipient's current MailId...
+2026-06-19 12:23:53 INFO  TS013_RecipientProfileManagement:292 - Current Email: johncena2@gmail.com
+2026-06-19 12:23:53 INFO  TS013_RecipientProfileManagement:294 - Clicking Edit Profile button...
+2026-06-19 12:23:53 INFO  TS013_RecipientProfileManagement:301 - Updating recipient's Email to existing User's Email: epckh@gmail.com
+2026-06-19 12:23:54 ERROR TS013_RecipientProfileManagement:323 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:23:54 ERROR TS013_RecipientProfileManagement:324 - Exception Message: element not interactable
   (Session info: chrome=148.0.7778.97)
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [caa1a0f970d83e99154b14a2a04c2f7b, sendKeysToElement {id=f.64DD2E2086EE5693427CBB1122E3FE22.d.110A5F42DF7757C230A56C92D988DF2E.e.57, value=[Ljava.lang.CharSequence;@3a4ba480}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62489}, goog:processID: 29400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62489/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (caa1a0f970d83e99154b14a2a04c2f7b)] -> xpath: //input[@name='name']]
-Session ID: caa1a0f970d83e99154b14a2a04c2f7b
-2026-06-18 16:29:11 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:29:11 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:29:11 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:29:11 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:29:12 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 16:29:17 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: O+
-2026-06-18 16:29:17 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 16:29:17 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: A-
-2026-06-18 16:29:17 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:29:17 ERROR TS013_RecipientProfileManagement:139 - Exception Message: stale element reference: stale element not found in the current frame
+Command: [91d4c2a1e5f6853816d3168be59979ee, sendKeysToElement {value=[Ljava.lang.CharSequence;@7e19755a, id=f.3D8FF901781F0C67781688E1E867D207.d.3409C9801C38D4E8DB0D0CA663C1F0DD.e.503}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53953}, goog:processID: 19532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53953/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91d4c2a1e5f6853816d3168be59979ee)] -> xpath: //input[@name='email']]
+Session ID: 91d4c2a1e5f6853816d3168be59979ee
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:332 - Logout Success
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:346 - =========================================================
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:347 - STARTING TEST CASE: TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:348 - =========================================================
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:353 - Navigating to Registration page from Home page...
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:357 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:358 - Unselecting the default 'Donor' checkbox option...
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:361 - Selecting the 'Recipient' checkbox option...
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:364 - Target email to seed: 'sibeh@gmail.com'
+2026-06-19 12:23:55 INFO  TS013_RecipientProfileManagement:366 - Populating form fields for the initial baseline user...
+2026-06-19 12:23:57 INFO  TS013_RecipientProfileManagement:369 - Clicking on the Agree Terms checkbox...
+2026-06-19 12:23:57 INFO  TS013_RecipientProfileManagement:372 - Submitting the initial registration...
+2026-06-19 12:24:00 INFO  TS013_RecipientProfileManagement:376 - Initial registration system response: 'User Registered Successfully'
+2026-06-19 12:24:00 INFO  TS013_RecipientProfileManagement:378 - Verifying baseline user registered successfully...
+2026-06-19 12:24:00 INFO  TS013_RecipientProfileManagement:382 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-19 12:24:00 INFO  TS013_RecipientProfileManagement:383 - Entering login credentials
+2026-06-19 12:24:03 INFO  TS013_RecipientProfileManagement:392 - Capturing recipient's current Phone Number...
+2026-06-19 12:24:07 INFO  TS013_RecipientProfileManagement:394 - Current Phone Number: 123456789
+2026-06-19 12:24:07 INFO  TS013_RecipientProfileManagement:396 - Clicking Edit Profile button...
+2026-06-19 12:24:08 INFO  TS013_RecipientProfileManagement:403 - Updating recipient's Phone Number to existing User's Phone Number: 3749280116
+2026-06-19 12:24:18 ERROR TS013_RecipientProfileManagement:425 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:24:18 ERROR TS013_RecipientProfileManagement:426 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='phone']"}
   (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [caa1a0f970d83e99154b14a2a04c2f7b, getElementValueOfCssProperty {id=f.64DD2E2086EE5693427CBB1122E3FE22.d.894B1A48832E34BA670BADA27ED30DC4.e.114, propertyName=opacity}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62489}, goog:processID: 29400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62489/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (caa1a0f970d83e99154b14a2a04c2f7b)] -> xpath: //select]] -> xpath: .//option[normalize-space(.) = "A-"]]
-Session ID: caa1a0f970d83e99154b14a2a04c2f7b
-2026-06-18 16:29:27 WARN  TS013_RecipientProfileManagement:149 - Unable to Logout
-2026-06-18 16:39:28 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:39:33 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:39:33 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:39:33 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:39:33 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:39:34 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:39:40 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:39:40 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:39:40 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: MIQLF
-2026-06-18 16:39:42 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:39:42 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
+Command: [91d4c2a1e5f6853816d3168be59979ee, findElement {value=//input[@name='phone'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53953}, goog:processID: 19532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53953/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91d4c2a1e5f6853816d3168be59979ee
+2026-06-19 12:24:18 INFO  TS013_RecipientProfileManagement:434 - Logout Success
+2026-06-19 12:24:18 INFO  TS013_RecipientProfileManagement:447 - =========================================================
+2026-06-19 12:24:18 INFO  TS013_RecipientProfileManagement:448 - STARTING TEST CASE: TC043_VerifyRecipientCanUpdateLocation
+2026-06-19 12:24:18 INFO  TS013_RecipientProfileManagement:449 - Target Account: [ johncena2@gmail.com ]
+2026-06-19 12:24:18 INFO  TS013_RecipientProfileManagement:450 - =========================================================
+2026-06-19 12:24:19 INFO  TS013_RecipientProfileManagement:459 - Capturing current recipient Location...
+2026-06-19 12:24:24 INFO  TS013_RecipientProfileManagement:461 - Current Location: Coimbatore
+2026-06-19 12:24:24 INFO  TS013_RecipientProfileManagement:463 - Clicking Edit Profile button...
+2026-06-19 12:24:24 INFO  TS013_RecipientProfileManagement:470 - Updating recipient Location to: gRaUW
+2026-06-19 12:24:34 ERROR TS013_RecipientProfileManagement:489 - FAILURE: Exception encountered during test execution!
+2026-06-19 12:24:34 ERROR TS013_RecipientProfileManagement:490 - Exception Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='address']"}
   (Session info: chrome=148.0.7778.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eec0a8ad94ff2140c3bbbe33207f5491, sendKeysToElement {value=[Ljava.lang.CharSequence;@659a2455, id=f.AE2262D6B66506CD922FF5F4F19AED4B.d.A4209FB6EFF4A7DC814F4FF799BE7495.e.60}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62811}, goog:processID: 3360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62811/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (eec0a8ad94ff2140c3bbbe33207f5491)] -> xpath: //input[@name='name']]
-Session ID: eec0a8ad94ff2140c3bbbe33207f5491
-2026-06-18 16:39:42 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:39:42 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:39:42 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:39:42 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:39:43 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 16:39:49 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: O+
-2026-06-18 16:39:49 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 16:39:49 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: O+
-2026-06-18 16:39:49 ERROR TS013_RecipientProfileManagement:138 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:39:49 ERROR TS013_RecipientProfileManagement:139 - Exception Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=148.0.7778.97)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eec0a8ad94ff2140c3bbbe33207f5491, getElementValueOfCssProperty {id=f.AE2262D6B66506CD922FF5F4F19AED4B.d.2FEF3F6A85B339927EE240D481C5364B.e.112, propertyName=visibility}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62811}, goog:processID: 3360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62811/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (eec0a8ad94ff2140c3bbbe33207f5491)] -> xpath: //select]
-Session ID: eec0a8ad94ff2140c3bbbe33207f5491
-2026-06-18 16:39:59 WARN  TS013_RecipientProfileManagement:149 - Unable to Logout
-2026-06-18 16:45:06 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:45:10 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:45:10 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:45:10 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:45:10 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:45:11 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 16:45:17 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: O+
-2026-06-18 16:45:17 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 16:45:17 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: A+
-2026-06-18 16:45:21 INFO  TS013_RecipientProfileManagement:122 - Clicking Save Changes button...
-2026-06-18 16:45:22 INFO  TS013_RecipientProfileManagement:125 - Capturing updated Blood Type from profile...
-2026-06-18 16:45:25 INFO  TS013_RecipientProfileManagement:128 - Verifying recipient Bloot Type was updated successfully...
-2026-06-18 16:45:25 INFO  TS013_RecipientProfileManagement:131 - SUCCESS: Recipient Blood Type updated successfully.
-2026-06-18 16:45:35 WARN  TS013_RecipientProfileManagement:149 - Unable to Logout
-2026-06-18 16:47:09 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:47:34 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:47:34 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:47:34 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:47:34 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:47:36 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 16:47:42 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: A+
-2026-06-18 16:47:42 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 16:47:42 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: O-
-2026-06-18 16:47:46 INFO  TS013_RecipientProfileManagement:122 - Clicking Save Changes button...
-2026-06-18 16:47:47 INFO  TS013_RecipientProfileManagement:125 - Capturing updated Blood Type from profile...
-2026-06-18 16:47:50 INFO  TS013_RecipientProfileManagement:128 - Verifying recipient Bloot Type was updated successfully...
-2026-06-18 16:47:50 INFO  TS013_RecipientProfileManagement:131 - SUCCESS: Recipient Blood Type updated successfully.
-2026-06-18 16:47:50 INFO  TS013_RecipientProfileManagement:147 - Logout Success
-2026-06-18 16:48:28 INFO  Utils:112 - [TestNG] Running:
-  C:\Practice\BCT\BloodConnectTest\testng.xml
-
-2026-06-18 16:48:32 INFO  TS013_RecipientProfileManagement:32 - =========================================================
-2026-06-18 16:48:32 INFO  TS013_RecipientProfileManagement:33 - STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName
-2026-06-18 16:48:32 INFO  TS013_RecipientProfileManagement:34 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:48:32 INFO  TS013_RecipientProfileManagement:35 - =========================================================
-2026-06-18 16:48:33 INFO  TS013_RecipientProfileManagement:44 - Capturing current recipient name...
-2026-06-18 16:48:38 INFO  TS013_RecipientProfileManagement:46 - Current Name: John Cena
-2026-06-18 16:48:38 INFO  TS013_RecipientProfileManagement:48 - Clicking Edit Profile button...
-2026-06-18 16:48:38 INFO  TS013_RecipientProfileManagement:55 - Updating recipient name to: xFFzv
-2026-06-18 16:48:40 ERROR TS013_RecipientProfileManagement:74 - FAILURE: Exception encountered during test execution!
-2026-06-18 16:48:40 ERROR TS013_RecipientProfileManagement:75 - Exception Message: element not interactable
-  (Session info: chrome=148.0.7778.97)
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0cb7d19ca12c011dfa185cfa664b968, sendKeysToElement {id=f.F200EA936591538F95447789CB620B98.d.7BD6A046B2C7A849CB9DB70FAA7E4599.e.60, value=[Ljava.lang.CharSequence;@1bcf67e8}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64234}, goog:processID: 19896, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64234/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f0cb7d19ca12c011dfa185cfa664b968)] -> xpath: //input[@name='name']]
-Session ID: f0cb7d19ca12c011dfa185cfa664b968
-2026-06-18 16:48:40 INFO  TS013_RecipientProfileManagement:96 - =========================================================
-2026-06-18 16:48:40 INFO  TS013_RecipientProfileManagement:97 - STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup
-2026-06-18 16:48:40 INFO  TS013_RecipientProfileManagement:98 - Target Account: [ johncena2@gmail.com ]
-2026-06-18 16:48:40 INFO  TS013_RecipientProfileManagement:99 - =========================================================
-2026-06-18 16:48:41 INFO  TS013_RecipientProfileManagement:108 - Capturing recipient's current BloodType...
-2026-06-18 16:48:46 INFO  TS013_RecipientProfileManagement:110 - Current Blood Type: O-
-2026-06-18 16:48:46 INFO  TS013_RecipientProfileManagement:112 - Clicking Edit Profile button...
-2026-06-18 16:48:46 INFO  TS013_RecipientProfileManagement:119 - Updating recipient's Blood Type to: A+
-2026-06-18 16:48:51 INFO  TS013_RecipientProfileManagement:122 - Clicking Save Changes button...
-2026-06-18 16:48:51 INFO  TS013_RecipientProfileManagement:125 - Capturing updated Blood Type from profile...
-2026-06-18 16:48:54 INFO  TS013_RecipientProfileManagement:128 - Verifying recipient Bloot Type was updated successfully...
-2026-06-18 16:48:54 INFO  TS013_RecipientProfileManagement:131 - SUCCESS: Recipient Blood Type updated successfully.
-2026-06-18 16:48:54 INFO  TS013_RecipientProfileManagement:147 - Logout Success
+Command: [91d4c2a1e5f6853816d3168be59979ee, findElement {value=//textarea[@name='address'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494594\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53953}, goog:processID: 19532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53953/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91d4c2a1e5f6853816d3168be59979ee

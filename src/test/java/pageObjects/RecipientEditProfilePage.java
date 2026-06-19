@@ -13,12 +13,17 @@ public class RecipientEditProfilePage extends BasePage{
     @FindBy(xpath = "//button[@type='submit']") WebElement saveChanges;
     @FindBy(xpath = "//input[@name='name']") WebElement name;
     @FindBy(xpath = "//select[@name='bloodGroup']") WebElement bloodType;
+    @FindBy(xpath = "//input[@name='email']") WebElement email;
+    @FindBy(xpath="//input[@name='phone']") WebElement phoneNo;
+    @FindBy(xpath = "//textarea[@name='address']") WebElement location;
 
     public void clickSaveChanges(){saveChanges.click();}
     public void setRecipientName(String recipientName){name.sendKeys(recipientName);}
-    public void setBloodType(String recipientBloodType){
+    public void setRecipientBloodType(String recipientBloodType){
         Select select=new Select(bloodType);
         select.selectByVisibleText(recipientBloodType);
     }
-
+    public  void setRecipientEmail(String recipientEmail){email.sendKeys(recipientEmail);}
+    public void setRecipientPhoneno(String recipientPhoneno){phoneNo.sendKeys(recipientPhoneno);}
+    public void setRecipientLocation(String recipientLocation){location.sendKeys(recipientLocation);}
 }
