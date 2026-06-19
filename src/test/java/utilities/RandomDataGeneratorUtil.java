@@ -1,13 +1,18 @@
 package utilities;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import pageObjects.AdminPage;
 import pageObjects.RegisterPage;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class RandomDataGeneratorUtil {
+    private static Random random = new Random();
+
     public static String[] randomUserDataGenerator(){
-        Random random = new Random();
+
         String[] bloodGroups = {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"};
         String[] genders = {"male", "female"};
 
@@ -50,4 +55,40 @@ public class RandomDataGeneratorUtil {
         registerPage.setMedicalInfo(userData[12]);
 
     }
+
+    public static void randomBloodCampGenerator(AdminPage adminPage){
+        String bloodCampName = "bloodCamp-"+ RandomStringUtils.randomAlphabetic(4);
+        String location = "location-" + RandomStringUtils.randomAlphabetic(4);
+        String date = randomDateGenerator();
+        String[] time = randomTimeGenerator();
+        int capacity = random.nextInt(100)+10;
+        String description = "description-" + RandomStringUtils.randomAlphabetic(8);
+
+        adminPage.submitBloodCampData(bloodCampName,location,date,time[0],time[1],capacity,description);
+    }
+
+    public static String randomDateGenerator(){
+        Random random = new Random();
+        int month = random.nextInt(12) + 1;
+        int day = random.nextInt(28) + 1;
+        int year = 2026 + random.nextInt(2);
+        return String.format("%02d/%02d/%d", month, day, year);
+    }
+
+    public static String[] randomTimeGenerator() {
+        Random random = new Random();
+        int startHour = random.nextInt(10)+8;
+        int startMinute = random.nextInt(60);
+
+        int endHour = (startHour+1) + random.nextInt(24-(startHour+1));
+        int endMinute = random.nextInt(60);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hhmma");
+
+        LocalTime startTime = LocalTime.of(startHour,startMinute);
+        LocalTime endTime = LocalTime.of(endHour,endMinute);
+
+        return new String[]{formatter.format(endTime),formatter.format(startTime)};
+    }
+
 }

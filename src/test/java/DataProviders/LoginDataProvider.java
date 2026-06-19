@@ -36,10 +36,31 @@ public class LoginDataProvider {
         };
     }
 
+    @DataProvider(name = "DonorLocationUpdate")
+    public Object[][] DonorLocationUpdate(){
+        return new Object[][]{
+                {"john@bms.com","password123","Hyderabad"}
+        };
+    }
+
     @DataProvider(name = "recipientLoginData")
     public Object[][] recipientLoginData() {
         return new Object[][] {{"johncena2@gmail.com", "password123"}};
+    }
 
+    @DataProvider(name="donorLogin")
+    public Object[][] donorLogin(){
+        return new Object[][] {{"johncena@gmail.com", "password123"}};
+    }
+
+    @DataProvider(name = "adminLoginData")
+    public Object[][] adminLoginData() {
+        return new Object[][] {{"admin@bms.com", "password123"}};
+    }
+
+    @DataProvider(name="bothLoginData")
+    public Object[][] bothLoginData() {
+        return new Object[][] {{"john@bms.com", "password123"}};
     }
 
     @DataProvider(name = "donorLoginData")

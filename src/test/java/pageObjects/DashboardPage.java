@@ -14,6 +14,7 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//a[@id='userDropdown']") WebElement lnkUserDropDown;
     @FindBy(xpath = "//a[@class='dropdown-item']") WebElement lnkLogout;
     @FindBy(xpath = "//a[contains(text(),'Home')]") WebElement lnKHome;
+    @FindBy(tagName = "h1") WebElement heading;
 
 
     //actions
@@ -25,6 +26,10 @@ public class DashboardPage extends BasePage{
     }
     public void clickHome(){
         lnKHome.click();
+    }
+
+    public String getHeading(){
+        return heading.getText();
     }
 
 }

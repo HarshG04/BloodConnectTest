@@ -17,7 +17,7 @@ public class BasePage {
     public BasePage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         js = (JavascriptExecutor) driver;
     }
 
@@ -34,4 +34,8 @@ public class BasePage {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+
+    public void waitForElementToVisible(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 }
