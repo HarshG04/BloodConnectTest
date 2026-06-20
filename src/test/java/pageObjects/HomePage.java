@@ -24,7 +24,8 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//h2[contains(text(),'Benefits of Donating Blood')]/ancestor::section") WebElement sectionBenefitsOfDonatingBlood;
     @FindBy(xpath = "//h2[contains(text(),'Eligibility Criteria')]/ancestor::section") WebElement sectionEligibilityCriteria;
     @FindBy(xpath = "//div[@class='col-lg-4 col-md-6']") List<WebElement> bloodCampList;
-    @FindBy(xpath= "//div[contains(@class,'camp-card')]") WebElement sectionBloodDonationCamps;
+    @FindBy(xpath = "//body/app-root/app-home/section[5]/div[1]")  WebElement sectionBloodDonationCamps;
+    @FindBy(xpath = "//p[text()='No upcoming camps scheduled. Check back soon!']") WebElement noBloodCampMessage;
 
     //actions
     public void clickRegister(){
@@ -59,11 +60,14 @@ public class HomePage extends BasePage{
     public int getBloodCampsCount(){
         try{
             js.executeScript("arguments[0].scrollIntoView();",sectionBloodDonationCamps);
-            return bloodCampList==null ? 0 : bloodCampList.size();
+            return bloodCampList.size();
         } catch (NoSuchElementException e) {
             return 0;
         }
 
+    }
+    public boolean checkNoBloodCampMessageVisibility(){
+        return noBloodCampMessage.isDisplayed();
     }
 
 

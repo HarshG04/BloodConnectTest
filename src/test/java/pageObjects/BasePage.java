@@ -38,4 +38,7 @@ public class BasePage {
     public void waitForElementToVisible(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public void refreshPage(){
+        driver.navigate().refresh();
+    }
 }
