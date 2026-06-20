@@ -37,7 +37,6 @@ public class RecipientDashboardPage extends DashboardPage {
     public void selBloodType() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Thread.sleep(3000);
-        js.executeScript("window.scrollBy(0,1000)");
         js.executeScript("arguments[0].scrollIntoView();",drpBloodType);
         Select sel = new Select(drpBloodType);
         sel.selectByValue(getRecipientBloodType());
@@ -69,6 +68,9 @@ public class RecipientDashboardPage extends DashboardPage {
 
     public boolean sendRequest(String donorName) {
         try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollTo(1000, 0);");
+            Thread.sleep(2000);
             WebElement donorSendReqBtn = driver.findElement(
                     By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
             );

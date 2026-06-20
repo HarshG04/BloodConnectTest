@@ -40,13 +40,32 @@ public class DonorDashboardPage extends DashboardPage {
     public String getDonorPhone(){return lblPhoneNo.getText();}
     public String getDonorLocation(){return lblLocation.getText();}
 
-    public void acceptRequest(String recipientName){
-        WebElement recAcceptReqbtn = driver.findElement(By.xpath("div[@class=''requests-list]/h6[text()='"+recipientName+"']/following::div[@class='request-actions']/button[1]"));
-        recAcceptReqbtn.click();
+    public boolean acceptRequest(String recipientName) {
+        try {
+
+            WebElement acceptBtn = driver.findElement(By.xpath(
+                    "//div[@class='requests-list']//h6[text()='" + recipientName + "']" +
+                            "/following::div[@class='request-actions']/button[1]"
+            ));
+            acceptBtn.click();
+
+            WebElement successMsg =
+                    driver.findElement(By.xpath("//div[contains(@class,'alert-success')]"));
+            Thread.sleep(3000);
+
+            String messageText = successMsg.getText();
+
+
+            return messageText.contains("accepted this blood request");
+
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 
     public boolean viewRequest(String recipientName){
-        WebElement recAcceptReqbtn = driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientName+"']"));
-        return recAcceptReqbtn.isDisplayed();
+        WebElement recAcceptRequest = driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientName+"']"));
+        return recAcceptRequest.isDisplayed();
     }
 }
