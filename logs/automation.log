@@ -461,3 +461,197 @@
 2026-06-18 21:36:31 INFO  TS007_DonorProfile:564 - =========================================================
 2026-06-18 21:36:31 INFO  TS007_DonorProfile:565 - ENDING TEST CASE: TC024_updateDonorLocation
 2026-06-18 21:36:31 INFO  TS007_DonorProfile:566 - =========================================================
+2026-06-18 22:13:35 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 22:13:43 INFO  TS007_DonorProfile:15 - =========================================================
+2026-06-18 22:13:43 INFO  TS007_DonorProfile:16 - STARTING TEST CASE: TC019_updateDonorName
+2026-06-18 22:13:43 INFO  TS007_DonorProfile:17 - =========================================================
+2026-06-18 22:13:43 INFO  TS007_DonorProfile:87 - Switching to login page...
+2026-06-18 22:13:43 INFO  TS007_DonorProfile:92 - Providing user credentials...
+2026-06-18 22:13:45 INFO  TS007_DonorProfile:96 - Trying to logging Into dashboard...
+2026-06-18 22:13:51 INFO  TS007_DonorProfile:37 - Navigating to Edit Profile page
+2026-06-18 22:13:53 INFO  TS007_DonorProfile:41 - Verifying Edit Profile page load
+2026-06-18 22:13:54 INFO  TS007_DonorProfile:45 - Checking if Full Name field is editable
+2026-06-18 22:13:56 ERROR TS007_DonorProfile:73 - ASSERTION FAILED : Full Name field is NOT editable expected [true] but found [false]
+2026-06-18 22:13:58 INFO  TS007_DonorProfile:86 - Logged out in finally block
+2026-06-18 22:14:05 INFO  TS007_DonorProfile:100 - =========================================================
+2026-06-18 22:14:05 INFO  TS007_DonorProfile:101 - STARTING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 22:14:05 INFO  TS007_DonorProfile:102 - =========================================================
+2026-06-18 22:14:05 INFO  TS007_DonorProfile:106 - Navigating to Login Page
+2026-06-18 22:14:05 INFO  TS007_DonorProfile:110 - Entering login credentials
+2026-06-18 22:14:06 INFO  TS007_DonorProfile:115 - Clicking Login button
+2026-06-18 22:14:06 INFO  TS007_DonorProfile:118 - Verifying login success (Dashboard page)
+2026-06-18 22:14:09 ERROR TS007_DonorProfile:163 - EXCEPTION OCCURRED : invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.97)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [077c2a2b7ab55d581e9cb1196329df06, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60019}, goog:processID: 30440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60019/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 077c2a2b7ab55d581e9cb1196329df06
+org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.97)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [077c2a2b7ab55d581e9cb1196329df06, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\2494401\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60019}, goog:processID: 30440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60019/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 077c2a2b7ab55d581e9cb1196329df06
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:134)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:129)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	at pageObjects.BasePage.waitForUrlToContain(BasePage.java:26)
+	at testCases.TS007_DonorProfile.TC020_updateDonorBloodGroup(TS007_DonorProfile.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-06-18 22:18:59 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2494401\IdeaProjects\Interim project\Testing-Project\BloodConnectTest\testng.xml
+
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:15 - =========================================================
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:16 - STARTING TEST CASE: TC019_updateDonorName
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:17 - =========================================================
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:87 - Switching to login page...
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:92 - Providing user credentials...
+2026-06-18 22:19:05 INFO  TS007_DonorProfile:96 - Trying to logging Into dashboard...
+2026-06-18 22:19:09 INFO  TS007_DonorProfile:22 - Navigating to Edit Profile page
+2026-06-18 22:19:11 INFO  TS007_DonorProfile:26 - Verifying Edit Profile page load
+2026-06-18 22:19:12 INFO  TS007_DonorProfile:30 - Checking if Full Name field is editable
+2026-06-18 22:19:12 ERROR TS007_DonorProfile:58 - ASSERTION FAILED : Full Name field is NOT editable expected [true] but found [false]
+2026-06-18 22:19:13 INFO  TS007_DonorProfile:71 - Logged out in finally block
+2026-06-18 22:19:20 INFO  TS007_DonorProfile:85 - =========================================================
+2026-06-18 22:19:20 INFO  TS007_DonorProfile:86 - STARTING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 22:19:20 INFO  TS007_DonorProfile:87 - =========================================================
+2026-06-18 22:19:20 INFO  TS007_DonorProfile:87 - Switching to login page...
+2026-06-18 22:19:20 INFO  TS007_DonorProfile:92 - Providing user credentials...
+2026-06-18 22:19:21 INFO  TS007_DonorProfile:96 - Trying to logging Into dashboard...
+2026-06-18 22:19:25 INFO  TS007_DonorProfile:93 - Navigating to Edit Profile page
+2026-06-18 22:19:27 INFO  TS007_DonorProfile:97 - Verifying Edit Profile page load
+2026-06-18 22:19:28 INFO  TS007_DonorProfile:101 - Checking if Blood Group field is editable
+2026-06-18 22:19:29 INFO  TS007_DonorProfile:107 - Updating Blood Group to: A+
+2026-06-18 22:19:29 INFO  TS007_DonorProfile:111 - Clicking Save Changes
+2026-06-18 22:19:29 INFO  TS007_DonorProfile:114 - Verifying navigation to Dashboard after save
+2026-06-18 22:19:31 INFO  TS007_DonorProfile:118 - Validating donor blood group update
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:122 - Expected: A+
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:123 - Actual: A+
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:127 - TEST CASE PASSED 
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:142 - Logged out in finally block
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:148 - =========================================================
+2026-06-18 22:19:33 INFO  TS007_DonorProfile:149 - ENDING TEST CASE: TC020_updateDonorBloodGroup
+2026-06-18 22:19:34 INFO  TS007_DonorProfile:150 - =========================================================
+2026-06-18 22:19:40 INFO  TS007_DonorProfile:156 - =========================================================
+2026-06-18 22:19:40 INFO  TS007_DonorProfile:157 - STARTING TEST CASE: TC021_updateDonorContactDetails
+2026-06-18 22:19:40 INFO  TS007_DonorProfile:158 - =========================================================
+2026-06-18 22:19:40 INFO  TS007_DonorProfile:87 - Switching to login page...
+2026-06-18 22:19:40 INFO  TS007_DonorProfile:92 - Providing user credentials...
+2026-06-18 22:19:41 INFO  TS007_DonorProfile:96 - Trying to logging Into dashboard...
+2026-06-18 22:19:44 INFO  TS007_DonorProfile:164 - Navigating to Edit Profile page
+2026-06-18 22:19:46 INFO  TS007_DonorProfile:168 - Verifying Edit Profile page load
+2026-06-18 22:19:47 INFO  TS007_DonorProfile:172 - Checking if Email field is editable
+2026-06-18 22:19:48 ERROR TS007_DonorProfile:210 - ASSERTION FAILED : Email field is NOT editable expected [true] but found [false]
+2026-06-18 22:19:49 INFO  TS007_DonorProfile:222 - Logged out in finally block
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:235 - =========================================================
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:236 - STARTING TEST CASE: TC022_VerifyDonorCannotUpdateEmailToExistingEmail
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:237 - =========================================================
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:241 - Navigating to Registration page from Home page...
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:245 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:247 - Target email to seed: 'qikov@gmail.com'
+2026-06-18 22:19:55 INFO  TS007_DonorProfile:249 - Populating form fields for the initial baseline user...
+2026-06-18 22:19:58 INFO  TS007_DonorProfile:252 - Clicking on the Agree Terms checkbox...
+2026-06-18 22:19:58 INFO  TS007_DonorProfile:255 - Submitting the initial registration...
+2026-06-18 22:20:02 INFO  TS007_DonorProfile:259 - Initial registration system response: 'User Registered Successfully'
+2026-06-18 22:20:02 INFO  TS007_DonorProfile:261 - Verifying baseline user registered successfully...
+2026-06-18 22:20:02 INFO  TS007_DonorProfile:264 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-18 22:20:02 INFO  TS007_DonorProfile:265 - Entering login credentials
+2026-06-18 22:20:04 INFO  TS007_DonorProfile:271 - Clicking Login button
+2026-06-18 22:20:05 INFO  TS007_DonorProfile:274 - Verifying login success (Dashboard page)
+2026-06-18 22:20:08 INFO  TS007_DonorProfile:278 - Navigating to Edit Profile page
+2026-06-18 22:20:10 INFO  TS007_DonorProfile:282 - Verifying Edit Profile page load
+2026-06-18 22:20:11 INFO  TS007_DonorProfile:288 - Checking if Email field is editable
+2026-06-18 22:20:13 ERROR TS007_DonorProfile:317 - ASSERTION FAILED : Email field is NOT editable expected [true] but found [false]
+2026-06-18 22:20:13 INFO  TS007_DonorProfile:329 - Logged out in finally block
+2026-06-18 22:20:13 INFO  TS007_DonorProfile:333 - =========================================================
+2026-06-18 22:20:13 INFO  TS007_DonorProfile:334 - ENDING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber
+2026-06-18 22:20:13 INFO  TS007_DonorProfile:335 - =========================================================
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:341 - =========================================================
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:342 - STARTING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:343 - =========================================================
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:347 - Navigating to Registration page from Home page...
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:351 - PHASE 1: Generating unique user dataset to seed the database...
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:353 - Target phone number to seed: '9838023162'
+2026-06-18 22:20:20 INFO  TS007_DonorProfile:355 - Populating form fields for the initial baseline user...
+2026-06-18 22:20:22 INFO  TS007_DonorProfile:358 - Clicking on the Agree Terms checkbox...
+2026-06-18 22:20:22 INFO  TS007_DonorProfile:361 - Submitting the initial registration...
+2026-06-18 22:20:26 INFO  TS007_DonorProfile:365 - Initial registration system response: 'User Registered Successfully'
+2026-06-18 22:20:26 INFO  TS007_DonorProfile:367 - Verifying baseline user registered successfully...
+2026-06-18 22:20:26 INFO  TS007_DonorProfile:370 - PHASE 2: Navigating back to the login screen to test duplicate constraint...
+2026-06-18 22:20:26 INFO  TS007_DonorProfile:371 - Entering login credentials
+2026-06-18 22:20:28 INFO  TS007_DonorProfile:377 - Clicking Login button
+2026-06-18 22:20:28 INFO  TS007_DonorProfile:380 - Verifying login success (Dashboard page)
+2026-06-18 22:20:32 INFO  TS007_DonorProfile:384 - Navigating to Edit Profile page
+2026-06-18 22:20:34 INFO  TS007_DonorProfile:388 - Verifying Edit Profile page load
+2026-06-18 22:20:34 INFO  TS007_DonorProfile:394 - Checking if Phone No. field is editable
+2026-06-18 22:20:36 INFO  TS007_DonorProfile:399 - Updating Phone No. to: 9838023162
+2026-06-18 22:20:36 INFO  TS007_DonorProfile:402 - Clicking Save Changes
+2026-06-18 22:20:36 INFO  TS007_DonorProfile:405 - Validating duplicate phone number behavior...
+2026-06-18 22:20:39 ERROR TS007_DonorProfile:411 - BUG: Duplicate phone number was accepted and profile updated!
+2026-06-18 22:20:39 ERROR TS007_DonorProfile:423 - ASSERTION FAILED : Test FAILED: System allowed duplicate phone number update
+2026-06-18 22:20:39 INFO  TS007_DonorProfile:435 - Logged out in finally block
+2026-06-18 22:20:39 INFO  TS007_DonorProfile:439 - =========================================================
+2026-06-18 22:20:39 INFO  TS007_DonorProfile:440 - ENDING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber
+2026-06-18 22:20:39 INFO  TS007_DonorProfile:441 - =========================================================
+2026-06-18 22:20:45 INFO  TS007_DonorProfile:448 - =========================================================
+2026-06-18 22:20:45 INFO  TS007_DonorProfile:449 - STARTING TEST CASE: TC024_updateDonorLocation
+2026-06-18 22:20:45 INFO  TS007_DonorProfile:450 - =========================================================
+2026-06-18 22:20:45 INFO  TS007_DonorProfile:87 - Switching to login page...
+2026-06-18 22:20:45 INFO  TS007_DonorProfile:92 - Providing user credentials...
+2026-06-18 22:20:46 INFO  TS007_DonorProfile:96 - Trying to logging Into dashboard...
+2026-06-18 22:20:49 INFO  TS007_DonorProfile:455 - Navigating to Edit Profile page
+2026-06-18 22:20:51 INFO  TS007_DonorProfile:459 - Verifying Edit Profile page load
+2026-06-18 22:20:52 INFO  TS007_DonorProfile:463 - Checking if Location field is editable
+2026-06-18 22:20:53 INFO  TS007_DonorProfile:469 - Updating Location to: Hyderabad
+2026-06-18 22:20:53 INFO  TS007_DonorProfile:473 - Clicking Save Changes
+2026-06-18 22:20:53 INFO  TS007_DonorProfile:476 - Verifying navigation to Dashboard after save
+2026-06-18 22:20:55 INFO  TS007_DonorProfile:480 - Validating donor Location update
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:484 - Expected: Hyderabad
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:485 - Actual: Mumbai
+2026-06-18 22:20:56 ERROR TS007_DonorProfile:491 - ASSERTION FAILED : Donor Location update validation failed expected [Hyderabad] but found [Mumbai]
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:503 - Logged out in finally block
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:507 - =========================================================
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:508 - ENDING TEST CASE: TC024_updateDonorLocation
+2026-06-18 22:20:56 INFO  TS007_DonorProfile:509 - =========================================================
