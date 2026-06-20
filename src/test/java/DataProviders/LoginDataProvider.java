@@ -68,6 +68,16 @@ public class LoginDataProvider {
         return new Object[][] {{"john@bms.com", "password123"}};
     }
 
+    @DataProvider(name = "donorRecipientData")
+    public Object[][] donorRecipientData() {
+        return new Object[][] {
+                {
+                        "ts008recipient@bms.com", "password123","TS008_Recipient",
+                        "ts008donor@bms.com", "password123","TS008_Donor"
+                }
+        };
+    }
+
 
 
 //    @DataProvider(name = "recipientRegistrationData")

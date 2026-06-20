@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,4 +39,14 @@ public class DonorDashboardPage extends DashboardPage {
     public String getDonorEmail(){return lblEmail.getText();}
     public String getDonorPhone(){return lblPhoneNo.getText();}
     public String getDonorLocation(){return lblLocation.getText();}
+
+    public void acceptRequest(String recipientName){
+        WebElement recAcceptReqbtn = driver.findElement(By.xpath("div[@class=''requests-list]/h6[text()='"+recipientName+"']/following::div[@class='request-actions']/button[1]"));
+        recAcceptReqbtn.click();
+    }
+
+    public boolean viewRequest(String recipientName){
+        WebElement recAcceptReqbtn = driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientName+"']"));
+        return recAcceptReqbtn.isDisplayed();
+    }
 }

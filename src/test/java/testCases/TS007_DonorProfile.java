@@ -18,22 +18,7 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         try {
-            logger.info("Navigating to Login Page");
-            HomePage homePage = new HomePage(driver);
-            homePage.clickLogin();
-
-            logger.info("Entering login credentials");
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.setEmail(email);
-            loginPage.setPassword(pwd);
-
-            logger.info("Clicking Login button");
-            loginPage.clickLogin();
-
-            logger.info("Verifying login success (Dashboard page)");
-            Assert.assertTrue(homePage.waitForUrlToContain("/donor/dashboard"),
-                    "Login failed: Dashboard URL not loaded");
-
+            LoginUserHelper(email,pwd);
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
@@ -103,21 +88,7 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         try {
-            logger.info("Navigating to Login Page");
-            HomePage homePage = new HomePage(driver);
-            homePage.clickLogin();
-
-            logger.info("Entering login credentials");
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.setEmail(email);
-            loginPage.setPassword(pwd);
-
-            logger.info("Clicking Login button");
-            loginPage.clickLogin();
-
-            logger.info("Verifying login success (Dashboard page)");
-            Assert.assertTrue(homePage.waitForUrlToContain("/donor/dashboard"),
-                    "Login failed: Dashboard URL not loaded");
+            LoginUserHelper(email,pwd);
 
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
@@ -188,21 +159,7 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         try {
-            logger.info("Navigating to Login Page");
-            HomePage homePage = new HomePage(driver);
-            homePage.clickLogin();
-
-            logger.info("Entering login credentials");
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.setEmail(email);
-            loginPage.setPassword(pwd);
-
-            logger.info("Clicking Login button");
-            loginPage.clickLogin();
-
-            logger.info("Verifying login success (Dashboard page)");
-            Assert.assertTrue(homePage.waitForUrlToContain("/donor/dashboard"),
-                    "Login failed: Dashboard URL not loaded");
+            LoginUserHelper(email,pwd);
 
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
@@ -493,21 +450,7 @@ public class TS007_DonorProfile extends BaseClass {
         logger.info("=========================================================");
 
         try{
-            logger.info("Navigating to Login Page");
-            HomePage homePage = new HomePage(driver);
-            homePage.clickLogin();
-
-            logger.info("Entering login credentials");
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.setEmail(email);
-            loginPage.setPassword(pwd);
-
-            logger.info("Clicking Login button");
-            loginPage.clickLogin();
-
-            logger.info("Verifying login success (Dashboard page)");
-            Assert.assertTrue(homePage.waitForUrlToContain("/donor/dashboard"),
-                    "Login failed: Dashboard URL not loaded");
+            LoginUserHelper(email,pwd);
 
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
