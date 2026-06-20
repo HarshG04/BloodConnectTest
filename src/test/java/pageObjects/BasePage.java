@@ -36,7 +36,11 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public boolean waitForElementInvisibility(By locator){
+    public boolean waitForElementInvisibility(By locator) {
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
+    public void refreshPage(){
+        driver.navigate().refresh();
     }
 }

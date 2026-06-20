@@ -52,12 +52,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-        <test name="TS008_DonorIncomingRequestsHandling">
-            <parameter name="browser" value="chrome"></parameter>
-            <classes>
-                <class name="testCases.TS008_DonorIncomingRequestHandling"></class>
-            </classes>
-        </test>
+<!--        <test name="TS008_DonorIncomingRequestsHandling">-->
+<!--            <parameter name="browser" value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class name="testCases.TS008_DonorIncomingRequestHandling"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--    <test name="TS013_RecipientProfileManagement">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
 <!--        <classes>-->

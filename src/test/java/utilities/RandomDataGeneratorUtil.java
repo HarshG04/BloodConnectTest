@@ -2,6 +2,7 @@ package utilities;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import pageObjects.AdminPage;
+import pageObjects.BloodCampPage;
 import pageObjects.RegisterPage;
 
 import java.time.LocalTime;
@@ -56,15 +57,16 @@ public class RandomDataGeneratorUtil {
 
     }
 
-    public static void randomBloodCampGenerator(AdminPage adminPage){
+    public static void randomBloodCampGenerator(BloodCampPage bloodCampPage) throws InterruptedException {
         String bloodCampName = "bloodCamp-"+ RandomStringUtils.randomAlphabetic(4);
         String location = "location-" + RandomStringUtils.randomAlphabetic(4);
         String date = randomDateGenerator();
         String[] time = randomTimeGenerator();
-        int capacity = random.nextInt(100)+10;
+        int capacity = random.nextInt(90)+10;
         String description = "description-" + RandomStringUtils.randomAlphabetic(8);
 
-        adminPage.submitBloodCampData(bloodCampName,location,date,time[0],time[1],capacity,description);
+        bloodCampPage.submitBloodCampData(bloodCampName,location,date,time[0],time[1],capacity,description);
+        bloodCampPage.clickSaveCamp();
     }
 
     public static String randomDateGenerator(){
@@ -88,7 +90,7 @@ public class RandomDataGeneratorUtil {
         LocalTime startTime = LocalTime.of(startHour,startMinute);
         LocalTime endTime = LocalTime.of(endHour,endMinute);
 
-        return new String[]{formatter.format(endTime),formatter.format(startTime)};
+        return new String[]{formatter.format(startTime),formatter.format(endTime)};
     }
 
 }
