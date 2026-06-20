@@ -72,8 +72,8 @@ public class LoginDataProvider {
     public Object[][] donorRecipientData() {
         return new Object[][] {
                 {
-                        "ts008recipient@bms.com", "password123",
-                        "ts008donor@bms.com", "password123"
+                        "ts008recipient@bms.com", "password123","TS008_Recipient",
+                        "ts008donor@bms.com", "password123","TS008_Donor"
                 }
         };
     }
