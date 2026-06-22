@@ -1,9 +1,6 @@
 package pageObjects;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,6 +35,11 @@ public class BasePage {
     public void waitForElementToVisible(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public boolean waitForElementInvisibility(By locator) {
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
     public void refreshPage(){
         driver.navigate().refresh();
     }
