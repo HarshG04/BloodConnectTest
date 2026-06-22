@@ -92,4 +92,15 @@ public class RandomDataGeneratorUtil {
         return new String[]{formatter.format(startTime),formatter.format(endTime)};
     }
 
+    public static String[] generateRandomInventoryData(){
+        String[] bloodGroups = {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"};
+        return new String[]{
+                bloodGroups[random.nextInt(bloodGroups.length)],
+                String.valueOf(random.nextInt(50) + 10),
+                randomDateGenerator(),
+                "src-" + RandomStringUtils.randomAlphabetic(5),
+        };
+
+    }
+
 }

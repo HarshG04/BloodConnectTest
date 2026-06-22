@@ -108,10 +108,19 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS021_AdminManageBloodCamps">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS021_AdminManageBloodCamps" />
-        </classes>
-    </test>
+<!--    <test name="TS021_AdminManageBloodCamps">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS021_AdminManageBloodCamps" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="TS022_AdminManagesBloodInventory">-->
+<!--            <parameter name="browser" value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class name="testCases.TS022_AdminManagesBloodInventory" />-->
+<!--            </classes>-->
+<!--        </test>-->
+
+
 </suite>

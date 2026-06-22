@@ -22,7 +22,8 @@ public class AdminPage extends DashboardPage{
     @FindBy(xpath = "//div[@class='stat-card stat-blue']/div[@class='stat-number']") WebElement totalRequests;
     @FindBy(xpath = "//div[@class='stat-card stat-yellow']/div[@class='stat-number']") WebElement pendingRequests;
     @FindBy(xpath = "//div[@class='stat-card stat-pink']/div[@class='stat-number']") WebElement upcomingCamps;
-
+    @FindBy(id = "adminDropdown") WebElement adminDropDown;
+    @FindBy(xpath = "//a[text()='Inventory']") WebElement lnkInventory;
 
 
 
@@ -60,8 +61,12 @@ public class AdminPage extends DashboardPage{
         return Integer.parseInt(wait.until(ExpectedConditions.visibilityOf(upcomingCamps)).getText());
     }
 
-//    public void clickBloodInventory(){
-//
-//    }
+    public void clickAdminDropDown(){
+        adminDropDown.click();
+    }
+
+    public void clickInventory(){
+        lnkInventory.click();
+    }
 
 }
