@@ -32,4 +32,9 @@ public class DashboardPage extends BasePage{
         return heading.getText();
     }
 
+    public void logoutUser(){
+        clickUserDropDown();
+        clickLogout();
+    }
+
 }

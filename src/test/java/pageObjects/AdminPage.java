@@ -14,12 +14,20 @@ public class AdminPage extends DashboardPage{
         super(driver);
     }
 
+    @FindBy(xpath = "//button[contains(text(),'Blood Requests')]") WebElement btnBloodRequests;
     @FindBy(xpath = "//button[contains(text(),'Blood Camps')]") WebElement btnBloodCamps;
     @FindBy(xpath = "//div[@class='row g-3 mb-4']") WebElement adminCards;
-    @FindBy(xpath = "//table/tbody/tr") List<WebElement> donorList;
-    @FindBy(xpath = "//button[contains(text(),'Delete')]") List<WebElement> btnDeletelist;
+    @FindBy(xpath = "//div[@role='alert']") WebElement alertMessage;
+    @FindBy(xpath = "//div[@class='stat-card stat-red']/div[@class='stat-number']") WebElement totalDonors;
+    @FindBy(xpath = "//div[@class='stat-card stat-blue']/div[@class='stat-number']") WebElement totalRequests;
+    @FindBy(xpath = "//div[@class='stat-card stat-yellow']/div[@class='stat-number']") WebElement pendingRequests;
 
 
+
+
+    public void clickBloodRequests(){
+        wait.until(ExpectedConditions.visibilityOf(btnBloodRequests)).click();
+    }
     public void clickBloodCampsMenu() {
         btnBloodCamps.click();
     }
@@ -28,21 +36,27 @@ public class AdminPage extends DashboardPage{
         waitForElementToVisible(adminCards);
     }
 
-    public boolean isDonorListVisible(){
-        return wait.until(ExpectedConditions.visibilityOfAllElements(donorList)).size()>0;
+    public String getAlertMessage(){
+        return wait.until(ExpectedConditions.visibilityOf(alertMessage)).getText();
     }
 
-    protected void clickOnAllDelete() throws InterruptedException {
-        for(WebElement btnDelete : btnDeletelist) {
-            Thread.sleep(2000);
-            btnDelete.click();
-            driver.switchTo().alert().accept();
-        }
-
+    protected void clickDeleteButton(WebElement deleteButton){
+        wait.until(ExpectedConditions.elementToBeClickable(deleteButton)).click();
+        driver.switchTo().alert().accept();
     }
 
+    public int getTotalDonorsCount(){
+        return Integer.parseInt(wait.until(ExpectedConditions.visibilityOf(totalDonors)).getText());
+    }
+    public int getTotalRequestCount(){
+        return Integer.parseInt(wait.until(ExpectedConditions.visibilityOf(totalRequests)).getText());
+    }
+    public int getPendingRequestCount(){
+        return Integer.parseInt(wait.until(ExpectedConditions.visibilityOf(pendingRequests)).getText());
+    }
 
-
-
+//    public void clickBloodInventory(){
+//
+//    }
 
 }
