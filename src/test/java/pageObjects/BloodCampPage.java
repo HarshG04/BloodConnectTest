@@ -32,7 +32,7 @@ public class BloodCampPage extends AdminPage{
     public void clickAddCampButton() {
         btnAddCamp.click();
     }
-    public void submitBloodCampData(String campName, String location, String campDate, String startTime, String endTime, int capacity, String description) {
+    public void setBloodCampData(String campName, String location, String campDate, String startTime, String endTime, int capacity, String description) {
         txtCampName.sendKeys(campName);
         txtLocation.sendKeys(location);
         txtDate.sendKeys(campDate);
@@ -55,4 +55,5 @@ public class BloodCampPage extends AdminPage{
             clickDeleteButton(bloodCamp.findElement(By.xpath("//td[7]")));
         }
     }
+
 }

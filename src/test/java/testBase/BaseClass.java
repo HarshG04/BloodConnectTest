@@ -146,7 +146,7 @@ public class BaseClass {
     public void generateNewBloodRequest(){
         try {
             String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            donorData[7] = "O+";
+//            donorData[7] = "O+";
             logger.info("Donor Profile Data: " + donorData[0] + ":" + donorData[1] + ":" + donorData[2]);
             String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
             logger.info("Recipient Profile Data: " + recipientData[0] + ":" + recipientData[1] + ":" + recipientData[2]);

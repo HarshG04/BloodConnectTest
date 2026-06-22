@@ -1,7 +1,6 @@
 package utilities;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import pageObjects.AdminPage;
 import pageObjects.BloodCampPage;
 import pageObjects.RegisterPage;
 
@@ -65,7 +64,7 @@ public class RandomDataGeneratorUtil {
         int capacity = random.nextInt(90)+10;
         String description = "description-" + RandomStringUtils.randomAlphabetic(8);
 
-        bloodCampPage.submitBloodCampData(bloodCampName,location,date,time[0],time[1],capacity,description);
+        bloodCampPage.setBloodCampData(bloodCampName,location,date,time[0],time[1],capacity,description);
         bloodCampPage.clickSaveCamp();
     }
 
