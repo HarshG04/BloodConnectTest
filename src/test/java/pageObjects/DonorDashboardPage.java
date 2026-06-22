@@ -30,6 +30,9 @@ public class DonorDashboardPage extends DashboardPage {
     @FindBy(xpath = "//div[@class='profile-card']//div[@class='profile-info']//span[@class='label' and text()='City']/following-sibling::span")
     WebElement lblLocation;
 
+    @FindBy(xpath = "//h5[text()='Donation History']/../..")
+    WebElement secDonationHistory;
+
     //actions
     public void clickEditProfile(){
         waitForElementToBeClickable(btnEditProfile).click();
@@ -39,6 +42,9 @@ public class DonorDashboardPage extends DashboardPage {
     public String getDonorEmail(){return lblEmail.getText();}
     public String getDonorPhone(){return lblPhoneNo.getText();}
     public String getDonorLocation(){return lblLocation.getText();}
+    public boolean isDonationHistoryDisplayed(){
+        return secDonationHistory.isDisplayed();
+    }
 
     public boolean acceptRequest(String recipientName) {
         try {

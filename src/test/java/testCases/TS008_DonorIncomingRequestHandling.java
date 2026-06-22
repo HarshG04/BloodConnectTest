@@ -11,7 +11,6 @@ import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
 
 public class TS008_DonorIncomingRequestHandling extends BaseClass {
-
     public void donorRecipientRequestExchange(String recipientEmail,String recipientPwd,String recipeintName,String donorEmail,String donorPwd,String donorName) throws InterruptedException {
         logger.info("Logging in as Recipient: {}", recipientEmail);
         LoginUserHelper(recipientEmail,recipientPwd);
@@ -50,7 +49,7 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
                 "Incoming request from recipient '" + recipeintName + "' not visible");
     }
 
-    @Test(priority = 1, dataProvider = "donorRecipientData", dataProviderClass = LoginDataProvider.class)
+    @Test(priority = 1, dataProvider = "donorRecipientData08", dataProviderClass = LoginDataProvider.class)
     public void TC025_verifyDonorCanViewIncomingRequests(String recipientEmail,String recipientPwd,String recipeintName,String donorEmail,String donorPwd,String donorName){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC025_verifyDonorCanViewIncomingRequests");
@@ -85,7 +84,7 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
 
     }
 
-    @Test(priority = 2,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",dataProvider = "donorRecipientData",dataProviderClass = LoginDataProvider.class)
+    @Test(priority = 2,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",dataProvider = "donorRecipientData08",dataProviderClass = LoginDataProvider.class)
     public void TC026_verifyDonorCanAcceptIncomingRequests(String recipientEmail,String recipientPwd,String recipeintName,String donorEmail,String donorPwd,String donorName){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC026_verifyDonorCanRejectIncomingRequests");
@@ -139,7 +138,7 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 3,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",dataProvider = "donorRecipientData",dataProviderClass = LoginDataProvider.class)
+    @Test(priority = 3,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",dataProvider = "donorRecipientData08",dataProviderClass = LoginDataProvider.class)
     public void TC027_verifyDonorCanRejectIncomingRequests(String recipientEmail,String recipientPwd,String recipeintName,String donorEmail,String donorPwd,String donorName){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC027_verifyDonorCanRejectIncomingRequests");
