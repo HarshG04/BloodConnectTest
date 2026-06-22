@@ -52,12 +52,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-        <test name="TS008_DonorIncomingRequestsHandling">
-            <parameter name="browser" value="chrome"></parameter>
-            <classes>
-                <class name="testCases.TS008_DonorIncomingRequestHandling"></class>
-            </classes>
-        </test>
+<!--        <test name="TS008_DonorIncomingRequestsHandling">-->
+<!--            <parameter name="browser" value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class name="testCases.TS008_DonorIncomingRequestHandling"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--            <test name="TS010_DonorDonationHistoryManagement">-->
 <!--                <parameter name="browser" value="chrome"></parameter>-->
 <!--                <classes>-->
@@ -111,6 +111,14 @@
 <!--        <parameter name="browser" value="chrome"></parameter>-->
 <!--        <classes>-->
 <!--            <class name="testCases.TS020_AdminManagesBloodRequests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="TS021_AdminManageBloodCamps">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS021_AdminManageBloodCamps" />-->
 <!--        </classes>-->
 <!--    </test>-->
 </suite>

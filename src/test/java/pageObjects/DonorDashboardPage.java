@@ -45,6 +45,11 @@ public class DonorDashboardPage extends DashboardPage {
     public boolean isDonationHistoryDisplayed(){
         return secDonationHistory.isDisplayed();
     }
+    public boolean isDonationHistoryDisplayed(String recipientName){
+        WebElement recipientApproval = driver.findElement(By.xpath("//div[@class='donation-timeline']/div[@class='timeline-item']/div[@class='timeline-content']/p[contains(text(),'"+recipientName+"')]"));
+        waitForElementToVisible(recipientApproval);
+        return recipientApproval.isDisplayed();
+    }
 
     public boolean acceptRequest(String recipientName) {
         try {
