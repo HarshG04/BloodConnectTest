@@ -11,6 +11,7 @@ public class LoginPage extends BasePage{
     }
 
     //locators
+    @FindBy(xpath = "//div[@id='navbarNav']//a[contains(text(),'Home')]") WebElement lnkHome;
     @FindBy(xpath = "//div[@id='navbarNav']//a[contains(text(),'Register')]") WebElement lnkRegister;
     @FindBy(xpath = "//input[@type='email']") WebElement txtEmail;
     @FindBy(xpath = "//input[@type='password']") WebElement txtPassword;
@@ -19,6 +20,9 @@ public class LoginPage extends BasePage{
 
 
     //actions
+    public void clickHome(){
+        lnkHome.click();
+    }
     public void clickRegister(){
         lnkRegister.click();
     }

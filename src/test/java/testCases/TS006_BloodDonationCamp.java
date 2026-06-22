@@ -12,7 +12,7 @@ import utilities.RandomDataGeneratorUtil;
 public class TS006_BloodDonationCamp extends BaseClass {
 
     @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
-    public void TC017_verifyActiveBloodCampsVisibility(String email,String password) throws InterruptedException {
+    public void TC017_verifyActiveBloodCampsVisibility(String email,String password){
         logger.info("Starting Test: TC017_verifyActiveBloodCampsVisibility");
 
         try {
@@ -46,14 +46,19 @@ public class TS006_BloodDonationCamp extends BaseClass {
             Assert.assertEquals(updatedBloodCampsCount,initialBloodCampsCount+1);
             logger.info("Test TC017 passed successfully");
 
-        } catch (Exception e) {
-            logger.error("Exception occurred in TC017: " + e.getMessage(), e);
-            throw e; // Rethrowing ensures TestNG still marks the test as failed
+        } catch(AssertionError ae){
+            logger.error("ASSERTION FAILED: " + ae.getMessage());
+            throw ae; // Pass the assertion failure directly to TestNG for reporting
+        }
+        catch (Exception e) {
+            logger.error("FAILURE: Exception encountered during TC017 execution!");
+            logger.error("Exception Message: " + e.getMessage());
+            Assert.fail("Test failed due to an exception: " + e.getMessage());
         }
     }
 
     @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
-    public void TC018_verifyNoBloodCampMessage(String email,String password) throws InterruptedException {
+    public void TC018_verifyNoBloodCampMessage(String email,String password){
         logger.info("Starting Test: TC018_verifyNoBloodCampMessage");
 
         try {
@@ -80,9 +85,15 @@ public class TS006_BloodDonationCamp extends BaseClass {
             Assert.assertTrue(isNoBloodCampMessageVisible);
             logger.info("Test TC018 passed successfully");
 
-        } catch (Exception e) {
-            logger.error("Exception occurred in TC018: " + e.getMessage(), e);
-            throw e; // Rethrowing ensures TestNG still marks the test as failed
+        }
+        catch(AssertionError ae){
+            logger.error("ASSERTION FAILED: " + ae.getMessage());
+            throw ae; // Pass the assertion failure directly to TestNG for reporting
+        }
+        catch (Exception e) {
+            logger.error("FAILURE: Exception encountered during TC018 execution!");
+            logger.error("Exception Message: " + e.getMessage());
+            Assert.fail("Test failed due to an exception: " + e.getMessage());
         }
     }
 }

@@ -57,7 +57,7 @@ public class RandomDataGeneratorUtil {
 
     }
 
-    public static void randomBloodCampGenerator(BloodCampPage bloodCampPage) throws InterruptedException {
+    public static void randomBloodCampGenerator(BloodCampPage bloodCampPage) {
         String bloodCampName = "bloodCamp-"+ RandomStringUtils.randomAlphabetic(4);
         String location = "location-" + RandomStringUtils.randomAlphabetic(4);
         String date = randomDateGenerator();

@@ -17,6 +17,9 @@ import org.testng.annotations.Parameters;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import pageObjects.RecipientDashboardPage;
+import pageObjects.RegisterPage;
+import utilities.RandomDataGeneratorUtil;
 
 public class BaseClass {
     public WebDriver driver;
@@ -95,6 +98,78 @@ public class BaseClass {
         loginPage.clickLogin();
         logger.info("Trying to logging Into dashboard...");
         loginPage.waitForUrlToContain("/dashboard");
+    }
+
+    public String[] registerUserHelper(String[] userData,String as){
+        HomePage homePage = new HomePage(driver);
+        logger.info("Navigating to Registration page from Home page...");
+        homePage.clickRegister();
+
+        RegisterPage registerPage = new RegisterPage(driver);
+
+        switch (as.toLowerCase()){
+            case "donor" : logger.info("Donor checkbox remains selected..."); break;
+            case "recipient" :
+                            logger.info("Deselecting Donor and Selecting Recipient checkbox...");
+                            registerPage.clickDonor();
+                            registerPage.clickRecipient();
+                            break;
+            case "both" : logger.info("Donor checkbox remains selected, Selecting Recipient checkbox...");
+                            registerPage.clickRecipient();
+                            break;
+            default: throw new IllegalArgumentException("Invalid User type: "+as);
+        }
+
+
+        if(userData==null){
+            logger.info("Generating random user data and populating the registration form...");
+            userData = RandomDataGeneratorUtil.randomUserDataGenerator();
+        }
+        RandomDataGeneratorUtil.submitUserData(registerPage,userData);
+
+        logger.info("Clicking on the Agree Terms...");
+        registerPage.clickAgreeTerms();
+
+        logger.info("Submitting the registration form...");
+        registerPage.clickRegister();
+
+        registerPage.getAlertMessage();
+        registerPage.waitForUrlToContain("/login");
+
+        return userData;
+    }
+
+    public String[] registerUserHelper(String as){
+        return registerUserHelper(null,as);
+    }
+
+    public void generateNewBloodRequest(){
+        try {
+            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            donorData[7] = "O+";
+            logger.info("Donor Profile Data: " + donorData[0] + ":" + donorData[1] + ":" + donorData[2]);
+            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            logger.info("Recipient Profile Data: " + recipientData[0] + ":" + recipientData[1] + ":" + recipientData[2]);
+            recipientData[7] = donorData[7];    //blood type
+            recipientData[9] = donorData[9];    // city
+
+
+            registerUserHelper(donorData, "donor");
+            logger.info("Registered With Donor Profile...");
+            new LoginPage(driver).clickRegister();
+
+            registerUserHelper(recipientData, "recipient");
+            logger.info("Registered With Recipient Profile...");
+            LoginUserHelper(recipientData[1], recipientData[2]);
+            logger.info("logged into Recipient profile...");
+            RecipientDashboardPage recipientPage = new RecipientDashboardPage(driver);
+            recipientPage.setFilterFields(recipientData[7], recipientData[9]);
+            Thread.sleep(2000);
+            boolean isRequestSent = recipientPage.sendRequest(donorData[0]);
+            logger.info("Is Blood Request Sent successful? " + isRequestSent);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

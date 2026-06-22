@@ -1,9 +1,12 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public class BloodCampPage extends AdminPage{
     public BloodCampPage(WebDriver driver) {
@@ -20,6 +23,8 @@ public class BloodCampPage extends AdminPage{
     @FindBy(xpath= "//input[@type='number']") WebElement txtCapacity;
     @FindBy(xpath= "//input[@placeholder='Optional details']") WebElement txtDescription;
     @FindBy(xpath= "//button[normalize-space()='Save Camp']") WebElement btnSaveCamp;
+    @FindBy(xpath = "//table/tbody/tr") List<WebElement> bloodCampList;
+
 
 
 
@@ -45,6 +50,9 @@ public class BloodCampPage extends AdminPage{
     }
 
     public void deleteAllBloodCamps() throws InterruptedException {
-        super.clickOnAllDelete();
+        wait.until(ExpectedConditions.visibilityOfAllElements(bloodCampList));
+        for(WebElement bloodCamp : bloodCampList){
+            clickDeleteButton(bloodCamp.findElement(By.xpath("//td[7]")));
+        }
     }
 }
