@@ -45,7 +45,7 @@ public class LoginDataProvider {
 
     @DataProvider(name = "recipientLoginData")
     public Object[][] recipientLoginData() {
-        return new Object[][] {{"johncena2@gmail.com", "password123"}};
+        return new Object[][] {{"alice@bms.com", "password123"}};
     }
 
     @DataProvider(name="donorLogin")
