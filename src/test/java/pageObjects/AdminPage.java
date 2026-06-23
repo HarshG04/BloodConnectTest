@@ -69,4 +69,6 @@ public class AdminPage extends DashboardPage{
         lnkInventory.click();
     }
 
+
+
 }

@@ -24,12 +24,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS003_BloodAvailability">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS003_BloodAvailability" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TS003_BloodAvailability">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS003_BloodAvailability" />
+        </classes>
+    </test>
 
 <!--    <test name="TS004_INeedBloodButton">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -45,12 +45,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS007_DonorProfile">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS007_DonorProfile"></class>
-        </classes>
-    </test>
+<!--    <test name="TS007_DonorProfile">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS007_DonorProfile"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--        <test name="TS008_DonorIncomingRequestsHandling">-->
 <!--            <parameter name="browser" value="chrome"></parameter>-->
@@ -86,12 +86,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS009_DonationStatistics">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS009_DonationStatistics" />
-        </classes>
-    </test>
+<!--    <test name="TS009_DonationStatistics">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS009_DonationStatistics" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="TS019_AdminManagesDonors">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
