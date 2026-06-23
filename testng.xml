@@ -24,12 +24,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS003_BloodAvailability">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS003_BloodAvailability" />
-        </classes>
-    </test>
+<!--    <test name="TS003_BloodAvailability">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS003_BloodAvailability" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="TS004_INeedBloodButton">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -143,5 +143,41 @@
 <!--        </classes>-->
 <!--    </test>-->
 
+
+
+<!--    <test name="TS014_SearchAndFilterDonorWorks">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS014_SearchAndFilterDonorWorks" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TS015_AvailableDonorSection">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS015_AvailableDonorSection" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TS016_SendBloodRequest">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS016_SendBloodRequest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="TS017_MyBloodRequests">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS017_MyBloodRequests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="TS018_BloodGroupCompabilityCheck">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS018_BloodGroupCompabilityCheck" />
+        </classes>
+    </test>
 
 </suite>

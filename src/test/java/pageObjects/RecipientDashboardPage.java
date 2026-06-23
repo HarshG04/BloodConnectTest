@@ -3,8 +3,15 @@ package pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.LinkedList;
+import java.util.List;
 
 import java.util.List;
 
@@ -33,6 +40,20 @@ public class RecipientDashboardPage extends DashboardPage {
     @FindBy(xpath="//li[@class='nav-item dropdown']")
     WebElement drpNotification;
 
+    @FindBy(xpath = "//div[@class='donor-header']/child::span")
+    List<WebElement> donorCards;
+    @FindBy(xpath = "//div[@class='donor-header']//p ")
+    List<WebElement> donorCardLocation;
+    @FindBy(xpath = "//*[contains(text(),'Available Donors')]")
+    WebElement availableDonors;
+    @FindBy(xpath = "//div/p[normalize-space()='No available donors found']")
+    WebElement noAvailableDonorsFound;
+    @FindBy(xpath = "//div[@class='donor-avatar compatible-avatar']/following-sibling::div/h6")
+    List<WebElement> compatibleDonorNames;
+    @FindBy(xpath = "//div[contains(text(),'Blood request sent successfully')]")
+    WebElement bloodRequestSentSuccessMsg;
+    @FindBy(xpath = "//div/div[@class='request-item']")
+    List<WebElement> requests;
 
     public void clickEdit() {
         lnkEdit.click();
@@ -51,7 +72,7 @@ public class RecipientDashboardPage extends DashboardPage {
     }
 
     public void enterCity(){
-        txtCity.sendKeys(getRecipientLocation());
+        txtCity.sendKeys(getRecipientLocation(), Keys.ENTER);
     }
 
     public String getRecipientName() {
@@ -78,13 +99,13 @@ public class RecipientDashboardPage extends DashboardPage {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollTo(1000, 0);");
-            Thread.sleep(2000);
+           // Thread.sleep(2000);
             WebElement donorSendReqBtn = driver.findElement(
                     By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
             );
 
             waitForElementToBeClickable(donorSendReqBtn).click();
-            Thread.sleep(6000);
+            //Thread.sleep(6000);
 
             WebElement updatedBtn = driver.findElement(
                     By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
@@ -103,14 +124,14 @@ public class RecipientDashboardPage extends DashboardPage {
         }
     }
 
-    public void setFilterFields(String bloodType,String city){
+    public void setFilterFields(String bloodType,String city) throws InterruptedException {
        new Select(drpBloodType).selectByValue(bloodType);
-
+        Thread.sleep(3000);
        new Actions(driver).scrollToElement(txtCity).click(txtCity)
                .sendKeys(city)
                .sendKeys(Keys.ENTER)
                .perform();
-
+        Thread.sleep(3000);
     }
 
     public void completeRequest(String donorName) throws InterruptedException {
@@ -141,4 +162,67 @@ public class RecipientDashboardPage extends DashboardPage {
             return false;
         }
     }
+
+    public List<String> getDisplayedDonorsBloodType(){
+        List<String> donors=new LinkedList<>();
+        for(WebElement w:donorCards){
+            donors.add(w.getText());
+        }
+        return donors;
+
+    }
+
+    public List<String> getDisplayedDonorsLocation(){
+        List<String> donors=new LinkedList<>();
+        for(WebElement w:donorCardLocation){
+            donors.add(w.getText());
+        }
+        return donors;
+
+    }
+
+    public boolean isAvailableDonorsVisible(){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.visibilityOf(availableDonors));
+
+        return availableDonors.isDisplayed();
+
+    }
+
+    public List<String> getCompatibleDonors(){
+        List<String> donors=new LinkedList<>();
+        for(WebElement w:compatibleDonorNames){
+            donors.add(w.getText());
+        }
+        return donors;
+    }
+
+    public boolean isBloodRequestSentSuccessfully() {
+
+        try {
+
+            WebDriverWait wait =
+                    new WebDriverWait(driver, Duration.ofSeconds(10));
+
+            wait.until(ExpectedConditions.visibilityOf(bloodRequestSentSuccessMsg));
+
+            return true;
+
+        } catch (Exception e) {
+
+            return false;
+        }
+    }
+
+    public int getBloodRequestHistoryCount(){
+        return requests.size();
+    }
+
+
+    public void clearFilterByCityField() {
+        txtCity.clear();
+    }
+
 }
