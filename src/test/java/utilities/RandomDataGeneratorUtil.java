@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class RandomDataGeneratorUtil {
-    private static Random random = new Random();
+    public static Random random = new Random();
 
     public static String[] randomUserDataGenerator(){
 
