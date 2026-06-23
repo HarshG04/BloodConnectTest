@@ -58,6 +58,12 @@
 <!--                <class name="testCases.TS008_DonorIncomingRequestHandling"></class>-->
 <!--            </classes>-->
 <!--        </test>-->
+<!--            <test name="TS010_DonorDonationHistoryManagement">-->
+<!--                <parameter name="browser" value="chrome"></parameter>-->
+<!--                <classes>-->
+<!--                    <class name="testCases.TS010_DonorDonationHistoryManagement"></class>-->
+<!--                </classes>-->
+<!--            </test>-->
 
 
 <!--    <test name="TS013_RecipientProfileManagement">-->

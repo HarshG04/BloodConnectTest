@@ -106,4 +106,15 @@ public class RecipientDashboardPage extends DashboardPage {
                .perform();
 
     }
+
+    public void completeRequest(String donorName) throws InterruptedException {
+        WebElement completeBtn = driver.findElement(By.xpath("//span[text()='MATCHED']/following-sibling::strong[text()='"+donorName+"']/following::div[@class='request-actions']/button"));
+        new Actions(driver).scrollToElement(completeBtn).click(completeBtn)
+                .perform();
+    }
+    public void cancelRequest(){
+        WebElement cancelBtn = driver.findElement(By.xpath("//div[text()=' PENDING ']/following::div[@class='request-actions']/button"));
+        new Actions(driver).scrollToElement(cancelBtn).click(cancelBtn)
+                .perform();
+    }
 }

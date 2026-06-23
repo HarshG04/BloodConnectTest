@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import java.io.FileReader;
 import java.io.IOException;
@@ -143,12 +144,12 @@ public class BaseClass {
         return registerUserHelper(null,as);
     }
 
-    public void generateNewBloodRequest(){
+    public void generateNewBloodRequest(String[] donorData,String[] recipientData){
         try {
-            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            if(donorData==null) donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
 //            donorData[7] = "O+";
             logger.info("Donor Profile Data: " + donorData[0] + ":" + donorData[1] + ":" + donorData[2]);
-            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            if(recipientData==null)  recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
             logger.info("Recipient Profile Data: " + recipientData[0] + ":" + recipientData[1] + ":" + recipientData[2]);
             recipientData[7] = donorData[7];    //blood type
             recipientData[9] = donorData[9];    // city
@@ -166,10 +167,15 @@ public class BaseClass {
             recipientPage.setFilterFields(recipientData[7], recipientData[9]);
             Thread.sleep(2000);
             boolean isRequestSent = recipientPage.sendRequest(donorData[0]);
-            logger.info("Is Blood Request Sent successful? " + isRequestSent);
+            logger.info("Validating request sent successfully...");
+            Assert.assertTrue(isRequestSent, "Failed to send request to donor");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void generateNewBloodRequest(){
+        generateNewBloodRequest(null,null);
     }
 
 
