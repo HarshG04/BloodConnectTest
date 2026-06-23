@@ -14,9 +14,9 @@ target/
 *.ipr
 
 ### Excluded ###
-.screenshots
-.reports
-.logs
+screenshots/
+reports/
+logs/
 
 ### Eclipse ###
 .apt_generated
