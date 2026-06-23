@@ -99,7 +99,7 @@ public class TS018_BloodGroupCompabilityCheck extends BaseClass {
                     recipientDashboardPage.getCompatibleDonors();
 
             logger.info("Compatible donors after O- filter: {}", compatibleDonors);
-
+            logger.info(" ");
             Assert.assertTrue(
                     compatibleDonors.contains(oMinusDonor[0]),
                     "O- donor is not marked as compatible"
