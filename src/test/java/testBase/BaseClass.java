@@ -87,7 +87,7 @@ public class BaseClass {
         return driver.getCurrentUrl();
     }
 
-    public void LoginUserHelper(String email,String password){
+    public boolean LoginUserHelper(String email,String password){
         logger.info("Switching to login page...");
         HomePage homePage = new HomePage(driver);
         homePage.clickLogin();
@@ -98,10 +98,10 @@ public class BaseClass {
         loginPage.setPassword(password);
         loginPage.clickLogin();
         logger.info("Trying to logging Into dashboard...");
-        loginPage.waitForUrlToContain("/dashboard");
+        return loginPage.waitForUrlToContain("/dashboard");
     }
 
-    public String[] registerUserHelper(String[] userData,String as){
+    public String[] registerUserHelper(String[] userData,String as,boolean isNegativeTest){
         HomePage homePage = new HomePage(driver);
         logger.info("Navigating to Registration page from Home page...");
         homePage.clickRegister();
@@ -134,14 +134,21 @@ public class BaseClass {
         logger.info("Submitting the registration form...");
         registerPage.clickRegister();
 
-        registerPage.getAlertMessage();
-        registerPage.waitForUrlToContain("/login");
+        if (!isNegativeTest) {
+            logger.info("Fetching registration alert confirmation message from the UI...");
+            String alertMessage = registerPage.getAlertMessage();
+            Assert.assertEquals(alertMessage, "User Registered Successfully");
+            registerPage.waitForUrlToContain("/login");
+        }
 
         return userData;
     }
 
     public String[] registerUserHelper(String as){
-        return registerUserHelper(null,as);
+        return registerUserHelper(null,as,false);
+    }
+    public String[] registerUserHelper(String[] userData,String as){
+        return registerUserHelper(userData,as,false);
     }
 
     public String[][] generateNewBloodRequest(String[] donorData,String[] recipientData){

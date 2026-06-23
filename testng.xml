@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+
 <!--    <test name="TS001_Register">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
 <!--        <classes>-->
-<!--            <class name="testCases.TS001_Registration">-->
-<!--                <methods>-->
-<!--                    <include name="TC001_verifyDonorRegistration"/>-->
-<!--                    <include name="TC002_verifyRecepientRegistration"/>-->
-<!--                    <include name="TC003_verifyBothRegistration"/>-->
-<!--                    <include name="TC004_verifyIncorrectEmailRegistration"/>-->
-<!--                    <include name="TC005_verifyDuplicateEmailRegistration"/>-->
-<!--                    <include name="TC006_verifyDuplicatePhoneRegistration"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+<!--            <class name="testCases.TS001_Registration" />-->
 <!--        </classes>-->
 <!--    </test>-->
 
@@ -24,12 +16,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS003_BloodAvailability">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS003_BloodAvailability" />
-        </classes>
-    </test>
+<!--    <test name="TS003_BloodAvailability">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS003_BloodAvailability" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="TS004_INeedBloodButton">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -38,12 +30,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS005_HomePageInfo">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS005_HomePageInfo" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TS005_HomePageInfo">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS005_HomePageInfo" />
+        </classes>
+    </test>
 
 <!--    <test name="TS007_DonorProfile">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->

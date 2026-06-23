@@ -13,7 +13,9 @@ public class TS006_BloodDonationCamp extends BaseClass {
 
     @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
     public void TC017_verifyActiveBloodCampsVisibility(String email,String password){
+        logger.info("=========================================================");
         logger.info("Starting Test: TC017_verifyActiveBloodCampsVisibility");
+        logger.info("=========================================================");
 
         try {
             int initialBloodCampsCount = new HomePage(driver).getBloodCampsCount();

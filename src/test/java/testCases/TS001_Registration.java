@@ -20,14 +20,6 @@ public class TS001_Registration extends BaseClass {
 
         try {
             registerUserHelper("donor");
-
-            logger.info("Fetching registration alert confirmation message from the UI...");
-            String alertMessage = new RegisterPage(driver).getAlertMessage();
-            logger.info("Actual Alert Message captured: '" + alertMessage + "'");
-
-            logger.info("Verifying alert message matches expected confirmation...");
-            Assert.assertEquals(alertMessage, "User Registered Successfully");
-
             logger.info("SUCCESS: TC001_verifyDonorRegistration passed successfully!");
         }
         catch(AssertionError ae){
@@ -50,14 +42,6 @@ public class TS001_Registration extends BaseClass {
 
         try {
             registerUserHelper("recipient");
-
-            logger.info("Fetching registration alert confirmation message from the UI...");
-            String alertMessage = new RegisterPage(driver).getAlertMessage();
-            logger.info("Actual Alert Message captured: '" + alertMessage + "'");
-
-            logger.info("Verifying alert message matches expected confirmation...");
-            Assert.assertEquals(alertMessage, "User Registered Successfully");
-
             logger.info("SUCCESS: TC002_verifyRecepientRegistration passed successfully!");
         }
         catch(AssertionError ae){
@@ -79,12 +63,6 @@ public class TS001_Registration extends BaseClass {
 
         try {
             registerUserHelper("both");
-
-            String alertMessage = new RegisterPage(driver).getAlertMessage();
-            logger.info("Actual Alert Message captured: '" + alertMessage + "'");
-
-            logger.info("Verifying alert message...");
-            Assert.assertEquals(alertMessage, "User Registered Successfully");
             logger.info("SUCCESS: TC003_verifyBothRegistration passed successfully!");
         }
         catch(AssertionError ae){
@@ -109,7 +87,7 @@ public class TS001_Registration extends BaseClass {
             String[] userData = RandomDataGeneratorUtil.randomUserDataGenerator();
             userData[1] = "abcdef";
             logger.info("Malformed email string injected into test array: '" + userData[1] + "'");
-            registerUserHelper(userData,"donor");
+            registerUserHelper(userData,"donor",true);
 
             logger.info("Fetching inline email validation error message from the UI page...");
             String errorMsg = new RegisterPage(driver).getEmailErrorMessage();
@@ -145,11 +123,6 @@ public class TS001_Registration extends BaseClass {
             String[] userData = registerUserHelper("donor");
             logger.info("Target email to seed: '" + userData[1] + "'");
 
-            String alertMsg = new RegisterPage(driver).getAlertMessage();
-            logger.info("Initial registration system response: '" + alertMsg + "'");
-
-            logger.info("Verifying baseline user registered successfully...");
-            Assert.assertEquals(alertMsg, "User Registered Successfully", "Baseline registration failed!");
 
             // --- PHASE 2: Navigate back and try to duplicate the email ---
             logger.info("PHASE 2: Navigating back to the registration screen to test duplicate constraint...");
@@ -160,7 +133,7 @@ public class TS001_Registration extends BaseClass {
             userData1[1] = userData[1]; // Overriding new email with the first user's email
 
             logger.info("trying to register with the duplicate email...");
-            registerUserHelper(userData1,"donor");
+            registerUserHelper(userData1,"donor",true);
 
             logger.info("Fetching duplicate error conflict alert message from the UI...");
             String alertMessage = new RegisterPage(driver).getAlertMessage();
@@ -195,11 +168,6 @@ public class TS001_Registration extends BaseClass {
             String[] userData = registerUserHelper("donor");
             logger.info("Target phone number to seed: '" + userData[3] + "'");
 
-            String alertMsg = new RegisterPage(driver).getAlertMessage();
-            logger.info("Initial registration system response: '" + alertMsg + "'");
-
-            logger.info("Verifying baseline user registered successfully...");
-            Assert.assertEquals(alertMsg, "User Registered Successfully", "Baseline registration failed!");
 
             // --- PHASE 2: Navigate back and try to duplicate the phone number ---
             logger.info("PHASE 2: Navigating back to the registration screen to test duplicate constraint...");
@@ -210,7 +178,7 @@ public class TS001_Registration extends BaseClass {
             userData1[3] = userData[3];
 
             logger.info("trying to register with the duplicate email...");
-            registerUserHelper(userData1,"donor");
+            registerUserHelper(userData1,"donor",true);
 
             logger.info("Fetching duplicate error conflict alert message from the UI...");
             String alertMessage = new RegisterPage(driver).getAlertMessage();

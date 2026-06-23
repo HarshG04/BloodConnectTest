@@ -58,7 +58,9 @@ public class HomePage extends BasePage{
     }
 
     public int getBloodCampsCount(){
-        try{
+        try
+        {
+            wait.until(ExpectedConditions.visibilityOfAllElements(bloodCampList));
             js.executeScript("arguments[0].scrollIntoView();",sectionBloodDonationCamps);
             return bloodCampList.size();
         } catch (NoSuchElementException e) {
