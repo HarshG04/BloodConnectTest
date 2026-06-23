@@ -44,4 +44,6 @@ public class BasePage {
     public void refreshPage(){
         driver.navigate().refresh();
     }
+
+
 }
