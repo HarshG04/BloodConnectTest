@@ -30,10 +30,16 @@ public class RecipientDashboardPage extends DashboardPage {
     WebElement drpBloodType;
     @FindBy(xpath="//input[@placeholder='Enter city']")
     WebElement txtCity;
+    @FindBy(xpath="//li[@class='nav-item dropdown']")
+    WebElement drpNotification;
 
 
     public void clickEdit() {
         lnkEdit.click();
+    }
+
+    public void clickNotificationdrp(){
+        drpNotification.click();
     }
 
     public void selBloodType() throws InterruptedException {
@@ -116,5 +122,23 @@ public class RecipientDashboardPage extends DashboardPage {
         WebElement cancelBtn = driver.findElement(By.xpath("//div[text()=' PENDING ']/following::div[@class='request-actions']/button"));
         new Actions(driver).scrollToElement(cancelBtn).click(cancelBtn)
                 .perform();
+    }
+    public boolean validateNotification(String donorName) {
+        clickNotificationdrp();
+        try {
+            By notificationLocator = By.xpath(
+                    "//ul[@aria-labelledby='notificationsDropdown']//a[contains(.,'Donor "
+                            + donorName + " has accepted')]"
+            );
+
+            WebElement notification = driver.findElement(notificationLocator);
+
+            String text = notification.getText();
+
+            return text.contains(donorName);
+
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

@@ -100,12 +100,20 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS011_SwitchViewWorks">
-            <parameter name="browser" value="chrome"></parameter>
-            <classes>
-                <class name="testCases.TS011_SwitchViewWorks" />
-            </classes>
+<!--    <test name="TS011_SwitchViewWorks">-->
+<!--            <parameter name="browser" value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class name="testCases.TS011_SwitchViewWorks" />-->
+<!--            </classes>-->
+<!--    </test>-->
+
+    <test name="TS012_RequestNotificationsValidation">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS012_RequestNotificationsValidation" />
+        </classes>
     </test>
+
 
 <!--    <test name="TS020_AdminManagesBloodRequests">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
