@@ -8,12 +8,13 @@ import testBase.BaseClass;
 
 public class TS011_SwitchViewWorks extends BaseClass {
 
-    @Test(dataProvider="bothLoginData", dataProviderClass = LoginDataProvider.class)
-    public void TC034_SwitchToRecipient(String email, String password){
+    @Test(priority = 1)
+    public void TC034_SwitchToRecipient(){
         logger.info("Starting TC34: Switching view to Recipient perspective");
 
         try {
-            LoginUserHelper(email, password);
+            String[] userData = registerUserHelper("both");
+            LoginUserHelper(userData[1],userData[2]);
             DonorRecepientPage donorRecepientPage = new DonorRecepientPage(driver);
 
             // Switch perspective cleanly
@@ -36,12 +37,13 @@ public class TS011_SwitchViewWorks extends BaseClass {
         }
     }
 
-    @Test(dataProvider="bothLoginData", dataProviderClass = LoginDataProvider.class)
-    public void TC35_SwitchToDonor(String email, String password){
+    @Test(priority = 2)
+    public void TC35_SwitchToDonor(){
         logger.info("Starting TC35: Testing round-trip perspective switch to Donor");
 
         try {
-            LoginUserHelper(email, password);
+            String[] userData = registerUserHelper("both");
+            LoginUserHelper(userData[1],userData[2]);
             DonorRecepientPage donorRecepientPage = new DonorRecepientPage(driver);
 
             // Toggle states sequence loop

@@ -35,6 +35,9 @@ public class DonorDashboardPage extends DashboardPage {
     @FindBy(xpath = "//h5[text()='Donation History']/../..")
     WebElement secDonationHistory;
 
+    @FindBy(xpath = "//li[@class='nav-item dropdown']")
+    WebElement drpNotification;
+
     @FindBy(xpath = "//div[@class='stats-card mt-4']") WebElement secDonationStatistics;
     @FindBy(xpath = "//div[@class='stats-card mt-4']//div[@class='stat-number']") WebElement totalDonations;
 
@@ -45,6 +48,7 @@ public class DonorDashboardPage extends DashboardPage {
     public void clickEditProfile(){
         waitForElementToBeClickable(btnEditProfile).click();
     }
+    public void clickNotificationDropDown(){waitForElementToBeClickable(drpNotification).click();}
     public String getDonorName(){return lblName.getText();}
     public String getDonorBloodGrp(){return lblBloodGrp.getText();}
     public String getDonorEmail(){return lblEmail.getText();}
@@ -58,7 +62,6 @@ public class DonorDashboardPage extends DashboardPage {
         waitForElementToVisible(recipientApproval);
         return recipientApproval.isDisplayed();
     }
-
 
     public boolean acceptRequest(String recipientName) {
         try {
@@ -112,6 +115,15 @@ public class DonorDashboardPage extends DashboardPage {
     public boolean viewRequest(String recipientName){
         WebElement recAcceptRequest = driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientName+"']"));
         return recAcceptRequest.isDisplayed();
+    }
+
+    public boolean validateNotification(String recipientName){
+        clickNotificationDropDown();
+        By locator = By.xpath(
+                "//ul[@aria-labelledby='notificationsDropdown']//a[contains(@class,'dropdown-item') and contains(.,'" + recipientName + "')]"
+        );
+        WebElement notification = driver.findElement(locator);
+        return notification.isDisplayed();
     }
 
     public boolean isDonationStatisticsDisplayed(){
