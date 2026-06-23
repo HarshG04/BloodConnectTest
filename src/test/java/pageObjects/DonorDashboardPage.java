@@ -1,9 +1,11 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DonorDashboardPage extends DashboardPage {
 
@@ -15,7 +17,7 @@ public class DonorDashboardPage extends DashboardPage {
     @FindBy(xpath = "//button[normalize-space()='Edit Profile']")
     WebElement btnEditProfile;
 
-    @FindBy(xpath="//div[@class='profile-card']//div[@class='profile-header']//h4']")
+    @FindBy(xpath="//div[@class='profile-card']//div[@class='profile-header']//h4")
     WebElement lblName;
 
     @FindBy(xpath = "//div[@class='profile-card']//div[@class='profile-header']//p")
@@ -35,6 +37,12 @@ public class DonorDashboardPage extends DashboardPage {
 
     @FindBy(xpath = "//li[@class='nav-item dropdown']")
     WebElement drpNotification;
+
+    @FindBy(xpath = "//div[@class='stats-card mt-4']") WebElement secDonationStatistics;
+    @FindBy(xpath = "//div[@class='stats-card mt-4']//div[@class='stat-number']") WebElement totalDonations;
+
+
+
 
     //actions
     public void clickEditProfile(){
@@ -79,6 +87,31 @@ public class DonorDashboardPage extends DashboardPage {
 
     }
 
+    public boolean rejectRequest(String recipientName) {
+        try {
+
+            WebElement rejectBtn = driver.findElement(By.xpath(
+                    "//div[@class='requests-list']//h6[text()='" + recipientName + "']" +
+                            "/following::div[@class='request-actions']/button[2]"
+            ));
+            rejectBtn.click();
+
+            WebElement successMsg =
+                    driver.findElement(By.xpath(
+                            "//div[@class='requests-list']//h6[text()='"+recipientName+"']/following::p[@class='small text-warning mt-2']"
+                    ));
+
+            String messageText = successMsg.getText().trim();
+
+
+            return messageText.contains("You marked this as not interested");
+
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+
     public boolean viewRequest(String recipientName){
         WebElement recAcceptRequest = driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientName+"']"));
         return recAcceptRequest.isDisplayed();
@@ -91,5 +124,24 @@ public class DonorDashboardPage extends DashboardPage {
         );
         WebElement notification = driver.findElement(locator);
         return notification.isDisplayed();
+    }
+
+    public boolean isDonationStatisticsDisplayed(){
+        try {
+            wait.until(ExpectedConditions.visibilityOf(secDonationStatistics));
+            return secDonationStatistics.isDisplayed();
+        }
+        catch(TimeoutException e){
+            return false;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public int getTotalDonationsCount() {
+        waitForElementToVisible(totalDonations);
+        String countText = totalDonations.getText().trim();
+        return Integer.parseInt(countText);
     }
 }

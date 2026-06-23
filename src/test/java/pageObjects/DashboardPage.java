@@ -12,7 +12,7 @@ public class DashboardPage extends BasePage{
 
     //locators
     @FindBy(xpath = "//a[@id='userDropdown']") WebElement lnkUserDropDown;
-    @FindBy(xpath = "//a[@class='dropdown-item']") WebElement lnkLogout;
+    @FindBy(xpath = "//a[@class='dropdown-item' and contains(text(),'Logout')]") WebElement lnkLogout;
     @FindBy(xpath = "//a[contains(text(),'Home')]") WebElement lnKHome;
     @FindBy(tagName = "h1") WebElement heading;
 

@@ -19,6 +19,7 @@ public class BloodAvailabilityPage extends BasePage{
     @FindBy(xpath = "//div[@class='card-body py-4']")
     List<WebElement> bloodGroupList;
 
+
     public int getBloodGroupCount(){
         try{
             wait.until(ExpectedConditions.visibilityOfAllElements(bloodGroupList));
@@ -43,5 +44,10 @@ public class BloodAvailabilityPage extends BasePage{
             return false;
         }
 
+    }
+    public int getAvailableUnitsCount(String bloodGroup){
+        WebElement bloodGroupAvaiability = driver.findElement(By.xpath("//div[@class='blood-group-badge mx-auto mb-3' and contains(text(),'"+bloodGroup.toUpperCase()+"')]/following-sibling::h2"));
+        wait.until(ExpectedConditions.visibilityOf(bloodGroupAvaiability));
+        return Integer.parseInt(bloodGroupAvaiability.getText());
     }
 }
