@@ -100,12 +100,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS011_SwitchViewWorks">-->
-<!--            <parameter name="browser" value="chrome"></parameter>-->
-<!--            <classes>-->
-<!--                <class name="testCases.TS011_SwitchViewWorks" />-->
-<!--            </classes>-->
-<!--    </test>-->
+    <test name="TS011_SwitchViewWorks">
+            <parameter name="browser" value="chrome"></parameter>
+            <classes>
+                <class name="testCases.TS011_SwitchViewWorks" />
+            </classes>
+    </test>
 
 <!--    <test name="TS020_AdminManagesBloodRequests">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
