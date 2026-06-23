@@ -86,12 +86,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS009_DonationStatistics">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS009_DonationStatistics" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TS009_DonationStatistics">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS009_DonationStatistics" />
+        </classes>
+    </test>
 
 <!--    <test name="TS019_AdminManagesDonors">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -127,6 +127,13 @@
 <!--                <class name="testCases.TS022_AdminManagesBloodInventory" />-->
 <!--            </classes>-->
 <!--        </test>-->
+
+<!--    <test name="DataSeeder">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="DataProviders.DataSeeder" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 </suite>

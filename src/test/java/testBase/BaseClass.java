@@ -144,7 +144,7 @@ public class BaseClass {
         return registerUserHelper(null,as);
     }
 
-    public void generateNewBloodRequest(String[] donorData,String[] recipientData){
+    public String[][] generateNewBloodRequest(String[] donorData,String[] recipientData){
         try {
             if(donorData==null) donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
 //            donorData[7] = "O+";
@@ -169,13 +169,15 @@ public class BaseClass {
             boolean isRequestSent = recipientPage.sendRequest(donorData[0]);
             logger.info("Validating request sent successfully...");
             Assert.assertTrue(isRequestSent, "Failed to send request to donor");
+
+            return new String[][]{donorData,recipientData};
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void generateNewBloodRequest(){
-        generateNewBloodRequest(null,null);
+    public String[][] generateNewBloodRequest(){
+        return generateNewBloodRequest(null,null);
     }
 
 
