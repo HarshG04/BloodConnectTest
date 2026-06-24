@@ -4,6 +4,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -58,10 +59,12 @@ public class HomePage extends BasePage{
     }
 
     public int getBloodCampsCount(){
-        try{
-            js.executeScript("arguments[0].scrollIntoView();",sectionBloodDonationCamps);
+        try
+        {
+            new Actions(driver).scrollToElement(sectionBloodDonationCamps).perform();
+            wait.until(ExpectedConditions.visibilityOfAllElements(bloodCampList));
             return bloodCampList.size();
-        } catch (NoSuchElementException e) {
+        } catch (Exception e) {
             return 0;
         }
 

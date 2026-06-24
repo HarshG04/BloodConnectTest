@@ -23,7 +23,7 @@ public class BloodCampPage extends AdminPage{
     @FindBy(xpath= "//input[@type='number']") WebElement txtCapacity;
     @FindBy(xpath= "//input[@placeholder='Optional details']") WebElement txtDescription;
     @FindBy(xpath= "//button[normalize-space()='Save Camp']") WebElement btnSaveCamp;
-    @FindBy(xpath = "//table/tbody/tr") List<WebElement> bloodCampList;
+//    @FindBy(xpath = "//table/tbody/tr") List<WebElement> bloodCampList;
 
 
 
@@ -50,9 +50,11 @@ public class BloodCampPage extends AdminPage{
     }
 
     public void deleteAllBloodCamps() throws InterruptedException {
+        List<WebElement> bloodCampList = driver.findElements(By.xpath("//table/tbody/tr"));
         wait.until(ExpectedConditions.visibilityOfAllElements(bloodCampList));
         for(WebElement bloodCamp : bloodCampList){
-            clickDeleteButton(bloodCamp.findElement(By.xpath("//td[7]")));
+            clickDeleteButton(bloodCamp.findElement(By.xpath(".//td[7]")));
+            bloodCampList = driver.findElements(By.xpath("//table/tbody/tr"));
         }
     }
 

@@ -14,35 +14,18 @@ public class TS002_Login extends BaseClass {
     public void verifyLogin(String email, String password, String expectedResult) {
 
         logger.info("=========================================================");
-        logger.info("STARTING DATA ROW EXECUTION: Login Verification");
-        logger.info("Target Account: [ " + email +": " + password + " ] | Expected Profile: " + expectedResult);
+        logger.info("STARTING TEST CASE: TS002_Login.verifyLogin");
+        logger.info("Target Account: [ " + email +" ] | Expected Profile: " + expectedResult);
         logger.info("=========================================================");
 
         try {
-            HomePage homePage = new HomePage(driver);
-            logger.info("Navigating to Login page from Home Page...");
-            homePage.clickLogin();
-
-            LoginPage loginPage = new LoginPage(driver);
-            logger.info("Entering email and password ...");
-            loginPage.setEmail(email);
-            loginPage.setPassword(password);
-
-            logger.info("Submitting login form...");
-            loginPage.clickLogin();
-
-            logger.info("Waiting to verify if target dashboard URL loads...");
-            boolean isLoggedIn = loginPage.waitForUrlToContain("/dashboard");
-
+            boolean isLoggedIn = LoginUserHelper(email, password);
 
             if (expectedResult.equalsIgnoreCase("Valid")) {
                 if (isLoggedIn) {
                     logger.info("SUCCESS: Logged in successfully with Valid credentials as expected.");
-
-                    DashboardPage dashboardPage = new DashboardPage(driver);
-                    logger.info("Logging out...");
-                    dashboardPage.clickUserDropDown();
-                    dashboardPage.clickLogout();
+                    new DashboardPage(driver).logoutUser();
+                    logger.info("Logged out...");
                 } else {
                     logger.error("ASSERTION FAILED: Valid Credentials Not LoggedIn!");
                     Assert.fail("Failed to login with valid credentials: " + email+":"+password);
@@ -53,16 +36,14 @@ public class TS002_Login extends BaseClass {
                     logger.info("Not able to logIn with Invalid Credentials.");
 
                     logger.info("Getting Alert Message...");
-                    String actualAlert = loginPage.getAlertMessage();
+                    String actualAlert = new LoginPage(driver).getAlertMessage();
                     logger.info("Alert Message: '" + actualAlert + "'");
 
                     Assert.assertEquals(actualAlert, "Bad credentials");
                 } else {
                     logger.error("logged into dashboard with Invalid credentials!");
-
-                    DashboardPage dashboardPage = new DashboardPage(driver);
-                    dashboardPage.clickUserDropDown();
-                    dashboardPage.clickLogout();
+                    new DashboardPage(driver).logoutUser();
+                    logger.info("Logged out...");
 
                     Assert.fail("Able to logIn into dashboard with Invalid credentials!" + email+":"+password);
                 }
