@@ -1,14 +1,20 @@
 package testBase;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.apache.commons.io.FileUtils;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -82,6 +88,29 @@ public class BaseClass {
 //    public void teardown(){
 //        driver.quit();
 //    }
+
+    public String captureScreen(String tname) throws IOException {
+
+        File directory = new File(System.getProperty("user.dir") + "\\screenshots");
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+
+        String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\"
+                + tname + "_" + timeStamp + ".png";
+
+        File targetFile = new File(targetFilePath);
+
+        FileUtils.copyFile(sourceFile, targetFile);
+
+        return targetFilePath;
+    }
+
 
     public String getCurrentURL(){
         return driver.getCurrentUrl();
