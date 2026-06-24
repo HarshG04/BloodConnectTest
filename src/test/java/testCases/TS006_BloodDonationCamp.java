@@ -21,7 +21,7 @@ public class TS006_BloodDonationCamp extends BaseClass {
             int initialBloodCampsCount = new HomePage(driver).getBloodCampsCount();
             logger.info("Initial blood camps count: " + initialBloodCampsCount);
 
-            logger.info("Logging in with user: " + email);
+            logger.info("Logging in with Admin: " + email);
             LoginUserHelper(email,password);
 
             AdminPage adminPage = new AdminPage(driver);
@@ -61,7 +61,9 @@ public class TS006_BloodDonationCamp extends BaseClass {
 
     @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
     public void TC018_verifyNoBloodCampMessage(String email,String password){
+        logger.info("=========================================================");
         logger.info("Starting Test: TC018_verifyNoBloodCampMessage");
+        logger.info("=========================================================");
 
         try {
             logger.info("Logging in with user: " + email);

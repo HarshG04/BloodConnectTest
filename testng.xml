@@ -30,12 +30,19 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS005_HomePageInfo">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS005_HomePageInfo" />
-        </classes>
-    </test>
+<!--    <test name="TS005_HomePageInfo">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS005_HomePageInfo" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+        <test name="TS006_BloodDonationCamp">
+            <parameter name="browser" value="chrome"></parameter>
+            <classes>
+                <class name="testCases.TS006_BloodDonationCamp" />
+            </classes>
+        </test>
 
 <!--    <test name="TS007_DonorProfile">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -71,12 +78,6 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS006_BloodDonationCamp">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS006_BloodDonationCamp" />-->
-<!--        </classes>-->
-<!--    </test>-->
 
 <!--    <test name="TS009_DonationStatistics">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -165,11 +166,11 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="TS018_BloodGroupCompabilityCheck">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS018_BloodGroupCompabilityCheck" />
-        </classes>
-    </test>
+<!--    <test name="TS018_BloodGroupCompabilityCheck">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS018_BloodGroupCompabilityCheck" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>
