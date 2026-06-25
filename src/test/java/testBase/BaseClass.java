@@ -33,7 +33,7 @@ public class BaseClass {
     public Properties properties;
     public Logger logger;
 
-    @BeforeTest
+    @BeforeClass
     public void setupTest() throws IOException {
         FileReader file = new FileReader("./src/test/resources/config.properties");
         properties = new Properties();
