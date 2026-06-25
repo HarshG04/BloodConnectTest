@@ -26,4 +26,23 @@ public class RecipientEditProfilePage extends BasePage{
     public  void setRecipientEmail(String recipientEmail){email.sendKeys(recipientEmail);}
     public void setRecipientPhoneno(String recipientPhoneno){phoneNo.sendKeys(recipientPhoneno);}
     public void setRecipientLocation(String recipientLocation){location.sendKeys(recipientLocation);}
+
+    public boolean isNameFieldEditable(){
+        return name.isEnabled();
+    }
+    public boolean isEmailFieldEditable(){
+        return email.isEnabled();
+    }
+    public boolean isPhoneFieldEditable(){
+        return phoneNo.isEnabled();
+    }
+    public boolean isPhoneFieldDisplayed(){
+        return phoneNo.isDisplayed();
+    }
+    public boolean isLocationFieldDisplayed(){
+        return location.isDisplayed();
+    }
+    public boolean isLocationFieldEditable(){
+        return location.isEnabled();
+    }
 }
