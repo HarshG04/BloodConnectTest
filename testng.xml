@@ -19,12 +19,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS003_BloodAvailability">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS003_BloodAvailability" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TS003_BloodAvailability">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS003_BloodAvailability" />
+        </classes>
+    </test>
 
 <!--    <test name="TS004_INeedBloodButton">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
@@ -90,12 +90,12 @@
 <!--    </test>-->
 
 
-    <test name="TS013_RecipientProfileManagement">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="testCases.TS013_RecipientProfileManagement"/>
-        </classes>
-    </test>
+<!--    <test name="TS013_RecipientProfileManagement">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TS013_RecipientProfileManagement"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="TS014_SearchAndFilterDonorWorks">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->

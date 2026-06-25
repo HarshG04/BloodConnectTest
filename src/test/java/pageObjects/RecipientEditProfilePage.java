@@ -36,8 +36,7 @@ public class RecipientEditProfilePage extends BasePage{
     public boolean isPhoneFieldEditable(){
         return phoneNo.isEnabled();
     }
-    public boolean isPhoneFieldDisplayed(){
-        return phoneNo.isDisplayed();
+    public boolean isPhoneFieldDisplayed(){return phoneNo.isDisplayed();
     }
     public boolean isLocationFieldDisplayed(){
         return location.isDisplayed();

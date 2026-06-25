@@ -280,13 +280,16 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             recipientDashboardPage.clickEdit();
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
+            try {
+                boolean isPhoneFieldDisplayed = recipientEditProfilePage.isPhoneFieldDisplayed();
+                Assert.assertTrue(isPhoneFieldDisplayed, "Phone Number field is not Displayed...");
 
-            boolean isPhoneFieldDisplayed = recipientEditProfilePage.isPhoneFieldDisplayed();
-            Assert.assertTrue(isPhoneFieldDisplayed,"Phone Number field is not Displayed...");
-
-            boolean isPhoneFieldEditable = recipientEditProfilePage.isPhoneFieldEditable();
-            Assert.assertTrue(isPhoneFieldEditable,"Phone Number field is not editable...");
-
+                boolean isPhoneFieldEditable = recipientEditProfilePage.isPhoneFieldEditable();
+                Assert.assertTrue(isPhoneFieldEditable, "Phone Number field is not editable...");
+            }
+            catch (Exception e){
+                Assert.fail("Phone Number Field not Displayed");
+            }
             String existingUserPhoneno = recipientData1[3];
 
             logger.info("Updating recipient's Phone Number to existing User's Phone Number: " + existingUserPhoneno);
@@ -338,11 +341,16 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
-            boolean isLocationFieldDisplayed = recipientEditProfilePage.isLocationFieldDisplayed();
-            Assert.assertTrue(isLocationFieldDisplayed,"Location field is not Displayed...");
+            try {
+                boolean isLocationFieldDisplayed = recipientEditProfilePage.isLocationFieldDisplayed();
+                Assert.assertTrue(isLocationFieldDisplayed, "Location field is not Displayed...");
 
-            boolean isLocationFieldEditable = recipientEditProfilePage.isLocationFieldEditable();
-            Assert.assertTrue(isLocationFieldEditable,"Location field is not editable...");
+                boolean isLocationFieldEditable = recipientEditProfilePage.isLocationFieldEditable();
+                Assert.assertTrue(isLocationFieldEditable, "Location field is not editable...");
+            }
+            catch (Exception e){
+                Assert.fail("Location Field is Not Displayed");
+            }
 
             String[] updatedLocation = RandomDataGeneratorUtil.randomUserDataGenerator();
 
