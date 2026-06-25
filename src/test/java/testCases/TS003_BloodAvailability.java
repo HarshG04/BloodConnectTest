@@ -64,7 +64,7 @@ public class TS003_BloodAvailability extends BaseClass {
             logger.info("Baseline available units for group " + bloodGroup + ": " + initialAvailableUnit);
 
             logger.info("Logging into the application as Admin user: " + email);
-            LoginUserHelper(email, password);
+            loginUserHelper(email, password);
 
             AdminPage adminPage = new AdminPage(driver);
             logger.info("Navigating deep into Admin Inventory dashboard panels...");

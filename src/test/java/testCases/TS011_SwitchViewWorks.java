@@ -1,6 +1,5 @@
 package testCases;
 
-import DataProviders.LoginDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.DonorRecepientPage;
@@ -14,7 +13,7 @@ public class TS011_SwitchViewWorks extends BaseClass {
 
         try {
             String[] userData = registerUserHelper("both");
-            LoginUserHelper(userData[1],userData[2]);
+            loginUserHelper(userData[1],userData[2]);
             DonorRecepientPage donorRecepientPage = new DonorRecepientPage(driver);
 
             // Switch perspective cleanly
@@ -43,7 +42,7 @@ public class TS011_SwitchViewWorks extends BaseClass {
 
         try {
             String[] userData = registerUserHelper("both");
-            LoginUserHelper(userData[1],userData[2]);
+            loginUserHelper(userData[1],userData[2]);
             DonorRecepientPage donorRecepientPage = new DonorRecepientPage(driver);
 
             // Toggle states sequence loop

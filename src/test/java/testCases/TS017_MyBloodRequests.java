@@ -9,23 +9,17 @@ import testBase.BaseClass;
 import java.util.List;
 
 public class TS017_MyBloodRequests extends BaseClass {
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
 
-    public void TC049_VerifyThatRecepientsCanViewTheirPastBloodRequests(
-            String email,
-            String password) {
+    public void TC049_VerifyThatRecipientsCanViewTheirPastBloodRequests(){
 
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC049_VerifyThatRecepientsCanViewTheirPastBloodRequests");
-        logger.info("Target Account: [ " + email + " ]");
         logger.info("=========================================================");
 
         try {
-
-            LoginUserHelper(email, password);
+            String[] recipientData = registerUserHelper("recipient");
+            String[] donorData = registerUserHelper("donor");
+            loginUserHelper(recipientData[1], recipientData[2]);
 
             logger.info("Navigating to Recipient Dashboard page");
 
@@ -39,36 +33,7 @@ public class TS017_MyBloodRequests extends BaseClass {
 
             logger.info("Current History Count: {}", currentHistoryCount);
 
-            logger.info("Fetching compatible donors");
-
-            List<String> compatibleDonors =
-                    recipientDashboardPage.getCompatibleDonors();
-
-            logger.info("Compatible donors found: {}", compatibleDonors.size());
-
-            Assert.assertTrue(
-                    compatibleDonors.size() > 0,
-                    "No compatible donors available to send blood request"
-            );
-
-            logger.info("Compatible Donor List:");
-
-            for(String donor : compatibleDonors){
-                logger.info(donor);
-            }
-
-            String selectedDonor = compatibleDonors.get(0);
-
-            logger.info("Sending blood request to donor: {}", selectedDonor);
-
-            recipientDashboardPage.sendRequest(selectedDonor);
-
-            logger.info("Verifying blood request success message");
-
-            Assert.assertTrue(
-                    recipientDashboardPage.isBloodRequestSentSuccessfully(),
-                    "Blood request was not sent successfully"
-            );
+            generateNewBloodRequest(donorData,recipientData);
 
             logger.info("Fetching updated blood request history count");
 
@@ -83,10 +48,7 @@ public class TS017_MyBloodRequests extends BaseClass {
                     "Blood request history was not updated"
             );
 
-            logger.info(
-                    "Blood request history updated successfully after sending request to: {}",
-                    selectedDonor
-            );
+            logger.info("Blood request history updated successfully after sending request to: {}",donorData[1]);
 
             logger.info("TEST CASE PASSED");
 
@@ -102,25 +64,6 @@ public class TS017_MyBloodRequests extends BaseClass {
             logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
             Assert.fail("Test failed due to unexpected exception");
 
-        }
-        finally {
-
-            try {
-
-                RecipientDashboardPage recipientDashboardPage =
-                        new RecipientDashboardPage(driver);
-
-                recipientDashboardPage.clickUserDropDown();
-                recipientDashboardPage.clickLogout();
-
-                logger.info("Logged out in finally block");
-
-            }
-            catch (Exception e) {
-
-                logger.warn("Logout skipped: " + e.getMessage());
-
-            }
         }
     }
 }

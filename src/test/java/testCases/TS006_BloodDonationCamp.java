@@ -22,7 +22,7 @@ public class TS006_BloodDonationCamp extends BaseClass {
             logger.info("Initial blood camps count: " + initialBloodCampsCount);
 
             logger.info("Logging in with Admin: " + email);
-            LoginUserHelper(email,password);
+            loginUserHelper(email,password);
 
             AdminPage adminPage = new AdminPage(driver);
             logger.info("Clicking Blood Camps Menu");
@@ -67,7 +67,7 @@ public class TS006_BloodDonationCamp extends BaseClass {
 
         try {
             logger.info("Logging in with user: " + email);
-            LoginUserHelper(email,password);
+            loginUserHelper(email,password);
 
             AdminPage adminPage = new AdminPage(driver);
             logger.info("Clicking Blood Camps Menu");

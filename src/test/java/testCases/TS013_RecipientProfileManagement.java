@@ -1,6 +1,7 @@
 package testCases;
 
 import DataProviders.LoginDataProvider;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,35 +12,27 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS013_RecipientProfileManagement extends BaseClass {
 
-    private void loginAsRecipient(String email, String password) {
+    private String[] recipientData;
 
-        HomePage homePage = new HomePage(driver);
-        homePage.clickLogin();
-
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.setEmail(email);
-        loginPage.setPassword(password);
-        loginPage.clickLogin();
+    @BeforeMethod
+    public void RegisterNewRecipient(){
+        if(recipientData==null) recipientData = registerUserHelper("recipient");
     }
 
-
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC038_VerifyRecipientCanUpdateName(String email, String password) {
+    @Test
+    public void TC038_VerifyRecipientCanUpdateName() {
 
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC038_VerifyRecipientCanUpdateName");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
-        RecipientDashboardPage recipientDashboardPage=null;
         try {
 
-            loginAsRecipient(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
+            logger.info("Successfully loggedIn as Recipient...");
 
-            recipientDashboardPage= new RecipientDashboardPage(driver);
+            RecipientDashboardPage recipientDashboardPage= new RecipientDashboardPage(driver);
 
             logger.info("Capturing current recipient name...");
             String oldName = recipientDashboardPage.getRecipientName();
@@ -50,10 +43,10 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
-            String[] updatedName = RandomDataGeneratorUtil.randomUserDataGenerator();
+            String updatedName = RandomStringUtils.randomAlphabetic(5);
 
-            logger.info("Updating recipient name to: " + updatedName[0]);
-            recipientEditProfilePage.setRecipientName(updatedName[0]);
+            logger.info("Updating recipient name to: " + updatedName);
+            recipientEditProfilePage.setRecipientName(updatedName);
 
             logger.info("Clicking Save Changes button...");
             recipientEditProfilePage.clickSaveChanges();
@@ -62,7 +55,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             String actualName = recipientDashboardPage.getRecipientName();
 
             logger.info("Verifying recipient name was updated successfully...");
-            Assert.assertEquals(actualName, updatedName[0], "Recipient could not update name as required by SRS 4.1.");
+            Assert.assertEquals(actualName, updatedName, "Recipient could not update name as required by SRS 4.1.");
 
             logger.info("SUCCESS: Recipient name updated successfully.");
         }
@@ -75,33 +68,20 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail("Recipient could not update name as required by SRS 4.1." + e.getMessage());
         }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
-        }
     }
 
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC039_VerifyRecipientCanUpdateBloodGroup(String email, String password) throws InterruptedException {
+    @Test
+    public void TC039_VerifyRecipientCanUpdateBloodGroup(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
         RecipientDashboardPage recipientDashboardPage=null;
         try {
 
-            loginAsRecipient(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
+            logger.info("Successfully loggedIn as Recipient...");
 
             recipientDashboardPage= new RecipientDashboardPage(driver);
 
@@ -114,10 +94,10 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
-            String[] updatedBloodType = RandomDataGeneratorUtil.randomUserDataGenerator();
+            String updatedBloodType = RandomDataGeneratorUtil.randomBloodGroupGenerator(recipientData[7]);
 
-            logger.info("Updating recipient's Blood Type to: " + updatedBloodType[7]);
-            recipientEditProfilePage.setRecipientBloodType(updatedBloodType[7]);
+            logger.info("Updating recipient's Blood Type to: " + updatedBloodType);
+            recipientEditProfilePage.setRecipientBloodType(updatedBloodType);
             Thread.sleep(3000);
             logger.info("Clicking Save Changes button...");
             recipientEditProfilePage.clickSaveChanges();
@@ -126,7 +106,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             String actualBloodType = recipientDashboardPage.getRecipientBloodType();
 
             logger.info("Verifying recipient Bloot Type was updated successfully...");
-            Assert.assertEquals(actualBloodType, updatedBloodType[7], "Recipient could not update Blood Type as required by SRS 4.1.");
+            Assert.assertEquals(actualBloodType, updatedBloodType, "Recipient could not update Blood Type as required by SRS 4.1.");
 
             logger.info("SUCCESS: Recipient Blood Type updated successfully.");
         }
@@ -139,35 +119,20 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail("Recipient could not update Blood Type as required by SRS 4.1." + e.getMessage());
         }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                    logger.info("Logout Success");
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
-        }
     }
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC040_VerifyRecipientCanUpdateContactDetails(String email, String password){
+    @Test
+    public void TC040_VerifyRecipientCanUpdateContactDetails(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
-        RecipientDashboardPage recipientDashboardPage=null;
         try {
 
-            loginAsRecipient(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
+            logger.info("Successfully loggedIn as Recipient...");
 
-            recipientDashboardPage= new RecipientDashboardPage(driver);
+            RecipientDashboardPage recipientDashboardPage= new RecipientDashboardPage(driver);
 
             logger.info("Capturing recipient's current MailId...");
             String oldEmail = recipientDashboardPage.getRecipientEmail();
@@ -221,72 +186,26 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail("Recipient could not update Contact Information as required by SRS 4.1." + e.getMessage());
         }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                    logger.info("Logout Success");
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
-        }
     }
 
 
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser(String email, String password){
+    @Test
+    public void TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser");
         logger.info("=========================================================");
 
-        RecipientDashboardPage recipientDashboardPage=null;
+
         try {
-            HomePage homePage = new HomePage(driver);
-            logger.info("Navigating to Registration page from Home page...");
-            homePage.clickRegister();
-
-            RegisterPage registerPage = new RegisterPage(driver);
             logger.info("PHASE 1: Generating unique user dataset to seed the database...");
-            logger.info("Unselecting the default 'Donor' checkbox option...");
-            registerPage.clickDonor();  // unSelect donor
-
-            logger.info("Selecting the 'Recipient' checkbox option...");
-            registerPage.clickRecipient();
-            String[] userData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            logger.info("Target email to seed: '" + userData[1] + "'");
-
-            logger.info("Populating form fields for the initial baseline user...");
-            RandomDataGeneratorUtil.submitUserData(registerPage, userData);
-
-            logger.info("Clicking on the Agree Terms checkbox...");
-            registerPage.clickAgreeTerms();
-
-            logger.info("Submitting the initial registration...");
-            registerPage.clickRegister();
-
-            String alertMsg = registerPage.getAlertMessage();
-            logger.info("Initial registration system response: '" + alertMsg + "'");
-
-            logger.info("Verifying baseline user registered successfully...");
-            Assert.assertEquals(alertMsg, "User Registered Successfully", "Baseline registration failed!");
-
+            String[] recipientData1 = registerUserHelper("recipient");
 
             logger.info("PHASE 2: Navigating back to the login screen to test duplicate constraint...");
             logger.info("Entering login credentials");
 
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.waitForUrlToContain("/login");
-            loginPage.setEmail(email);
-            loginPage.setPassword(password);
-            loginPage.clickLogin();
+            loginUserHelper(recipientData[1],recipientData[2]);
 
-            recipientDashboardPage= new RecipientDashboardPage(driver);
+            RecipientDashboardPage recipientDashboardPage= new RecipientDashboardPage(driver);
             logger.info("Capturing recipient's current MailId...");
             String oldEmail = recipientDashboardPage.getRecipientEmail();
             logger.info("Current Email: " + oldEmail);
@@ -296,7 +215,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
-            String existingUserEmail = userData[1];
+            String existingUserEmail = recipientData1[1];
 
             logger.info("Updating recipient's Email to existing User's Email: " + existingUserEmail);
             recipientEditProfilePage.setRecipientEmail(existingUserEmail);
@@ -324,71 +243,24 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail(" Exception encountered during test execution " + e.getMessage());
         }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                    logger.info("Logout Success");
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
-        }
     }
 
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser(String email, String password){
+    @Test
+    public void TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser");
         logger.info("=========================================================");
 
-        RecipientDashboardPage recipientDashboardPage=null;
         try {
-            HomePage homePage = new HomePage(driver);
-            logger.info("Navigating to Registration page from Home page...");
-            homePage.clickRegister();
-
-            RegisterPage registerPage = new RegisterPage(driver);
             logger.info("PHASE 1: Generating unique user dataset to seed the database...");
-            logger.info("Unselecting the default 'Donor' checkbox option...");
-            registerPage.clickDonor();  // unSelect donor
-
-            logger.info("Selecting the 'Recipient' checkbox option...");
-            registerPage.clickRecipient();
-            String[] userData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            logger.info("Target email to seed: '" + userData[1] + "'");
-
-            logger.info("Populating form fields for the initial baseline user...");
-            RandomDataGeneratorUtil.submitUserData(registerPage, userData);
-
-            logger.info("Clicking on the Agree Terms checkbox...");
-            registerPage.clickAgreeTerms();
-
-            logger.info("Submitting the initial registration...");
-            registerPage.clickRegister();
-
-            String alertMsg = registerPage.getAlertMessage();
-            logger.info("Initial registration system response: '" + alertMsg + "'");
-
-            logger.info("Verifying baseline user registered successfully...");
-            Assert.assertEquals(alertMsg, "User Registered Successfully", "Baseline registration failed!");
-
+            String[] recipientData1 = registerUserHelper("recipient");
 
             logger.info("PHASE 2: Navigating back to the login screen to test duplicate constraint...");
             logger.info("Entering login credentials");
 
-            LoginPage loginPage = new LoginPage(driver);
-            loginPage.waitForUrlToContain("/login");
-            loginPage.setEmail(email);
-            loginPage.setPassword(password);
-            loginPage.clickLogin();
+            loginUserHelper(recipientData[1],recipientData[2]);
 
-            recipientDashboardPage= new RecipientDashboardPage(driver);
+            RecipientDashboardPage recipientDashboardPage= new RecipientDashboardPage(driver);
             logger.info("Capturing recipient's current Phone Number...");
             String oldPhoneno = recipientDashboardPage.getRecipientPhoneno();
             logger.info("Current Phone Number: " + oldPhoneno);
@@ -398,7 +270,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
-            String existingUserPhoneno = userData[3];
+            String existingUserPhoneno = recipientData1[3];
 
             logger.info("Updating recipient's Phone Number to existing User's Phone Number: " + existingUserPhoneno);
             recipientEditProfilePage.setRecipientPhoneno(existingUserPhoneno);
@@ -426,35 +298,19 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail(" Exception encountered during test execution " + e.getMessage());
         }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                    logger.info("Logout Success");
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
-        }
     }
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC043_VerifyRecipientCanUpdateLocation(String email, String password){
+    @Test
+    public void TC043_VerifyRecipientCanUpdateLocation(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC043_VerifyRecipientCanUpdateLocation");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
-        RecipientDashboardPage recipientDashboardPage=null;
         try {
 
-            loginAsRecipient(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
 
-            recipientDashboardPage= new RecipientDashboardPage(driver);
+            RecipientDashboardPage recipientDashboardPage= new RecipientDashboardPage(driver);
 
             logger.info("Capturing current recipient Location...");
             String oldLocation = recipientDashboardPage.getRecipientLocation();
@@ -489,17 +345,6 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             logger.error("FAILURE: Exception encountered during test execution!");
             logger.error("Exception Message: " + e.getMessage());
             Assert.fail("Recipient could not update Location as required by SRS 4.1." + e.getMessage());
-        }
-        finally {
-            if(recipientDashboardPage!=null){
-                try{
-                    recipientDashboardPage.clickUserDropDown();
-                    recipientDashboardPage.clickLogout();
-                }
-                catch(Exception e){
-                    logger.warn("Unable to Logout");
-                }
-            }
         }
     }
 }

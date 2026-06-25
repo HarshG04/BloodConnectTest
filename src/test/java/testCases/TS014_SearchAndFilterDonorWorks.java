@@ -2,29 +2,33 @@ package testCases;
 
 import DataProviders.LoginDataProvider;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.DonorDashboardPage;
-import pageObjects.DonorProfilePage;
 import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
 
 import java.util.List;
 
 public class TS014_SearchAndFilterDonorWorks extends BaseClass {
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class, enabled = false
-    )
-    public void TC044_VerifyThatFilterByBloodGroupWorks(String email, String password){
+
+    private String[] recipientData;
+
+    @BeforeMethod
+    public void RegisterNewRecipient(){
+        if(recipientData==null) recipientData = registerUserHelper("recipient");
+    }
+
+    @Test
+    public void TC044_VerifyThatFilterByBloodGroupWorks(){
 
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC044_VerifyThatFilterByBloodGroupWorks");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
         try {
 
-            LoginUserHelper(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
 
             logger.info("Navigating to Recipient Profile page");
 
@@ -76,41 +80,20 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
             Assert.fail("Test failed due to unexpected exception");
 
         }
-        finally {
 
-            try {
-
-                RecipientDashboardPage recipientDashboardPage =
-                        new RecipientDashboardPage(driver);
-
-                recipientDashboardPage.clickUserDropDown();
-                recipientDashboardPage.clickLogout();
-
-                logger.info("Logged out in finally block");
-
-            }
-            catch (Exception e) {
-
-                logger.warn("Logout skipped: " + e.getMessage());
-
-            }
-        }
     }
 
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class, enabled = false
-    )
-    public void TC045_VerifyThatFilterByLocationWorks(String email, String password){
+    @Test
+    public void TC045_VerifyThatFilterByLocationWorks(){
 
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC045_VerifyThatFilterByLocationWorks");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
         try {
 
-            LoginUserHelper(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
 
             logger.info("Navigating to Recipient Profile page");
 
@@ -161,40 +144,19 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
             Assert.fail("Test failed due to unexpected exception");
 
         }
-        finally {
 
-            try {
-
-                RecipientDashboardPage recipientDashboardPage =
-                        new RecipientDashboardPage(driver);
-
-                recipientDashboardPage.clickUserDropDown();
-                recipientDashboardPage.clickLogout();
-
-                logger.info("Logged out in finally block");
-
-            }
-            catch (Exception e) {
-
-                logger.warn("Logout skipped: " + e.getMessage());
-
-            }
-        }
     }
-    @Test(
-            dataProvider = "recipientLoginData",
-            dataProviderClass = LoginDataProvider.class
-    )
-    public void TC046_VerifyThatFilterByBloodGroupAndLocationWorks(String email, String password){
+    @Test
+    public void TC046_VerifyThatFilterByBloodGroupAndLocationWorks(){
 
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC046_VerifyThatFilterByBloodGroupAndLocationWorks");
-        logger.info("Target Account: [ " + email + " ]");
+        logger.info("Target Account: [ " + recipientData[1] + " ]");
         logger.info("=========================================================");
 
         try {
 
-            LoginUserHelper(email, password);
+            loginUserHelper(recipientData[1], recipientData[2]);
 
             logger.info("Navigating to Recipient Profile page");
 
@@ -272,25 +234,6 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
             logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
             Assert.fail("Test failed due to unexpected exception");
 
-        }
-        finally {
-
-            try {
-
-                RecipientDashboardPage recipientDashboardPage =
-                        new RecipientDashboardPage(driver);
-
-                recipientDashboardPage.clickUserDropDown();
-                recipientDashboardPage.clickLogout();
-
-                logger.info("Logged out in finally block");
-
-            }
-            catch (Exception e) {
-
-                logger.warn("Logout skipped: " + e.getMessage());
-
-            }
         }
     }
 

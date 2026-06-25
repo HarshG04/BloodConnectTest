@@ -33,8 +33,8 @@ public class BasePage {
     }
 
 
-    public void waitForElementToVisible(WebElement element){
-        wait.until(ExpectedConditions.visibilityOf(element));
+    public WebElement waitForElementToVisible(WebElement element){
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public boolean waitForElementInvisibility(By locator) {

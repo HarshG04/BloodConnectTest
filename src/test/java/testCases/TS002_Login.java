@@ -4,7 +4,6 @@ import DataProviders.LoginDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.DashboardPage;
-import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import testBase.BaseClass;
 
@@ -19,7 +18,7 @@ public class TS002_Login extends BaseClass {
         logger.info("=========================================================");
 
         try {
-            boolean isLoggedIn = LoginUserHelper(email, password);
+            boolean isLoggedIn = loginUserHelper(email, password);
 
             if (expectedResult.equalsIgnoreCase("Valid")) {
                 if (isLoggedIn) {

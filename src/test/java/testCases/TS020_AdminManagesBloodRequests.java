@@ -2,14 +2,11 @@ package testCases;
 
 import DataProviders.LoginDataProvider;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.AdminPage;
 import pageObjects.BloodRequestsPage;
-import pageObjects.LoginPage;
 import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
-import utilities.RandomDataGeneratorUtil;
 
 public class TS020_AdminManagesBloodRequests extends BaseClass {
 
@@ -168,7 +165,7 @@ public class TS020_AdminManagesBloodRequests extends BaseClass {
         new RecipientDashboardPage(driver).logoutUser();
 
         logger.info("Logging in with target Admin identity: " + email);
-        LoginUserHelper(email,password);
+        loginUserHelper(email,password);
 
         logger.info("Navigating to Blood Requests dashboard management grid");
         new AdminPage(driver).clickBloodRequests();

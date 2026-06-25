@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Master Test Suite" parallel="false">
+
+    <!-- Extent Report Listener -->
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <!-- Common Parameter -->
+    <parameter name="browser" value="chrome"/>
+
+    <!-- All Test Suites Combined -->
+    <test name="All Functional Tests">
+        <classes>
+
+            <!-- TS001 -->
+            <class name="testCases.TS001_Registration"/>
+
+            <!-- TS002 -->
+            <class name="testCases.TS002_Login"/>
+
+            <!-- TS003 -->
+            <class name="testCases.TS003_BloodAvailability"/>
+
+            <!-- TS004 -->
+            <class name="testCases.TS004_INeedBloodButton"/>
+
+            <!-- TS005 -->
+            <class name="testCases.TS005_HomePageInfo"/>
+
+            <!-- TS006 -->
+            <class name="testCases.TS006_BloodDonationCamp"/>
+
+            <!-- TS007 -->
+            <class name="testCases.TS007_DonorProfile"/>
+
+            <!-- TS008 -->
+            <class name="testCases.TS008_DonorIncomingRequestHandling"/>
+
+            <!-- TS009 -->
+            <class name="testCases.TS009_DonationStatistics"/>
+
+            <!-- TS010 -->
+            <class name="testCases.TS010_DonorDonationHistoryManagement"/>
+
+            <!-- TS011 -->
+            <class name="testCases.TS011_SwitchViewWorks"/>
+
+            <!-- TS012 -->
+            <class name="testCases.TS012_RequestNotificationsValidation"/>
+
+            <!-- TS013 -->
+            <class name="testCases.TS013_RecipientProfileManagement"/>
+
+            <!-- TS014 -->
+            <class name="testCases.TS014_SearchAndFilterDonorWorks"/>
+
+            <!-- TS015 -->
+            <class name="testCases.TS015_AvailableDonorSection"/>
+
+            <!-- TS016 -->
+            <class name="testCases.TS016_SendBloodRequest"/>
+
+            <!-- TS017 -->
+            <class name="testCases.TS017_MyBloodRequests"/>
+
+            <!-- TS018 -->
+            <class name="testCases.TS018_BloodGroupCompabilityCheck"/>
+
+            <!-- TS019 -->
+            <class name="testCases.TS019_AdminManagesDonors"/>
+
+            <!-- TS020 -->
+            <class name="testCases.TS020_AdminManagesBloodRequests"/>
+
+            <!-- TS021 -->
+            <class name="testCases.TS021_AdminManageBloodCamps"/>
+
+            <!-- TS022 -->
+            <class name="testCases.TS022_AdminManagesBloodInventory"/>
+
+        </classes>
+    </test>
+
+</suite>

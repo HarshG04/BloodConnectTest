@@ -14,7 +14,7 @@ public class TS021_AdminManageBloodCamps extends BaseClass {
     public void TC057_VerifyAdminCanAddsBloodCamp(String email,String password) throws InterruptedException {
         logger.info("Starting Test: TC057_VerifyAdminCanAddsBloodCamp");
         try {
-            LoginUserHelper(email, password);
+            loginUserHelper(email, password);
 
             logger.info("clicking Blood Camps Button...");
             new AdminPage(driver).clickBloodCampsMenu();

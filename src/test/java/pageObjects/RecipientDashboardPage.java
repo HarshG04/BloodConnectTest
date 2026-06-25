@@ -54,6 +54,8 @@ public class RecipientDashboardPage extends DashboardPage {
     WebElement bloodRequestSentSuccessMsg;
     @FindBy(xpath = "//div/div[@class='request-item']")
     List<WebElement> requests;
+    @FindBy(xpath = "//div[@role='alert']") WebElement alertMessage;
+
 
     public void clickEdit() {
         lnkEdit.click();
@@ -101,23 +103,32 @@ public class RecipientDashboardPage extends DashboardPage {
             js.executeScript("window.scrollTo(1000, 0);");
            // Thread.sleep(2000);
             WebElement donorSendReqBtn = driver.findElement(
-                    By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
+                    By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button[1]")
             );
 
-            waitForElementToBeClickable(donorSendReqBtn).click();
-            //Thread.sleep(6000);
+            js.executeScript("arguments[0].click();",donorSendReqBtn);
 
-            WebElement updatedBtn = driver.findElement(
-                    By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
-            );
+//            new Actions(driver).click(donorSendReqBtn).perform();
+//
+            String alertMessage = getAlertMessage();
 
-            String btnText = updatedBtn.getText();
+            if(alertMessage.equals("Blood request sent successfully!")) return true;
+            return false;
 
-            if (btnText.equalsIgnoreCase("Request Sent") || btnText.equalsIgnoreCase("Pending")) {
-                return true;
-            } else {
-                return false;
-            }
+//            waitForElementToBeClickable(donorSendReqBtn).click();
+//            //Thread.sleep(6000);
+//
+//            WebElement updatedBtn = driver.findElement(
+//                    By.xpath("//div[@class='donors-grid']//h6[text()='" + donorName + "']/following::button")
+//            );
+//
+//            String btnText = updatedBtn.getText();
+//
+//            if (btnText.equalsIgnoreCase("Request Sent")) {
+//                return true;
+//            } else {
+//                return false;
+//            }
 
         } catch (Exception e) {
             return false;
@@ -126,7 +137,6 @@ public class RecipientDashboardPage extends DashboardPage {
 
     public void setFilterFields(String bloodType,String city) throws InterruptedException {
        new Select(drpBloodType).selectByValue(bloodType);
-        Thread.sleep(3000);
        new Actions(driver).scrollToElement(txtCity).click(txtCity)
                .sendKeys(city)
                .sendKeys(Keys.ENTER)
@@ -217,12 +227,22 @@ public class RecipientDashboardPage extends DashboardPage {
     }
 
     public int getBloodRequestHistoryCount(){
-        return requests.size();
+        try{
+            wait.until(ExpectedConditions.visibilityOfAllElements(requests));
+            return requests.size();
+        } catch (Exception e) {
+            return 0;
+        }
+
     }
 
 
     public void clearFilterByCityField() {
         txtCity.clear();
+    }
+
+    public String getAlertMessage(){
+        return waitForElementToVisible(alertMessage).getText().trim();
     }
 
 }
