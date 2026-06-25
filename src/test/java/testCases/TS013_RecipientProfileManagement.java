@@ -43,6 +43,9 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
+            boolean isNameFieldEditable = recipientEditProfilePage.isNameFieldEditable();
+            Assert.assertTrue(isNameFieldEditable,"Name Field is not Editable...");
+
             String updatedName = RandomStringUtils.randomAlphabetic(5);
 
             logger.info("Updating recipient name to: " + updatedName);
@@ -149,6 +152,11 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             String[] updatedContact = RandomDataGeneratorUtil.randomUserDataGenerator();
 
+            boolean isEmailFieldEditable = recipientEditProfilePage.isEmailFieldEditable();
+            Assert.assertTrue(isEmailFieldEditable,"Email field is not editable...");
+            boolean isPhoneFieldEditable = recipientEditProfilePage.isPhoneFieldEditable();
+            Assert.assertTrue(isPhoneFieldEditable,"Phone Number field is not editable...");
+
             logger.info("Updating recipient's Email to: " + updatedContact[1]);
             recipientEditProfilePage.setRecipientEmail(updatedContact[1]);
             //Thread.sleep(3000);
@@ -215,6 +223,9 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
+            boolean isEmailFieldEditable = recipientEditProfilePage.isEmailFieldEditable();
+            Assert.assertTrue(isEmailFieldEditable,"Email field is not editable...");
+
             String existingUserEmail = recipientData1[1];
 
             logger.info("Updating recipient's Email to existing User's Email: " + existingUserEmail);
@@ -270,6 +281,12 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
+            boolean isPhoneFieldDisplayed = recipientEditProfilePage.isPhoneFieldDisplayed();
+            Assert.assertTrue(isPhoneFieldDisplayed,"Phone Number field is not Displayed...");
+
+            boolean isPhoneFieldEditable = recipientEditProfilePage.isPhoneFieldEditable();
+            Assert.assertTrue(isPhoneFieldEditable,"Phone Number field is not editable...");
+
             String existingUserPhoneno = recipientData1[3];
 
             logger.info("Updating recipient's Phone Number to existing User's Phone Number: " + existingUserPhoneno);
@@ -320,6 +337,12 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             recipientDashboardPage.clickEdit();
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
+
+            boolean isLocationFieldDisplayed = recipientEditProfilePage.isLocationFieldDisplayed();
+            Assert.assertTrue(isLocationFieldDisplayed,"Location field is not Displayed...");
+
+            boolean isLocationFieldEditable = recipientEditProfilePage.isLocationFieldEditable();
+            Assert.assertTrue(isLocationFieldEditable,"Location field is not editable...");
 
             String[] updatedLocation = RandomDataGeneratorUtil.randomUserDataGenerator();
 
