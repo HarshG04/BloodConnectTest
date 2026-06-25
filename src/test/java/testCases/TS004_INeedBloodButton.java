@@ -4,7 +4,6 @@ import DataProviders.LoginDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
-import pageObjects.LoginPage;
 import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
 
@@ -46,7 +45,7 @@ public class TS004_INeedBloodButton extends BaseClass {
         logger.info("=========================================================");
 
         try {
-            LoginUserHelper(email, password);
+            loginUserHelper(email, password);
 
             logger.info("Going back to the Home page from the dashboard...");
             new RecipientDashboardPage(driver).clickHome();

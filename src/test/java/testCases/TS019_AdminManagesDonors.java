@@ -1,13 +1,9 @@
 package testCases;
 
 import DataProviders.LoginDataProvider;
-import org.apache.logging.log4j.LogManager; // Added import
-import org.apache.logging.log4j.Logger;     // Added import
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.AdminPage;
-import pageObjects.HomePage;
-import pageObjects.LoginPage;
 import pageObjects.ManageDonorsPage;
 import testBase.BaseClass;
 
@@ -19,7 +15,7 @@ public class TS019_AdminManagesDonors extends BaseClass {
 
         try {
             logger.info("Logging in with administrator credentials: " + email);
-            LoginUserHelper(email,password);
+            loginUserHelper(email,password);
 
             logger.info("Getting the count of all donors from admin dashboard...");
             int totalDonorsCount = new AdminPage(driver).getTotalDonorsCount();
@@ -48,7 +44,7 @@ public class TS019_AdminManagesDonors extends BaseClass {
 
         try {
             logger.info("Logging in with administrator credentials: " + email);
-            LoginUserHelper(email,password);
+            loginUserHelper(email,password);
 
             ManageDonorsPage manageDonorsPage = new ManageDonorsPage(driver);
             logger.info("Executing deletion routine on the first donor row record");

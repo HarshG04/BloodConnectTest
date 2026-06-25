@@ -103,4 +103,18 @@ public class RandomDataGeneratorUtil {
 
     }
 
+    public static String randomBloodGroupGenerator(String excludedBloodGroup){
+        String[] bloodGroups = {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"};
+        String bg;
+        do{
+            bg = bloodGroups[random.nextInt(bloodGroups.length)];
+        } while(bg.equals(excludedBloodGroup));
+
+        return bg;
+
+    }
+    public static String randomBloodGroupGenerator(){
+        return randomBloodGroupGenerator(null);
+    }
+
 }

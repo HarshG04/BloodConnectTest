@@ -57,7 +57,7 @@ public class TS018_BloodGroupCompabilityCheck extends BaseClass {
 
             logger.info("Logging in as A- Recipient");
 
-            LoginUserHelper(
+            loginUserHelper(
                     aMinusRecipient[1],
                     aMinusRecipient[2]
             );
@@ -125,25 +125,6 @@ public class TS018_BloodGroupCompabilityCheck extends BaseClass {
             logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
             Assert.fail("Test failed due to unexpected exception");
 
-        }
-        finally {
-
-            try {
-
-                RecipientDashboardPage recipientDashboardPage =
-                        new RecipientDashboardPage(driver);
-
-                recipientDashboardPage.clickUserDropDown();
-                recipientDashboardPage.clickLogout();
-
-                logger.info("Logged out in finally block");
-
-            }
-            catch (Exception e) {
-
-                logger.warn("Logout skipped: " + e.getMessage());
-
-            }
         }
     }
 }

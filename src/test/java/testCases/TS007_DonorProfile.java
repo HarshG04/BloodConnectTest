@@ -1,16 +1,22 @@
 package testCases;
 
-import DataProviders.LoginDataProvider;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.*;
 import testBase.BaseClass;
 import utilities.RandomDataGeneratorUtil;
 
-import static utilities.RandomDataGeneratorUtil.random;
-
 public class TS007_DonorProfile extends BaseClass {
+
+
+    private String[] donorData;
+
+    @BeforeMethod
+    public void RegisterNewUser(){
+        if(donorData==null) donorData = registerUserHelper("donor");
+    }
+
 
     @Test(priority = 1)
     public void TC019_updateDonorName() {
@@ -21,9 +27,9 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         try {
-            String[] donorData = registerUserHelper("donor");
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
             String name = RandomStringUtils.randomAlphabetic(5);
+
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
@@ -68,18 +74,6 @@ public class TS007_DonorProfile extends BaseClass {
             Assert.fail("Test failed due to unexpected exception");
         }
 
-        finally {
-            try {
-                DonorDashboardPage donorDash = new DonorDashboardPage(driver);
-                donorDash.clickUserDropDown();
-                donorDash.clickLogout();
-                logger.info("Logged out in finally block");
-            } catch (Exception e) {
-                logger.warn("Logout skipped: " + e.getMessage());
-            }
-        }
-
-
         logger.info("=========================================================");
         logger.info("ENDING TEST CASE: TC019_updateDonorName");
         logger.info("=========================================================");
@@ -91,12 +85,9 @@ public class TS007_DonorProfile extends BaseClass {
         logger.info("STARTING TEST CASE: TC020_updateDonorBloodGroup");
         logger.info("=========================================================");
 
-        String[] bloodGroups = {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"};
-
         try {
-            String[] donorData = registerUserHelper("donor");
-            LoginUserHelper(donorData[1], donorData[2]);
-            String bd = bloodGroups[random.nextInt(bloodGroups.length)];
+            loginUserHelper(donorData[1], donorData[2]);
+            String bloodGroup = RandomDataGeneratorUtil.randomBloodGroupGenerator(donorData[7]);
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
@@ -111,8 +102,8 @@ public class TS007_DonorProfile extends BaseClass {
             Assert.assertTrue(donorProfile.isBloodGroupEditable(),
                     "Blood Group field is NOT editable");
 
-            logger.info("Updating Blood Group to: " + bd);
-            donorProfile.selectBloodGrp(bd);
+            logger.info("Updating Blood Group to: " + bloodGroup);
+            donorProfile.selectBloodGrp(bloodGroup);
 
 
             logger.info("Clicking Save Changes");
@@ -126,10 +117,10 @@ public class TS007_DonorProfile extends BaseClass {
 
             String actualBldGrp = donorDash.getDonorBloodGrp();
 
-            logger.info("Expected: {}", bd);
+            logger.info("Expected: {}", bloodGroup);
             logger.info("Actual: {}", actualBldGrp);
 
-            Assert.assertEquals(actualBldGrp, bd,
+            Assert.assertEquals(actualBldGrp, bloodGroup,
                     "Donor blood group update validation failed");
             logger.info("TEST CASE PASSED ");
 
@@ -140,16 +131,6 @@ public class TS007_DonorProfile extends BaseClass {
         } catch (Exception e) {
             logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
             Assert.fail("Test failed due to unexpected exception");
-        }
-        finally {
-            try {
-                DonorDashboardPage donorDash = new DonorDashboardPage(driver);
-                donorDash.clickUserDropDown();
-                donorDash.clickLogout();
-                logger.info("Logged out in finally block");
-            } catch (Exception e) {
-                logger.warn("Logout skipped: " + e.getMessage());
-            }
         }
 
         logger.info("=========================================================");
@@ -166,10 +147,11 @@ public class TS007_DonorProfile extends BaseClass {
 
 
         try {
-            String[] donorData = registerUserHelper("donor");
-            LoginUserHelper(donorData[1], donorData[2]);
-            String newEmail = "Pass" + RandomStringUtils.randomAlphanumeric(6);
+            loginUserHelper(donorData[1], donorData[2]);
+            String newEmail = RandomStringUtils.randomAlphabetic(5).toLowerCase() + "@gmail.com";
             String newPhno = RandomStringUtils.randomNumeric(10);
+            logger.info("new email {}, new phone {}",newEmail,newPhno);
+
             logger.info("Navigating to Edit Profile page");
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
@@ -223,16 +205,6 @@ public class TS007_DonorProfile extends BaseClass {
             logger.error("EXCEPTION OCCURRED : " + e.getMessage(), e);
             Assert.fail("Test failed due to unexpected exception");
         }
-        finally {
-            try {
-                DonorDashboardPage donorDash = new DonorDashboardPage(driver);
-                donorDash.clickUserDropDown();
-                donorDash.clickLogout();
-                logger.info("Logged out in finally block");
-            } catch (Exception e) {
-                logger.warn("Logout skipped: " + e.getMessage());
-            }
-        }
 
         logger.info("=========================================================");
         logger.info("ENDING TEST CASE: TC021_updateDonorContactDetails");
@@ -247,8 +219,8 @@ public class TS007_DonorProfile extends BaseClass {
 
         try {
             String[] userData1 = registerUserHelper("donor");
-            String[] userData2 = registerUserHelper("donor");
-            LoginUserHelper(userData2[1], userData2[2]);
+            loginUserHelper(donorData[1], donorData[2]);
+
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
             logger.info("Verifying Edit Profile page load");
@@ -276,12 +248,11 @@ public class TS007_DonorProfile extends BaseClass {
             if (isRedirected) {
                 logger.error("BUG: Duplicate email was accepted and profile updated!");
                 Assert.fail("Test FAILED: System allowed duplicate email update");
-                donorDash.clickUserDropDown();
-                donorDash.clickLogout();
+                donorDash.logoutUser();
             }
             // Case 2: Check error message (expected behavior)
             else {
-                logger.info("Duplicate phone number correctly rejected");
+                logger.info("Duplicate email correctly rejected");
                 Assert.assertTrue(true);
             }
 
@@ -308,8 +279,7 @@ public class TS007_DonorProfile extends BaseClass {
 
         try{
             String[] userData1 = registerUserHelper("donor");
-            String[] userData2 = registerUserHelper("donor");
-            LoginUserHelper(userData2[1], userData2[2]);
+            loginUserHelper(donorData[1], donorData[2]);
             DonorDashboardPage donorDash = new DonorDashboardPage(driver);
             donorDash.clickEditProfile();
 
@@ -367,8 +337,7 @@ public class TS007_DonorProfile extends BaseClass {
         logger.info("=========================================================");
 
         try{
-            String[] donorData = registerUserHelper("donor");
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
             String newLocation = RandomStringUtils.randomAlphabetic(5);
 
             logger.info("Navigating to Edit Profile page");

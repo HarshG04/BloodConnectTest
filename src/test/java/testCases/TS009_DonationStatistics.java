@@ -13,7 +13,7 @@ public class TS009_DonationStatistics extends BaseClass {
     public void TC028_VerifyDonationStatisticsSectionVisibility(String email, String password) {
         logger.info("Starting TC028: Verifying donation statistics section visibility.");
         try {
-            LoginUserHelper(email, password);
+            loginUserHelper(email, password);
 
             DonorDashboardPage donorPage = new DonorDashboardPage(driver);
             boolean isDonationStatsSectionVisible = donorPage.isDonationStatisticsDisplayed();
@@ -43,7 +43,7 @@ public class TS009_DonationStatistics extends BaseClass {
             new RecipientDashboardPage(driver).logoutUser();
 
             logger.info("Logging in as donor: " + donorData[1]);
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
 
             DonorDashboardPage donorPage = new DonorDashboardPage(driver);
             int initialDonations = donorPage.getTotalDonationsCount();
@@ -83,7 +83,7 @@ public class TS009_DonationStatistics extends BaseClass {
             new RecipientDashboardPage(driver).logoutUser();
 
             logger.info("Logging in as donor: " + donorData[1]);
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
 
             DonorDashboardPage donorPage = new DonorDashboardPage(driver);
             int initialDonations = donorPage.getTotalDonationsCount();

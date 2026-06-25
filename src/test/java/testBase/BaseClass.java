@@ -33,22 +33,25 @@ public class BaseClass {
     public Properties properties;
     public Logger logger;
 
-    @BeforeMethod
-    @Parameters({"browser"})
-    public void setup(String browser) throws IOException {
-
+    @BeforeTest
+    public void setupTest() throws IOException {
         FileReader file = new FileReader("./src/test/resources/config.properties");
         properties = new Properties();
         properties.load(file);
 
         logger = LogManager.getLogger(this.getClass());
+    }
 
+    @BeforeMethod
+    @Parameters({"browser"})
+    public void setup(String browser){
         switch(browser.toLowerCase()){
             case "chrome" :
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
                 options.addArguments("--disable-infobars");
-
+//                options.addArguments("--headless=new");
+//                options.addArguments("--window-size=1920,1080");
 
                 HashMap<String, Object> prefs = new HashMap<>();
                 prefs.put("credentials_enable_service", false);
@@ -71,23 +74,12 @@ public class BaseClass {
 
     }
 
-//    @BeforeMethod
-//    public void driverSetup(){
-//        driver.manage().deleteAllCookies();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        driver.manage().window().maximize();
-//        driver.get(properties.getProperty("uri"));
-//    }
-
     @AfterMethod
     public void driverTearDown(){
         driver.quit();
+        driver = null;
     }
 
-//    @AfterClass
-//    public void teardown(){
-//        driver.quit();
-//    }
 
     public String captureScreen(String tname) throws IOException {
 
@@ -116,7 +108,7 @@ public class BaseClass {
         return driver.getCurrentUrl();
     }
 
-    public boolean LoginUserHelper(String email,String password){
+    public boolean loginUserHelper(String email, String password){
         logger.info("Switching to login page...");
         HomePage homePage = new HomePage(driver);
         homePage.clickLogin();
@@ -197,11 +189,10 @@ public class BaseClass {
 
             registerUserHelper(recipientData, "recipient");
             logger.info("Registered With Recipient Profile...");
-            LoginUserHelper(recipientData[1], recipientData[2]);
+            loginUserHelper(recipientData[1], recipientData[2]);
             logger.info("logged into Recipient profile...");
             RecipientDashboardPage recipientPage = new RecipientDashboardPage(driver);
             recipientPage.setFilterFields(recipientData[7], recipientData[9]);
-            Thread.sleep(2000);
             boolean isRequestSent = recipientPage.sendRequest(donorData[0]);
             logger.info("Validating request sent successfully...");
             Assert.assertTrue(isRequestSent, "Failed to send request to donor");

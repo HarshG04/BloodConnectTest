@@ -125,7 +125,7 @@ public class TS022_AdminManagesBloodInventory extends BaseClass {
     private void gotoInventoryHelper(String email,String password){
         logger.info("Logging into admin profile with email: " + email);
         try {
-            LoginUserHelper(email, password);
+            loginUserHelper(email, password);
             logger.info("Logged in to admin profile...");
 
             AdminPage adminPage = new AdminPage(driver);

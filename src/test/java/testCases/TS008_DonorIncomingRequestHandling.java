@@ -1,10 +1,9 @@
 package testCases;
 
-import DataProviders.LoginDataProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.DonorDashboardPage;
 import pageObjects.RecipientDashboardPage;
@@ -19,18 +18,20 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
         logger.info("STARTING TEST CASE: TC025_verifyDonorCanViewIncomingRequests");
         logger.info("=========================================================");
         try{
-            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            generateNewBloodRequest(donorData,recipientData);
-            RecipientDashboardPage recipientDash = new RecipientDashboardPage(driver);
-            recipientDash.clickUserDropDown();
-            recipientDash.clickLogout();
+            String[][] userData = generateNewBloodRequest();
+            String[] donorData = userData[0];
+            String[] recipientData = userData[1];
 
-            LoginUserHelper(donorData[1], donorData[2]);
+            new RecipientDashboardPage(driver).logoutUser();
+            logger.info("Successfully logged out from recipient profile...");
+
+            loginUserHelper(donorData[1], donorData[2]);
             DonorDashboardPage donordash = new DonorDashboardPage(driver);
+
             logger.info("Validating Donor Dashboard URL...");
             Assert.assertTrue(donordash.waitForUrlToContain("/donor/dashboard"),
                     "Donor dashboard not loaded");
+
             logger.info("Checking if incoming request from recipient '{}' is visible...", recipientData[0]);
             boolean requestReceived = donordash.viewRequest(recipientData[0]);
             logger.info("Validating incoming request visibility...");
@@ -58,18 +59,19 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
         logger.info("STARTING TEST CASE: TC026_verifyDonorCanRejectIncomingRequests");
         logger.info("=========================================================");
         try{
-            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            generateNewBloodRequest(donorData,recipientData);
-            RecipientDashboardPage recipientDash = new RecipientDashboardPage(driver);
-            recipientDash.clickUserDropDown();
-            recipientDash.clickLogout();
+            String[][] userData = generateNewBloodRequest();
+            new RecipientDashboardPage(driver).logoutUser();
+            String[] donorData = userData[0];
+            String[] recipientData = userData[1];
 
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
+            logger.info("Successfully login the donor who got the request...");
+
             DonorDashboardPage donordash = new DonorDashboardPage(driver);
             logger.info("Validating Donor Dashboard URL...");
             Assert.assertTrue(donordash.waitForUrlToContain("/donor/dashboard"),
                     "Donor dashboard not loaded");
+
             logger.info("Checking if incoming request from recipient '{}' is visible...", recipientData[0]);
             boolean requestReceived = donordash.viewRequest(recipientData[0]);
             logger.info("Validating incoming request visibility...");
@@ -77,20 +79,8 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
                     "Incoming request from recipient '" + recipientData[0] + "' not visible");
 
             logger.info("Attempting to ACCEPT request from recipient: {}", recipientData[0]);
-            logger.info("Locating Accept button for recipient: {}", recipientData[0]);
-            WebElement acceptBtn = driver.findElement(By.xpath(
-                    "//div[@class='requests-list']//h6[text()='" + recipientData[0] + "']" +
-                            "/following::div[@class='request-actions']/button[1]"
-            ));
-            logger.info("Clicking Accept button...");
-            acceptBtn.click();
-            logger.info("Waiting for success message to appear...");
-            WebElement successMsg =
-                    driver.findElement(By.xpath("//div[contains(@class,'alert-success')]"));
-            Thread.sleep(3000);
-            String messageText = successMsg.getText();
-            logger.info("Captured success message: {}", messageText);
-            boolean result = messageText.contains("accepted this blood request");
+
+            boolean result = donordash.acceptRequest(recipientData[0]);
             if (result) {
                 logger.info("Request accepted successfully");
             } else {
@@ -117,14 +107,14 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
         logger.info("STARTING TEST CASE: TC027_verifyDonorCanRejectIncomingRequests");
         logger.info("=========================================================");
         try{
-            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
-            generateNewBloodRequest(donorData,recipientData);
-            RecipientDashboardPage recipientDash = new RecipientDashboardPage(driver);
-            recipientDash.clickUserDropDown();
-            recipientDash.clickLogout();
+            String[][] userData = generateNewBloodRequest();
+            new RecipientDashboardPage(driver).logoutUser();
+            String[] donorData = userData[0];
+            String[] recipientData = userData[1];
 
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
+            logger.info("Successfully login the donor who got the request...");
+
             DonorDashboardPage donordash = new DonorDashboardPage(driver);
             logger.info("Validating Donor Dashboard URL...");
             Assert.assertTrue(donordash.waitForUrlToContain("/donor/dashboard"),
@@ -136,20 +126,8 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
                     "Incoming request from recipient '" + recipientData[0] + "' not visible");
 
             logger.info("Attempting to REJECT request from recipient: {}", recipientData[0]);
-            logger.info("Locating REJECT button for recipient: {}", recipientData[0]);
-            WebElement acceptBtn = driver.findElement(By.xpath(
-                    "//div[@class='requests-list']//h6[text()='" + recipientData[0] + "']" +
-                            "/following::div[@class='request-actions']/button[2]"
-            ));
-            logger.info("Clicking REJECT button...");
-            acceptBtn.click();
-            logger.info("Waiting for success message to appear...");
-            WebElement RejectMsg =
-                    driver.findElement(By.xpath("//div[@class='requests-list']//h6[text()='"+recipientData[0] +"']/following::p[text()=' You marked this as not interested ']"));
-            Thread.sleep(3000);
-            String messageText = RejectMsg.getText();
-            logger.info("Captured success message: {}", messageText);
-            boolean result = messageText.contains("You marked this as not interested");
+
+            boolean result = donordash.rejectRequest(recipientData[0]);
             if (result) {
                 logger.info("Request rejected successfully");
             } else {

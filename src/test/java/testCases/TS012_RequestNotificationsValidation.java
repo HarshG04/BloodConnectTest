@@ -23,7 +23,7 @@ public class TS012_RequestNotificationsValidation extends BaseClass {
             recipientDash.clickUserDropDown();
             recipientDash.clickLogout();
 
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
             DonorDashboardPage donordash = new DonorDashboardPage(driver);
             logger.info("Validating Donor Dashboard URL...");
             Assert.assertTrue(donordash.waitForUrlToContain("/donor/dashboard"),
@@ -59,7 +59,7 @@ public class TS012_RequestNotificationsValidation extends BaseClass {
             recipientDash.clickUserDropDown();
             recipientDash.clickLogout();
 
-            LoginUserHelper(donorData[1], donorData[2]);
+            loginUserHelper(donorData[1], donorData[2]);
             DonorDashboardPage donordash = new DonorDashboardPage(driver);
             logger.info("Validating Donor Dashboard URL...");
             Assert.assertTrue(donordash.waitForUrlToContain("/donor/dashboard"),
@@ -95,7 +95,7 @@ public class TS012_RequestNotificationsValidation extends BaseClass {
             donordash.clickUserDropDown();
             donordash.clickLogout();
 
-            LoginUserHelper(recipientData[1],recipientData[2]);
+            loginUserHelper(recipientData[1],recipientData[2]);
             logger.info("Validating Recipient Dashboard URL...");
             boolean isNotificationReceived = recipientDash.validateNotification(donorData[0]);
             Assert.assertTrue(isNotificationReceived,"Failed to get Notification from :"+donorData[0]);
