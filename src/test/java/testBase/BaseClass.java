@@ -192,6 +192,7 @@ public class BaseClass {
             loginUserHelper(recipientData[1], recipientData[2]);
             logger.info("logged into Recipient profile...");
             RecipientDashboardPage recipientPage = new RecipientDashboardPage(driver);
+            Thread.sleep(1200);
             recipientPage.setFilterFields(recipientData[7], recipientData[9]);
             boolean isRequestSent = recipientPage.sendRequest(donorData[0]);
             logger.info("Validating request sent successfully...");
