@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -32,6 +33,7 @@ public class BloodRequestsPage extends AdminPage {
     public boolean approveBloodRequest(){
         try {
            wait.until(ExpectedConditions.visibilityOfAllElements(bloodRequestList));
+           new Actions(driver).scrollByAmount(0,1000).perform();
            for(WebElement requestCard : bloodRequestList) {
                WebElement btnApprove = requestCard.findElement(By.xpath(".//button[contains(text(),'Approve')]"));
                if (btnApprove.isEnabled()) {
@@ -48,6 +50,7 @@ public class BloodRequestsPage extends AdminPage {
     public boolean rejectBloodRequest(){
         try {
             wait.until(ExpectedConditions.visibilityOfAllElements(bloodRequestList));
+            new Actions(driver).scrollByAmount(0,1000).perform();
             for(WebElement requestCard : bloodRequestList) {
                 WebElement btnApprove = requestCard.findElement(By.xpath(".//button[contains(text(),'Reject')]"));
                 if (btnApprove.isEnabled()) {
@@ -64,6 +67,7 @@ public class BloodRequestsPage extends AdminPage {
     public boolean fulfilledBloodRequest(){
         try {
             wait.until(ExpectedConditions.visibilityOfAllElements(bloodRequestList));
+            new Actions(driver).scrollByAmount(0,1000).perform();
             for(WebElement requestCard : bloodRequestList) {
                 WebElement btnApprove = requestCard.findElement(By.xpath(".//button[contains(text(),'Fulfill')]"));
                 if (btnApprove.isEnabled()) {
