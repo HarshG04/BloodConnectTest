@@ -9,8 +9,7 @@ import testBase.BaseClass;
 import java.util.List;
 
 public class TS017_MyBloodRequests extends BaseClass {
-
-    @Test
+    @Test(groups = "recipient")
     public void TC049_VerifyThatRecipientsCanViewTheirPastBloodRequests(){
 
         logger.info("=========================================================");

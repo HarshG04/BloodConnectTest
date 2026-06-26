@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TS018_BloodGroupCompabilityCheck extends BaseClass {
 
-    @Test
+    @Test(groups = "recipient")
     public void TC050_VerifyThatANegativeCanReceiveOnlyFromANegativeAndONegative() {
 
         logger.info("=========================================================");

@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class TS001_Registration extends BaseClass {
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "auth")
     public void TC001_verifyDonorRegistration(){
 
         logger.info("=========================================================");
@@ -33,7 +33,7 @@ public class TS001_Registration extends BaseClass {
         }
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2,groups = "auth")
     public void TC002_verifyRecipientRegistration(){
 
         logger.info("=========================================================");
@@ -55,7 +55,7 @@ public class TS001_Registration extends BaseClass {
         }
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3,groups = "auth")
     public void TC003_verifyBothRegistration(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC003_verifyBothRegistration");
@@ -75,7 +75,7 @@ public class TS001_Registration extends BaseClass {
         }
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4,groups = "auth")
     public void TC004_verifyIncorrectEmailRegistration(){
 
         logger.info("=========================================================");
@@ -109,7 +109,7 @@ public class TS001_Registration extends BaseClass {
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5,groups = "auth")
     public void TC005_verifyDuplicateEmailRegistration(){
 
         logger.info("=========================================================");
@@ -155,7 +155,7 @@ public class TS001_Registration extends BaseClass {
         }
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6,groups = "auth")
     public void TC006_verifyDuplicatePhoneRegistration(){
 
         logger.info("=========================================================");

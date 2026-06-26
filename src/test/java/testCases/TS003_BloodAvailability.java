@@ -12,7 +12,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS003_BloodAvailability extends BaseClass {
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "home")
     public void TC010_checkAllBloodInventoryVisibility(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC010_checkAllBloodInventoryVisibility");
@@ -49,7 +49,7 @@ public class TS003_BloodAvailability extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData", dataProviderClass = LoginDataProvider.class,priority = 2)
+    @Test(dataProvider = "adminLoginData", dataProviderClass = LoginDataProvider.class,priority = 2,groups = "home")
     public void TC011_VerifyUpdatedInventoryReflectedOnHomePage(String email, String password) {
         logger.info("Starting TC011: Verifying that admin stock updates reflect in public Blood Availability counts.");
 

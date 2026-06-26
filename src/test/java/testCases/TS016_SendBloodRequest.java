@@ -9,7 +9,7 @@ import testBase.BaseClass;
 import java.util.List;
 
 public class TS016_SendBloodRequest extends BaseClass {
-    @Test
+    @Test(groups = "recipient")
     public void TC048_VerifyThatRecipientsCanSendBloodRequestsToCompatibleDonors() {
 
         logger.info("=========================================================");

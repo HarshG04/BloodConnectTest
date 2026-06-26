@@ -10,7 +10,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS021_AdminManageBloodCamps extends BaseClass {
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
     public void TC057_VerifyAdminCanAddsBloodCamp(String email,String password) throws InterruptedException {
         logger.info("Starting Test: TC057_VerifyAdminCanAddsBloodCamp");
         try {
