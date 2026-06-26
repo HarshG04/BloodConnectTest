@@ -32,7 +32,6 @@ public class ExtentReportManager implements ITestListener {
     public ExtentSparkReporter sparkReporter;
     public ExtentReports extent;
     public ExtentTest test;
-
     String repName;
 
     public void onStart(ITestContext testContext) {
@@ -54,6 +53,11 @@ public class ExtentReportManager implements ITestListener {
         extent.attachReporter(sparkReporter);
         extent.setSystemInfo("Application", "BloodConnect");
         extent.setSystemInfo("Environemnt", "QA");
+
+        extent.setSystemInfo("Tester", "Hemanth");
+        extent.setSystemInfo("OS", System.getProperty("os.name"));
+        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+
 
         String os = testContext.getCurrentXmlTest().getParameter("os");
         extent.setSystemInfo("Operating System", os);

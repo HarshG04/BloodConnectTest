@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TS019_AdminManagesDonors extends BaseClass {
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
     public void TC051_verifyAllDonorListVisibilityOnAdminPage(String email,String password){
         logger.info("Starting Test: TC051_verifyDonorListVisibilityOnAdminPage");
 
@@ -38,7 +38,7 @@ public class TS019_AdminManagesDonors extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class)
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
     public void TC052_VerifyAdminCanDeleteDonors(String email,String password){
         logger.info("Starting Test: TC052_VerifyAdminCanDeleteDonors");
 

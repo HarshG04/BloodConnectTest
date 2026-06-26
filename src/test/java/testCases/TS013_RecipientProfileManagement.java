@@ -19,7 +19,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         if(recipientData==null) recipientData = registerUserHelper("recipient");
     }
 
-    @Test
+    @Test(groups = "recipient")
     public void TC038_VerifyRecipientCanUpdateName() {
 
         logger.info("=========================================================");
@@ -73,7 +73,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "recipient")
     public void TC039_VerifyRecipientCanUpdateBloodGroup(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup");
@@ -123,7 +123,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             Assert.fail("Recipient could not update Blood Type as required by SRS 4.1." + e.getMessage());
         }
     }
-    @Test
+    @Test(groups = "recipient")
     public void TC040_VerifyRecipientCanUpdateContactDetails(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails");
@@ -197,7 +197,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
     }
 
 
-    @Test
+    @Test(groups = "recipient")
     public void TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser");
@@ -256,7 +256,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "recipient")
     public void TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser");
@@ -319,7 +319,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             Assert.fail(" Exception encountered during test execution " + e.getMessage());
         }
     }
-    @Test
+    @Test(groups = "recipient")
     public void TC043_VerifyRecipientCanUpdateLocation(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC043_VerifyRecipientCanUpdateLocation");

@@ -7,7 +7,7 @@ import testBase.BaseClass;
 
 public class TS005_HomePageInfo extends BaseClass {
 
-    @Test
+    @Test(groups = "home")
     public void TC014_WhyDonateBloodSectionVisibility(){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC014_WhyDonateBloodSectionVisibility");
@@ -31,7 +31,7 @@ public class TS005_HomePageInfo extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "home")
     public void TC015_BenefitsOfDonatingBloodSectionVisibility(){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC015_BenefitsOfDonatingBloodSectionVisibility");
@@ -55,7 +55,7 @@ public class TS005_HomePageInfo extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "home")
     public void TC016_sectionEligibilityCriteriaSectionVisibility(){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC016_sectionEligibilityCriteriaSectionVisibility");

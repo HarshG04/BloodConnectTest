@@ -18,7 +18,7 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
         if(recipientData==null) recipientData = registerUserHelper("recipient");
     }
 
-    @Test
+    @Test(groups = "recipient")
     public void TC044_VerifyThatFilterByBloodGroupWorks(){
 
         logger.info("=========================================================");
@@ -83,7 +83,7 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
 
     }
 
-    @Test
+    @Test(groups = "recipient")
     public void TC045_VerifyThatFilterByLocationWorks(){
 
         logger.info("=========================================================");
@@ -146,7 +146,7 @@ public class TS014_SearchAndFilterDonorWorks extends BaseClass {
         }
 
     }
-    @Test
+    @Test(groups = "recipient")
     public void TC046_VerifyThatFilterByBloodGroupAndLocationWorks(){
 
         logger.info("=========================================================");

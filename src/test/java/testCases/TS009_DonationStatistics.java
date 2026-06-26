@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TS009_DonationStatistics extends BaseClass {
 
-    @Test(dataProvider = "donorLogin", dataProviderClass = LoginDataProvider.class)
+    @Test(dataProvider = "donorLogin", dataProviderClass = LoginDataProvider.class,groups = "donor")
     public void TC028_VerifyDonationStatisticsSectionVisibility(String email, String password) {
         logger.info("Starting TC028: Verifying donation statistics section visibility.");
         try {
@@ -32,7 +32,7 @@ public class TS009_DonationStatistics extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "donor")
     public void TC029_VerifyDonationStatisticsUpdation() {
         logger.info("Starting TC029: Verifying donation statistics increment upon accepting a request.");
         try {
@@ -72,7 +72,7 @@ public class TS009_DonationStatistics extends BaseClass {
         }
     }
 
-    @Test
+    @Test(groups = "donor")
     public void TC030_VerifyDonationStatisticsStaysSameOnReject() {
         logger.info("Starting TC030: Verifying donation statistics remain static upon rejecting a request.");
         try {

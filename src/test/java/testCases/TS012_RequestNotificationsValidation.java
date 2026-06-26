@@ -10,7 +10,7 @@ import testBase.BaseClass;
 import utilities.RandomDataGeneratorUtil;
 
 public class TS012_RequestNotificationsValidation extends BaseClass {
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "donor")
     public void TC036_verifyDonorReceivesNewRequestNotification() throws InterruptedException {
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC036_verifyDonorReceivesNewRequestNotification");
@@ -46,7 +46,7 @@ public class TS012_RequestNotificationsValidation extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2,groups = "donor")
     public void TC037_verifyRecipientReceivesUpdateNotification(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC037_verifyRecipientReceivesUpdateNotification");
