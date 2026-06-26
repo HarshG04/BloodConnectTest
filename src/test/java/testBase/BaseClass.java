@@ -50,6 +50,8 @@ public class BaseClass {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
                 options.addArguments("--disable-infobars");
+                options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+
 //                options.addArguments("--headless=new");
 //                options.addArguments("--window-size=1920,1080");
 
