@@ -10,7 +10,7 @@ import testBase.BaseClass;
 
 public class TS020_AdminManagesBloodRequests extends BaseClass {
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","sanity"})
     public void TC053_VerifyAllBloodRequestsVisibilityToAdmin(String email,String password){
         logger.info("Starting Test: TC053_VerifyAllBloodRequestsVisibilityToAdmin");
         try {
@@ -37,7 +37,7 @@ public class TS020_AdminManagesBloodRequests extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","sanity"})
     public void TC054_VerifyAdminApprovesBloodRequests(String email,String password) throws InterruptedException {
         logger.info("Starting Test: TC054_VerifyAdminApprovesBloodRequests");
         try {
@@ -77,7 +77,7 @@ public class TS020_AdminManagesBloodRequests extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","sanity"})
     public void TC055_VerifyAdminRejectBloodRequests(String email,String password) throws InterruptedException {
         logger.info("Starting Test: TC055_VerifyAdminRejectBloodRequests");
         try {
@@ -117,7 +117,7 @@ public class TS020_AdminManagesBloodRequests extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","sanity"})
     public void TC056_VerifyAdminFulfilledBloodRequests(String email,String password) throws InterruptedException {
         logger.info("Starting Test: TC056_VerifyAdminFulfilledBloodRequests");
         try {

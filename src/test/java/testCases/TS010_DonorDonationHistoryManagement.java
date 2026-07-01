@@ -11,7 +11,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS010_DonorDonationHistoryManagement extends BaseClass {
 
-    @Test(priority = 1,groups = "donor")
+    @Test(priority = 1,groups = {"donor","regression"})
     public void TC031_verifyDonorCanViewDonationHistory(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC031_verifyDonorCanViewDonationHistory");
@@ -42,7 +42,7 @@ public class TS010_DonorDonationHistoryManagement extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 2,groups = "donor")
+    @Test(priority = 2,groups = {"donor","regression"})
     public void TC032_verifyDonorDonationHistoryUpdatesOnAcceptingRequest(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC032_verifyDonorDonationHistoryUpdatesOnAcceptingRequest");
@@ -115,7 +115,7 @@ public class TS010_DonorDonationHistoryManagement extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 3,groups = "donor")
+    @Test(priority = 3,groups = {"donor","regression"})
     public void TC033_verifyDonorDonationHistoryRemainsSameOnRejectingRequest(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC033_verifyDonorDonationHistoryRemainsSameOnRejectingRequest");

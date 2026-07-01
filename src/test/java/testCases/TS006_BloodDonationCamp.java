@@ -11,7 +11,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS006_BloodDonationCamp extends BaseClass {
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "home")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"home","regression"})
     public void TC017_verifyActiveBloodCampsVisibility(String email,String password){
         logger.info("=========================================================");
         logger.info("Starting Test: TC017_verifyActiveBloodCampsVisibility");
@@ -59,7 +59,7 @@ public class TS006_BloodDonationCamp extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "home")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"home","regression"})
     public void TC018_verifyNoBloodCampMessage(String email,String password){
         logger.info("=========================================================");
         logger.info("Starting Test: TC018_verifyNoBloodCampMessage");

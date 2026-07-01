@@ -7,7 +7,7 @@ import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
 
 public class TS015_AvailableDonorSection extends BaseClass {
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","regression"})
     public void TC047_VerifyAvailableDonorSectionIsVisible() {
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC047_VerifyAvailableDonorSectionIsVisible");

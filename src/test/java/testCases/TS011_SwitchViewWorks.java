@@ -7,7 +7,7 @@ import testBase.BaseClass;
 
 public class TS011_SwitchViewWorks extends BaseClass {
 
-    @Test(priority = 1,groups = {"donor","recipient"})
+    @Test(priority = 1,groups = {"donor","recipient","regression"})
     public void TC034_SwitchToRecipient(){
         logger.info("Starting TC34: Switching view to Recipient perspective");
 
@@ -36,7 +36,7 @@ public class TS011_SwitchViewWorks extends BaseClass {
         }
     }
 
-    @Test(priority = 2,groups = {"donor","recipient"})
+    @Test(priority = 2,groups = {"donor","recipient","regression"})
     public void TC35_SwitchToDonor(){
         logger.info("Starting TC35: Testing round-trip perspective switch to Donor");
 

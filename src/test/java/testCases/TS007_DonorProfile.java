@@ -18,7 +18,7 @@ public class TS007_DonorProfile extends BaseClass {
     }
 
 
-    @Test(priority = 1,groups = "donor")
+    @Test(priority = 1,groups = {"donor","sanity"})
     public void TC019_updateDonorName() {
 
         logger.info("=========================================================");
@@ -79,7 +79,7 @@ public class TS007_DonorProfile extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 2,groups = "donor")
+    @Test(priority = 2,groups = {"donor","sanity"})
     public void TC020_updateDonorBloodGroup() {
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC020_updateDonorBloodGroup");
@@ -139,7 +139,7 @@ public class TS007_DonorProfile extends BaseClass {
 
     }
 
-    @Test(priority = 3,groups = "donor")
+    @Test(priority = 3,groups = {"donor","sanity"})
     public void TC021_updateDonorContactDetails(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC021_updateDonorContactDetails");
@@ -211,7 +211,7 @@ public class TS007_DonorProfile extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 4,groups = "donor")
+    @Test(priority = 4,groups = {"donor","sanity"})
     public void TC022_VerifyDonorCannotUpdateEmailToExistingEmail() {
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC022_VerifyDonorCannotUpdateEmailToExistingEmail");
@@ -271,7 +271,7 @@ public class TS007_DonorProfile extends BaseClass {
 
     }
 
-    @Test(priority = 5,groups = "donor")
+    @Test(priority = 5,groups = {"donor","sanity"})
     public void TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC023_VerifyDonorCannotUpdatePhoneNumberToExistingUserNumber");
@@ -330,7 +330,7 @@ public class TS007_DonorProfile extends BaseClass {
 
     }
 
-    @Test(priority = 6,groups = "donor")
+    @Test(priority = 6,groups = {"donor","sanity"})
     public void TC024_updateDonorLocation(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC024_updateDonorLocation");
