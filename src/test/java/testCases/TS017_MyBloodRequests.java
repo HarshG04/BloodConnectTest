@@ -10,8 +10,7 @@ import utilities.RandomDataGeneratorUtil;
 import java.util.List;
 
 public class TS017_MyBloodRequests extends BaseClass {
-
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","regression"})
     public void TC049_VerifyThatRecipientsCanViewTheirPastBloodRequests(){
 
         logger.info("=========================================================");

@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TS002_Login extends BaseClass {
 
-    @Test(dataProvider = "LoginData", dataProviderClass = LoginDataProvider.class,groups = "auth")
+    @Test(dataProvider = "LoginData", dataProviderClass = LoginDataProvider.class,groups = {"auth","smoke","sanity"})
     public void verifyLogin(String email, String password, String expectedResult) {
 
         logger.info("=========================================================");

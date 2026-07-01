@@ -12,7 +12,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS008_DonorIncomingRequestHandling extends BaseClass {
 
-    @Test(priority = 1,groups = "donor")
+    @Test(priority = 1,groups = {"donor","smoke"})
     public void TC025_verifyDonorCanViewIncomingRequests(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC025_verifyDonorCanViewIncomingRequests");
@@ -53,7 +53,7 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
 
     }
 
-    @Test(priority = 2,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",groups = "donor")
+    @Test(priority = 2,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",groups = {"donor","smoke"})
     public void TC026_verifyDonorCanAcceptIncomingRequests(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC026_verifyDonorCanRejectIncomingRequests");
@@ -101,7 +101,7 @@ public class TS008_DonorIncomingRequestHandling extends BaseClass {
         logger.info("=========================================================");
     }
 
-    @Test(priority = 3,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",groups = "donor")
+    @Test(priority = 3,dependsOnMethods = "TC025_verifyDonorCanViewIncomingRequests",groups = {"donor","sanity"})
     public void TC027_verifyDonorCanRejectIncomingRequests(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC027_verifyDonorCanRejectIncomingRequests");
