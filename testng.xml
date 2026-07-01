@@ -125,12 +125,12 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="TS018_BloodGroupCompabilityCheck">-->
-<!--        <parameter name="browser" value="chrome"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testCases.TS018_BloodGroupCompabilityCheck" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TS018_BloodGroupCompabilityCheck">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TS018_BloodGroupCompabilityCheck" />
+        </classes>
+    </test>
 
 
 <!--    <test name="TS019_AdminManagesDonors">-->

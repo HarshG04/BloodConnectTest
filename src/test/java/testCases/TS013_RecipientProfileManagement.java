@@ -40,7 +40,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             boolean isNameFieldEditable = recipientEditProfilePage.isNameFieldEditable();
@@ -94,6 +95,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
@@ -147,7 +150,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             String[] updatedContact = RandomDataGeneratorUtil.randomUserDataGenerator();
@@ -220,7 +224,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             boolean isEmailFieldEditable = recipientEditProfilePage.isEmailFieldEditable();
@@ -278,7 +283,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
             try {
                 boolean isPhoneFieldDisplayed = recipientEditProfilePage.isPhoneFieldDisplayed();
@@ -338,6 +344,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
