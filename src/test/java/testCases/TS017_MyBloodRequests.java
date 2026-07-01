@@ -5,11 +5,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.RecipientDashboardPage;
 import testBase.BaseClass;
+import utilities.RandomDataGeneratorUtil;
 
 import java.util.List;
 
 public class TS017_MyBloodRequests extends BaseClass {
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","regression"})
     public void TC049_VerifyThatRecipientsCanViewTheirPastBloodRequests(){
 
         logger.info("=========================================================");
@@ -17,8 +18,13 @@ public class TS017_MyBloodRequests extends BaseClass {
         logger.info("=========================================================");
 
         try {
-            String[] recipientData = registerUserHelper("recipient");
-            String[] donorData = registerUserHelper("donor");
+            String[] recipientData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            String[] donorData = RandomDataGeneratorUtil.randomUserDataGenerator();
+            donorData[7] = recipientData[7];
+            registerUserHelper(donorData,"donor");
+            registerUserHelper(recipientData,"recipient");
+
+
             loginUserHelper(recipientData[1], recipientData[2]);
 
             logger.info("Navigating to Recipient Dashboard page");
@@ -33,8 +39,10 @@ public class TS017_MyBloodRequests extends BaseClass {
 
             logger.info("Current History Count: {}", currentHistoryCount);
 
-            generateNewBloodRequest(donorData,recipientData);
-
+            recipientDashboardPage.setFilterFields(donorData[7], donorData[9]);
+            boolean isRequestSent = recipientDashboardPage.sendRequest(donorData[0]);
+            logger.info("Validating request sent successfully...");
+            Assert.assertTrue(isRequestSent, "Failed to send request to donor");
             logger.info("Fetching updated blood request history count");
 
             int updatedHistoryCount =
@@ -66,4 +74,8 @@ public class TS017_MyBloodRequests extends BaseClass {
 
         }
     }
+
+
+
+
 }

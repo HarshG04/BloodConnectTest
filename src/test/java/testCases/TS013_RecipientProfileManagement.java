@@ -19,7 +19,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         if(recipientData==null) recipientData = registerUserHelper("recipient");
     }
 
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC038_VerifyRecipientCanUpdateName() {
 
         logger.info("=========================================================");
@@ -40,7 +40,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             boolean isNameFieldEditable = recipientEditProfilePage.isNameFieldEditable();
@@ -73,7 +74,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         }
     }
 
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC039_VerifyRecipientCanUpdateBloodGroup(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC039_VerifyRecipientCanUpdateBloodGroup");
@@ -94,6 +95,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
@@ -123,7 +126,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             Assert.fail("Recipient could not update Blood Type as required by SRS 4.1." + e.getMessage());
         }
     }
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC040_VerifyRecipientCanUpdateContactDetails(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC040_VerifyRecipientCanUpdateContactDetails");
@@ -147,7 +150,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             String[] updatedContact = RandomDataGeneratorUtil.randomUserDataGenerator();
@@ -197,7 +201,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
     }
 
 
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC041_VerifyRecipientCannotUpdateEmailIfAlreadyBelongsToAnotherUser");
@@ -220,7 +224,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 
             boolean isEmailFieldEditable = recipientEditProfilePage.isEmailFieldEditable();
@@ -256,7 +261,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
         }
     }
 
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC042_VerifyRecipientCannotUpdatePhoneNumberIfAlreadyBelongsToAnotherUser");
@@ -278,7 +283,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
-
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
             try {
                 boolean isPhoneFieldDisplayed = recipientEditProfilePage.isPhoneFieldDisplayed();
@@ -319,7 +325,7 @@ public class TS013_RecipientProfileManagement extends BaseClass {
             Assert.fail(" Exception encountered during test execution " + e.getMessage());
         }
     }
-    @Test(groups = "recipient")
+    @Test(groups = {"recipient","sanity"})
     public void TC043_VerifyRecipientCanUpdateLocation(){
         logger.info("=========================================================");
         logger.info("STARTING TEST CASE: TC043_VerifyRecipientCanUpdateLocation");
@@ -338,6 +344,8 @@ public class TS013_RecipientProfileManagement extends BaseClass {
 
             logger.info("Clicking Edit Profile button...");
             recipientDashboardPage.clickEdit();
+            Assert.assertTrue(recipientDashboardPage.waitForUrlToContain("/edit-profile"),
+                    "Edit Profile page not loaded");
 
             RecipientEditProfilePage recipientEditProfilePage=new RecipientEditProfilePage(driver);
 

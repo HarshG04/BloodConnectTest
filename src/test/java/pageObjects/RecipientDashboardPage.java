@@ -136,12 +136,13 @@ public class RecipientDashboardPage extends DashboardPage {
     }
 
     public void setFilterFields(String bloodType,String city) throws InterruptedException {
+        js.executeScript("window.scrollBy(0,500);");
        new Select(drpBloodType).selectByValue(bloodType);
        new Actions(driver).scrollToElement(txtCity).click(txtCity)
                .sendKeys(city)
                .sendKeys(Keys.ENTER)
                .perform();
-        Thread.sleep(3000);
+        Thread.sleep(1500);
     }
 
     public void completeRequest(String donorName) throws InterruptedException {

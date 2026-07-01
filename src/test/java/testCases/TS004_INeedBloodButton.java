@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TS004_INeedBloodButton extends BaseClass {
 
-    @Test(priority = 1,groups = "home")
+    @Test(priority = 1,groups = {"home","smoke"})
     public void TC012_verifyINeedButtonForUnauthenticatedUsers(){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC012_verifyINeedButtonUnauthenticatedUsers");
@@ -37,7 +37,7 @@ public class TS004_INeedBloodButton extends BaseClass {
     }
 
 
-    @Test(dataProvider = "recipientLoginData", dataProviderClass = LoginDataProvider.class,groups = "home", priority = 2)
+    @Test(dataProvider = "recipientLoginData", dataProviderClass = LoginDataProvider.class,groups = {"home","smoke"}, priority = 2)
     public void TC013_verifyINeedButtonForAuthenticatedUsers(String email, String password){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC013_verifyINeedButtonAuthenticatedUsers");

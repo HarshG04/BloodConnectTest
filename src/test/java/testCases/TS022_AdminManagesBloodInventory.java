@@ -10,7 +10,7 @@ import utilities.RandomDataGeneratorUtil;
 
 public class TS022_AdminManagesBloodInventory extends BaseClass {
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","smoke"})
     public void TC058_VerifyBloodInventoryVisibilityToAdmin(String email,String password) {
         logger.info("Executing TC058: Verify Blood Inventory Visibility To Admin");
         try {
@@ -35,7 +35,7 @@ public class TS022_AdminManagesBloodInventory extends BaseClass {
     }
 
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","regression"})
     public void TC059_VerifyAdminAddInventorySock(String email,String password) throws InterruptedException {
         logger.info("Executing TC059: Verify Admin Add Inventory Stock");
         try {
@@ -75,7 +75,7 @@ public class TS022_AdminManagesBloodInventory extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","regression"})
     public void TC060_VerifyAllBloodInventoryStockVisibilityToAdmin(String email,String password) {
         logger.info("Executing TC060: Verify All Blood Inventory Stock Visibility To Admin");
         try {
@@ -99,7 +99,7 @@ public class TS022_AdminManagesBloodInventory extends BaseClass {
         }
     }
 
-    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = "admin")
+    @Test(dataProvider = "adminLoginData",dataProviderClass = LoginDataProvider.class,groups = {"admin","regression"})
     public void TC061_VerifyBloodGroupDistributionSectionVisibility(String email,String password) {
         logger.info("Executing TC061: Verify Blood Group Distribution Section Visibility");
         try {
