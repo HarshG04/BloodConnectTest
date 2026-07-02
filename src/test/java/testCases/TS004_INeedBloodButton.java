@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TS004_INeedBloodButton extends BaseClass {
 
-    @Test(priority = 1,groups = {"home","smoke"})
+    @Test(priority = 1,groups = {"smoke","home"})
     public void TC012_verifyINeedButtonForUnauthenticatedUsers(){
         logger.info("=========================================================");
         logger.info("STARTING TEST: TC012_verifyINeedButtonUnauthenticatedUsers");

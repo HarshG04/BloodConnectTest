@@ -33,7 +33,7 @@ public class BaseClass {
     public Properties properties;
     public Logger logger;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setupTest() throws IOException {
         FileReader file = new FileReader("./src/test/resources/config.properties");
         properties = new Properties();
@@ -42,7 +42,7 @@ public class BaseClass {
         logger = LogManager.getLogger(this.getClass());
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     @Parameters({"browser"})
     public void setup(String browser){
         switch(browser.toLowerCase()){
@@ -74,7 +74,7 @@ public class BaseClass {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void driverTearDown(){
         driver.quit();
         driver = null;
