@@ -50,7 +50,9 @@ public class BaseClass {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
                 options.addArguments("--disable-infobars");
-//                options.addArguments("--headless=new");
+                options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+
+                options.addArguments("--headless=new");
 //                options.addArguments("--window-size=1920,1080");
 
                 HashMap<String, Object> prefs = new HashMap<>();
@@ -69,7 +71,7 @@ public class BaseClass {
 
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.get(properties.getProperty("uri"));
 
     }
